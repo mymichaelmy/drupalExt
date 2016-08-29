@@ -1,0 +1,65 @@
+<fields>
+<!--
+  Example: Adding German dynamic field types to our Solr Schema.
+  If you enable this, make sure you have a folder called lang containing
+  stopwords_de.txt and synonyms_de.txt.
+  This also requires to enable the content in schema_extra_types.xml.
+-->
+<!--
+   <field name="label_de" type="text_de" indexed="true" stored="true" termVectors="true" omitNorms="true"/>
+   <field name="content_de" type="text_de" indexed="true" stored="true" termVectors="true"/>
+   <field name="teaser_de" type="text_de" indexed="false" stored="true"/>
+   <field name="path_alias_de" type="text_de" indexed="true" stored="true" termVectors="true" omitNorms="true"/>
+   <field name="taxonomy_names_de" type="text_de" indexed="true" stored="false" termVectors="true" multiValued="true" omitNorms="true"/>
+   <field name="spell_de" type="text_de" indexed="true" stored="true" multiValued="true"/>
+   <copyField source="label_de" dest="spell_de"/>
+   <copyField source="content_de" dest="spell_de"/>
+   <dynamicField name="tags_de_*" type="text_de" indexed="true" stored="false" omitNorms="true"/>
+   <dynamicField name="ts_de_*" type="text_de" indexed="true" stored="true" multiValued="false" termVectors="true"/>
+   <dynamicField name="tm_de_*" type="text_de" indexed="true" stored="true" multiValued="true" termVectors="true"/>
+   <dynamicField name="tos_de_*" type="text_de" indexed="true" stored="true" multiValued="false" termVectors="true" omitNorms="true"/>
+   <dynamicField name="tom_de_*" type="text_de" indexed="true" stored="true" multiValued="true" termVectors="true" omitNorms="true"/>
+-->
+   <!-- The following maps Splash-specific (drupal node) field names to those the client expects to find 
+        in the response after making a restful api call to the Splash + BUILD Unified Search feature. -->
+    <field name="uuid" type="text" indexed="true" stored="true" multiValued="false"/>
+    <copyField source="tm_uuid" dest="uuid"/>
+
+    <field name="title" type="text" indexed="true" stored="true" multiValued="false" termVectors="true" omitNorms="true"/>
+    <copyField source="tm_title" dest="title"/>
+
+    <field name="description" type="text" indexed="true" stored="true" multiValued="false" termVectors="true"/>    
+    <copyField source="tm_description" dest="description"/>
+    <!--<copyField source="tm_field_from_summary$value" dest="description"/>-->
+		
+    <field name="provider" type="string" indexed="true" stored="true" multiValued="false" />
+	  <copyField source="tm_provider" dest="provider"/>
+		
+    <field name="category" type="string" indexed="true" stored="true" multiValued="false" />
+    <copyField source="tm_category" dest="category"/>
+	
+    <field name="uri" type="string" indexed="false" stored="true" multiValued="false" />
+    <copyField source="ss_uri" dest="uri"/>
+	
+	<field name="sub_category" type="string" indexed="true" stored="true" multiValued="false" />
+    <copyField source="tm_sub_category" dest="sub_category"/>
+	
+	 <field name="sub_title" type="string"   indexed="false"  stored="true" multiValued="false"/>
+		<copyField source="ss_sub_title" dest="sub_title"/>
+		
+     <field name="sub_uri" type="string"   indexed="false"  stored="true" multiValued="false"/>
+		<copyField source="ss_sub_uri" dest="sub_uri"/>
+		
+	<field name="sub_title_name" type="string"   indexed="false"  stored="true" multiValued="false"/>
+		<copyField source="ss_sub_title_name" dest="sub_title_name"/>
+		
+	<field name="extension_s" type="string"   indexed="false"  stored="true" multiValued="false"/>
+		<copyField source="ss_extension_s" dest="extension_s"/>
+		
+	<field name="content_type_s" type="string"   indexed="false"  stored="true" multiValued="false"/>
+		<copyField source="ss_content_type_s" dest="content_type_s"/>
+		
+	<field name="hasThumb_b" type="boolean"   indexed="false"  stored="true" multiValued="false"/>
+		<copyField source="bs_hasThumb_b" dest="hasThumb_b"/>
+	
+</fields>

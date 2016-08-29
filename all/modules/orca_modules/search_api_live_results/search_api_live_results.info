@@ -1,0 +1,15 @@
+name = Search live results
+description = "Gives back search results while typing."
+dependencies[] = search_api
+dependencies[] = search_api_grouping
+dependencies[] = search_api_page
+dependencies[] = search_api_solr
+core = 7.x
+package = "Orca Modules"
+; Information added by Drupal.org packaging script on 2014-11-17
+; Modified by Angie Perez 2015-08-03
+version = "7.x-1.0"
+core = "7.x"
+project = "search_api_live_results"
+datestamp = "1416238682"
+

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the orca_features_solr_live_results feature.
+ */
+
+include_once 'orca_features_solr_live_results.features.inc';

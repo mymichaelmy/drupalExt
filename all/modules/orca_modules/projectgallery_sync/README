@@ -1,0 +1,47 @@
+Splash Forum BUILD Integration Settings
+
+From the Drupal Menu select Configure - BUILD System Settings - BUILD System Integration
+
+BUILD System - enter the value to reference the BUILD system. Example: http://shared-splash-ci.mo.sap.corp
+BUILD Port - enter the BUILD Port Number. Example: 8000
+BUILD HTTP Request Timeout - enter the value, in seconds, for the HTTP Request Timeoute. When DRUPAL_HTTP_REQUEST is executed this value is used for the Timeout paramater.
+
+HTTP Proxy Configuration
+From the Drupal Menu select Configuration - System - HTTP Proxy.
+
+Server
+Enter the IP Address or Hostname of the Proxy Server. Example: proxy
+
+Port
+Enter the Port Number used by the Proxy Server. Example: 8080 
+
+Enter any remaining parameter values as required.
+
+
+This is the BUILD Project Gallery Synchronization Cron Job. It retrieves project from BUILD via a REST API call and creates them in Drupal.
+These are the parameters that need to be configured:
+
+Allow Project Gallery Sync with BUILD with cron run
+Select the checkbox to enable the Cron Job. If the not checked the Project Gallery Sync will not execute when Cron is executed.
+
+Data Source
+BUILD - Make a REST API call to the configured BUILD system to retrieve the recently Published BUILD Projects.
+File System - Select the Snapshots.json file and the associated Zip Files from the Local File System.
+
+Local Path
+When File System is selected, this is the Path to the Project Gallery Files to be processed. This setting is not relevant
+when the BUILD Data Source is selected.
+
+Zip File Root
+This is the Path of where the Project Gallery Zip Files will be persisted. Each Zip File will have a Directory created in this path
+and the artifacts unzipped in that Directory.
+
+Timestamp of Last Execution in UTC
+This is the Timestamp of the Last Execution in UTC for the Project Gallery Sync Cron Job. It is not updated when the Data Source is File System.
+
+Timestamp of Next Execution in UTC
+This is the Timestamp of the NExt Execution in UTC. The Project Gallery Sync Cron Jon will not execute if it is in the future.
+It is not updated when the Data Source is File System.
+
+
+

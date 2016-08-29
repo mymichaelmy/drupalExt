@@ -1,0 +1,415 @@
+
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<style>
+		body {
+			font-family: 'Lato', sans-serif;
+			font-weight: 200;
+			font-size: 14px;
+			line-height: 1.6;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			background-color: white;
+			color: #6A6A6A;
+			padding: 30px; }
+
+		body > *:first-child {
+			margin-top: 0 !important; }
+		body > *:last-child {
+			margin-bottom: 0 !important; }
+
+		a {
+			color: #4183C4; }
+		a.absent {
+			color: #cc0000; }
+		a.anchor {
+			display: block;
+			padding-left: 30px;
+			margin-left: -30px;
+			cursor: pointer;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0; }
+
+		h1, h2, h3, h4, h5, h6 {
+			margin: 20px 0 10px;
+			padding: 0;
+			font-weight: bold;
+			-webkit-font-smoothing: antialiased;
+			cursor: text;
+			position: relative; }
+
+		h1 {
+			margin-bottom: 40px;
+		}
+
+		h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+			background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+			text-decoration: none; }
+
+		h1 tt, h1 code {
+			font-size: inherit; }
+
+		h2 tt, h2 code {
+			font-size: inherit; }
+
+		h3 tt, h3 code {
+			font-size: inherit; }
+
+		h4 tt, h4 code {
+			font-size: inherit; }
+
+		h5 tt, h5 code {
+			font-size: inherit; }
+
+		h6 tt, h6 code {
+			font-size: inherit; }
+
+		h1 {
+			font-size: 28px;
+			color: black; }
+
+		h2 {
+			font-size: 24px;
+			border-bottom: 1px solid #cccccc;
+			color: black; }
+
+		h3 {
+			font-size: 18px; }
+
+		h4 {
+			font-size: 16px; }
+
+		h5 {
+			font-size: 14px; }
+
+		h6 {
+			color: #777777;
+			font-size: 14px; }
+
+		p, blockquote, ul, ol, dl, li, table, pre {
+			margin: 15px 0;
+			text-align: justify;
+		}
+
+		hr {
+			background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+			border: 0 none;
+			color: #cccccc;
+			height: 4px;
+			padding: 0;
+		}
+
+		body > h2:first-child {
+			margin-top: 0;
+			padding-top: 0; }
+		body > h1:first-child {
+			margin-top: 0;
+			padding-top: 0; }
+		body > h1:first-child + h2 {
+			margin-top: 0;
+			padding-top: 0; }
+		body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+			margin-top: 0;
+			padding-top: 0; }
+
+		a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+			margin-top: 0;
+			padding-top: 0; }
+
+		h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+			margin-top: 0; }
+
+		li p.first {
+			display: inline-block; }
+		li {
+			margin: 0; }
+		ul, ol {
+			padding-left: 30px; }
+
+		ul :first-child, ol :first-child {
+			margin-top: 0; }
+
+		dl {
+			padding: 0; }
+		dl dt {
+			font-size: 14px;
+			font-weight: bold;
+			font-style: italic;
+			padding: 0;
+			margin: 15px 0 5px; }
+		dl dt:first-child {
+			padding: 0; }
+		dl dt > :first-child {
+			margin-top: 0; }
+		dl dt > :last-child {
+			margin-bottom: 0; }
+		dl dd {
+			margin: 0 0 15px;
+			padding: 0 15px; }
+		dl dd > :first-child {
+			margin-top: 0; }
+		dl dd > :last-child {
+			margin-bottom: 0; }
+
+		blockquote {
+			border-left: 4px solid #dddddd;
+			padding: 0 15px;
+			color: #777777; }
+		blockquote > :first-child {
+			margin-top: 0; }
+		blockquote > :last-child {
+			margin-bottom: 0; }
+
+		table {
+			padding: 0;border-collapse: collapse; }
+		table tr {
+			border-top: 1px solid #cccccc;
+			background-color: white;
+			margin: 0;
+			padding: 0; }
+		table tr:nth-child(2n) {
+			background-color: #f8f8f8; }
+		table tr th {
+			font-weight: bold;
+			border: 1px solid #cccccc;
+			margin: 0;
+			padding: 6px 13px; }
+		table tr td {
+			border: 1px solid #cccccc;
+			margin: 0;
+			padding: 6px 13px; }
+		table tr th :first-child, table tr td :first-child {
+			margin-top: 0; }
+		table tr th :last-child, table tr td :last-child {
+			margin-bottom: 0; }
+
+		img {
+			max-width: 100%; }
+
+		span.frame {
+			display: block;
+			overflow: hidden; }
+		span.frame > span {
+			border: 1px solid #dddddd;
+			display: block;
+			float: left;
+			overflow: hidden;
+			margin: 13px 0 0;
+			padding: 7px;
+			width: auto; }
+		span.frame span img {
+			display: block;
+			float: left; }
+		span.frame span span {
+			clear: both;
+			color: #333333;
+			display: block;
+			padding: 5px 0 0; }
+		span.align-center {
+			display: block;
+			overflow: hidden;
+			clear: both; }
+		span.align-center > span {
+			display: block;
+			overflow: hidden;
+			margin: 13px auto 0;
+			text-align: center; }
+		span.align-center span img {
+			margin: 0 auto;
+			text-align: center; }
+		span.align-right {
+			display: block;
+			overflow: hidden;
+			clear: both; }
+		span.align-right > span {
+			display: block;
+			overflow: hidden;
+			margin: 13px 0 0;
+			text-align: right; }
+		span.align-right span img {
+			margin: 0;
+			text-align: right; }
+		span.float-left {
+			display: block;
+			margin-right: 13px;
+			overflow: hidden;
+			float: left; }
+		span.float-left span {
+			margin: 13px 0 0; }
+		span.float-right {
+			display: block;
+			margin-left: 13px;
+			overflow: hidden;
+			float: right; }
+		span.float-right > span {
+			display: block;
+			overflow: hidden;
+			margin: 13px auto 0;
+			text-align: right; }
+
+		code, tt {
+			margin: 0 2px;
+			padding: 0 5px;
+			white-space: nowrap;
+			border: 1px solid #eaeaea;
+			background-color: #f8f8f8;
+			border-radius: 3px; }
+
+		pre code {
+			margin: 0;
+			padding: 0;
+			white-space: pre;
+			border: none;
+			background: transparent; }
+
+		.highlight pre {
+			background-color: #f8f8f8;
+			border: 1px solid #cccccc;
+			font-size: 13px;
+			line-height: 19px;
+			overflow: auto;
+			padding: 6px 10px;
+			border-radius: 3px; }
+
+		pre {
+			background-color: #f8f8f8;
+			border: 1px solid #cccccc;
+			font-size: 13px;
+			line-height: 19px;
+			overflow: auto;
+			padding: 6px 10px;
+			border-radius: 3px; }
+		pre code, pre tt {
+			background-color: transparent;
+			border: none; }
+
+		sup {
+			font-size: 0.83em;
+			vertical-align: super;
+			line-height: 0;
+		}
+		* {
+			-webkit-print-color-adjust: exact;
+		}
+		@media screen and (min-width: 914px) {
+			body {
+				width: 854px;
+				margin:0 auto;
+			}
+		}
+		@media print {
+			table, pre {
+				page-break-inside: avoid;
+			}
+			pre {
+				word-wrap: break-word;
+			}
+		}
+
+		ol li {
+			padding-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+<center><h1>SAP Splash Beta 5 - TERMS OF USE</h1></center>
+<p>
+	<b>Please scroll down and read the following Terms of Use ("Agreement") carefully. The following terms and conditions govern your use of the SAP Splash website (the "Service").
+		The Service is operated by SAP SE with principal offices located at Dietmar Hopp-Allee 16, D-69190 Walldorf, Germany ("SAP").
+		Your use of the Service is subject to your acceptance of all of this Agreement and policies governing the Service, including the SAP Splash Privacy Statement.
+		If you do not agree to all of these terms, please do not use the Service.</b>
+</p>
+<ol>
+	<li><b>Definitions:</b>
+		<ol type="a">
+			<li>"Account Holder" means a person or entity that registers and opens and account to use the Service.
+			<li>"Affiliate" means any entity which directly or indirectly controls, is controlled by, or is under common control with the subject entity. "Control," for purposes of this definition, means direct or indirect ownership or control of more than 50% of the voting interests of the subject entity.
+			<li>"Feedback" means any (i) answers provided by a Guest Participant in response to questions posed by an Account Holder with respect to a UI Design, (ii) comments, suggestions or ideas provided by a Guest Participant to an Account Holder with respect to a UI Design.
+			<li>"Guest Participant" means an individual or entity that has been invited by an Account Holder to view and/or provide feedback on a UI Design created by such Account Holder.
+			<li>"Malicious Code" means viruses, worms, time bombs, Trojan horses and other harmful or malicious code, files, scripts, agents or programs.
+			<li>"SAP," "We," "Us" or "Our" refers to SAP SE, for and on behalf of itself and its subsidiaries and Affiliates.
+			<li>"Third-Party Applications" means online, Web-based applications and offline software products that are provided by third parties, which interoperate with the Service.
+			<li>"UI Design" means a prototype user interface design created by an Account Holder using the Service, including the program code generated by the Service underlying the UI Design.
+			<li>"User Content" means all images, electronic data or information uploaded by You into the Service.
+			<li>"You" or "Your" means you or the company or other legal entity for which you are accepting this Agreement, and Affiliates of that company or entity.
+		</ol>
+	<li><b>Responsibilities of Account Holders.</b>
+		<ol type="a">
+			<li>Your Responsibilities. If you create an account on the Service, you are responsible for maintaining the security of your account and its content, and you are fully responsible for all activities or actions that occur under your account.
+				You shall (i) be solely responsible for the (A) accuracy, quality, integrity and legality of Your use of the User Content and of the means by which You acquired Your User Content, and (B) the legality of your use of Third-Party Applications with the Service or any UI Design,
+				(ii) use commercially reasonable efforts to prevent unauthorized access to or use of the Service, and notify Us promptly of any such unauthorized access or use, and (iii) use the Service only in accordance with applicable laws and government regulations.  You shall not (i) sell, resell, rent or lease the Service, (ii) use the Service to store or transmit infringing, libelous,
+				or otherwise unlawful or tortious material, or to store or transmit material in violation of third-party privacy or confidentiality rights, (iii) use the Service to store or transmit Malicious Code, (iv) interfere with or disrupt the integrity or performance of the Service or third-party data contained therein,
+				or (v) attempt to gain unauthorized access to the Service or their related systems or networks.
+			<li>Indemnity.  You acknowledge that any Feedback that you receive from Guest Participants is solely the responsibility of the Guest Participant and that SAP shall have no liability for any Feedback that You receive from Guest Participants.
+				You agree to indemnify SAP, its Affiliates and their respective officers, directors, employees and agents against any claims or disputes with respect to (i) any Feedback you receive, including any claims against SAP by Guest Participants with respect to any Feedback they have provided to You;
+				(ii) any dispute with a Guest Participant with respect to the Your use of the Guest Participant's personal information; (iii) any claim that your use of User Content or Third-Party Applications violates any contractual or intellectual property rights of any third party; and (iv) Your breach of this Agreement.
+			<li>Content Migration. You are responsible for migrating any User Content, Third-Party Applications or UI Design between the Service and any other location where you choose to store those items.  SAP shall not be liable for the loss of any User Content, Third-Party Applications or UI Design.
+				Any User Content, Third-Party Applications and UI Design stored on the Service may be deleted when you terminate this Agreement.
+			<li>Usage Limitations. Service may be subject to other limitations, such as, for example, limits on disk storage space, number of users, or features.  SAP may change the features of usage limitations of the Service from time to time at its sole discretion.
+		</ol>
+	<li><b>Responsibilities of Guest Participants</b>
+		<ol type="a">
+			<li>Feedback.  You understand that any Feedback that You choose to provide is provided on a non-confidential basis and may be used by the Account Holder for any purpose, including product development and commercial purposes.  You (i) represent that You have all requisite power and authority to provide Your Feedback to an Account Holder through the Service and that the provision of such Feedback does not violate any legal or contractual obligation by which You are bound, including any obligations to Your employer; and (ii) grant the Account Holder a license to use Your Feedback for any purpose, including product development and commercial purposes.
+			<li>Your Responsibilities. You shall (i) be responsible for Your compliance with this Agreement, (ii) be solely responsible for the accuracy, quality, integrity and legality of Your provision of Feedback, (iii) use commercially reasonable efforts to prevent unauthorized access to or use of the Service, and notify Us promptly of any such unauthorized access or use, and (iv) use the Service only in accordance with applicable laws and government regulations.  You shall not (i) use the Service to store or transmit infringing, libelous, or otherwise unlawful or tortious material, or to store or transmit material in violation of third-party privacy or confidentiality rights, (ii) use the Service to store or transmit Malicious Code, (iii) interfere with or disrupt the integrity or performance of the Service or third-party data contained therein, or (iv) attempt to gain unauthorized access to the Service or their related systems or networks.
+			<li>Indemnity.  You agree to indemnify SAP, its Affiliates and their respective officers, directors, employees and agents against any claims or disputes with respect to (i) any Feedback you provide, including any claims against SAP by Account Holders with respect to any Feedback you provide; (ii) any dispute with an Account Holder with respect to the Account Holder's use of your personal information; (iii) any claim that your provision of Feedback violates any contractual or intellectual property right of any third party; and (iv) your breach of this Agreement.
+		</ol>
+	<li><b>Responsibility of Visitors.</b> SAP has not reviewed, and cannot review, all of the material posted to the Service, and cannot therefore be responsible for that materials content, use or effects. By operating the Service, SAP does not represent or imply that it endorses the material there posted, or that it believes such material to be accurate, useful or non-harmful. You are responsible for taking precautions as necessary to protect yourself and your computer systems from viruses, worms, Trojan horses, and other harmful or destructive content. The Service may contain content that is offensive, indecent, or otherwise objectionable, as well as content containing technical inaccuracies, typographical mistakes, and other errors. The Service may also contain material that violates the privacy or publicity rights, or infringes the intellectual property and other proprietary rights, of third parties, or the downloading, copying or use of which is subject to additional terms and conditions, stated or unstated. SAP disclaims any responsibility for any harm resulting from the use by visitors of the Service, or from any downloading by those visitors of content there posted.
+		<p>
+			SAP has not reviewed, and cannot review, all of the material, including computer software, made available through the websites and webpages to which the Service links, and that link to the Service. SAP does not have any control over those non-SAP websites and webpages, and is not responsible for their contents or their use. By linking to a non-SAP website or webpage, SAP does not represent or imply that it endorses such website or webpage. You are responsible for taking precautions as necessary to protect yourself and your computer systems from viruses, worms, Trojan horses, and other harmful or destructive content. SAP disclaims any responsibility for any harm resulting from your use of non-SAP websites and webpages.
+		</p>
+	<li><b>Third-Party Applications</b>
+		<ol type="a">
+			<li>Third-Party Applications.  To use the Service, You must have a supported computer device, Web browser and Internet connection; no purchase of any other third-party products or services is required to use the Service.  Any other acquisition by You of third-party products or services, including but not limited to Third-Party Applications and implementation, customization and other consulting services, and any exchange of data between You and any third-party provider, are solely between You and the applicable third-party provider. We do not warrant or support third-party products or services.  Your use of Third-Party Applications is subject to the license terms or terms of use of those Third-Party Applications. If You cannot comply with the license terms or terms of use of those Third-Party Applications, including, but not limited to all limitations and restrictions therein, You may not use the Third-Party Applications in the Service.
+			<li>Third-Party Applications and Your User Content.  If You install or enable Third-Party Applications for use with Service, You acknowledge that We may allow providers of those Third-Party Applications to access Your User Content as required for the interoperation of such Third-Party Applications with the Service. We shall not be responsible for any disclosure, modification or deletion of Your User Content resulting from any such access by Third- Party Application providers.
+			<li>Service Features that Integrate with Third-Party Services. The Service may contain features designed to interoperate with third-party services (which may include, for example, storage services, integration with mobile devices, collaboration tools or social media services). Such features depend on those third-party providers continuing to make their services, including their application programming interfaces ("APIs") where applicable, available for the Service. If any of those third-party service providers ceases to make its applicable services or APIs available on reasonable terms for the Service, We may cease providing the corresponding features.
+		</ol>
+	<li><b>Changes; Rights of SAP</b>
+		<ol type="a">
+			<li>SAP reserves the right, at its sole discretion, to modify or replace any part of this Agreement. It is your responsibility to check this Agreement periodically for changes. Your continued use of or access to the Service following the posting of any changes to this Agreement constitutes acceptance of those changes. SAP may also, in the future, offer new services and/or features through the Service (including, the release of new tools and resources). Such new features and/or services shall be subject to the terms and conditions of this Agreement.
+			<li>SAP reserves the right to remove any User Content that it deems inappropriate for any reason whatsoever, in SAP’s sole discretion. 
+			<li>SAP reserves the right to terminate or deny access to and use of the Service to any individual or entity for any reason, in SAP’s sole discretion.
+		</ol>
+	<li><b>Copyrights and Copyright Agent.</b> SAP respects the intellectual property of others. If You believe that Your work has been copied in a way that constitutes copyright infringement or any other violation of Your rights, please provide SAP's Copyright Agent the following information:
+		<ul>
+			<li>an electronic or physical signature of the person authorized to act on behalf of the owner of the copyright interest;
+			<li>a description of the copyrighted work that You claim has been infringed or material which otherwise violates Your rights;
+			<li>a description of where the material that You claim is infringing/violating is located;
+			<li>Your address, telephone number, and e-mail address;
+			<li>a statement by You that You have a good faith belief that the disputed use is not authorized by the copyright owner, its agent, or the law;
+			<li>a statement by You, made under penalty of perjury, that the above information in Your Notice is accurate and that You are the copyright owner or authorized to act on the copyright owner's behalf.
+		</ul>
+		<p>
+			Valentina A. Boyet<br/>
+			IP Counsel<br/>
+			SAP<br/>
+			3999 West Chester Pike<br/>
+			Newtown Square, PA 19073 USA<br/>
+			(610) 661-5221<br/>
+			<a href="mailto:copyrights@sap.com">copyrights@sap.com</a><br/>
+		</p>
+		<p>
+			Ulrike Brunner<br/>
+			Head of Trademark Affairs<br/>
+			Global Legal Department<br/>
+			SAP SE<br/>
+			Dietmar-Hopp-Allee 16<br/>
+			69190 Walldorf, Germany<br/>
+			+49/6227/7-42570<br/>
+			<a href="mailto:copyrights@sap.com">copyrights@sap.com</a><br/>
+		</p>
+	<li><b>Intellectual Property:</b> SAP or its licensors retain all ownership and intellectual property rights in the Service. You may not: a) remove or modify any marks or proprietary notices of SAP or third parties contained in the Service, b) provide or make the Service available to any third party, c) decompile, disassemble or reverse engineer (except to the extent permitted by applicable law) the Service, d) create derivative works of or based on the Service, or e) use any name, trademark or logo of SAP or any third party.
+	<li><b>Termination.</b> SAP may terminate your access to all or any part of the Service at any time, with or without cause, with or without notice, effective immediately. If you wish to terminate this Agreement, you may simply discontinue using the Service.  All provisions of this Agreement that by their nature should survive termination shall survive termination, including, without limitation, intellectual property, warranty disclaimers, indemnification and limitations of liability.
+	<li><b>Warranty Disclaimer:</b> The Service is provided "as is". SAP and its suppliers and licensors hereby disclaim all warranties of any kind, express or implied, including, without limitation, the warranties of merchantability, fitness for a particular purpose and non-infringement. Neither SAP nor its suppliers and licensors, makes any warranty that the Service will be error free or that access thereto will be continuous or uninterrupted. You understand that you download from, or otherwise obtain content or services through, the Service at your own discretion and risk..
+	<li><b>Limitation of Liability:</b> Irrespective of the legal reasons, SAP, its licensors, suppliers, and their respective employees, agents and subcontractors shall only be liable for damages occurred under this Agreement if such damage (i) cannot be waived under applicable law or (ii) is caused by intentional misconduct of SAP or (iii) consists of personal injury. In all other cases, SAP, its licensors, suppliers, and their respective employees, agents and subcontractors, shall not be liable for any kind of damage or claims hereunder. You agree that in no event shall the amount of damages sought exceed €50,000.
+	<li><b>General Representation and Warranty.</b> You represent and warrant that (i) your use of the Service will be in strict accordance with the SAP Privacy Statement, with this Agreement and with all applicable laws and regulations (including without limitation any local laws or regulations in your country, state, city, or other governmental area, regarding online conduct and acceptable
+	<li><b>Indemnification.</b> You agree to indemnify and hold harmless SAP, its licensors, suppliers, and their respective employees, agents and subcontractors from and against any and all claims and expenses, including attorneys fees, arising out of your use of the Service, including but not limited to out of your violation this Agreement.
+	<li><b>Law/Venue:</b> This Agreement is governed by and construed in accordance with the laws of the Germany. You and SAP agree to submit to the exclusive jurisdiction of, and venue in, the courts of Karlsruhe in Germany in any dispute arising out of or relating to this Agreement.
+	<li><b>Miscellaneous:</b> This Agreement is the complete Agreement for the Service licensed. This Agreement supersedes all prior or contemporaneous agreements or representations with regards to the subject matter of this Agreement. If any term of this Agreement is found to be invalid or unenforceable, the surviving provisions shall remain effective. SAP´s failure to enforce any right or provisions stipulated in this Agreement will not constitute a waiver of such provision, or any other provision of this Agreement.
+</ol>
+</body>
+</html>

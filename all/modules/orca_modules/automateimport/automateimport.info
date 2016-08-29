@@ -1,0 +1,12 @@
+name = Automate Import
+description = This module packs assets & files in a tar or zip file, uploads them, extracts and imports the node.
+core = 7.x
+
+dependencies[] = node_export
+version = "7.x-0.0"
+core = "7.x"
+package = "Orca Modules"
+project = "automateimport"
+configure = admin/config/automate-import
+configuration = admin/config/automate-import
+

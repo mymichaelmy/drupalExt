@@ -1,0 +1,8 @@
+name = "Statistics Resource Module"
+description = "Orca Projects Statistics - Views, Clones, Likes - resource implementation
+package = "Orca Modules"
+core = 7.x
+
+
+files[] = statsresource.inc
+files[] = statsresource.module

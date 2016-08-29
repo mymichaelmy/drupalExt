@@ -1,0 +1,864 @@
+<?php
+
+/**
+ * @file
+ * Custom functionality for Project Gallery Synchronization with BUILD.
+ */
+
+/**
+ * Implements hook_permission().
+ */
+  
+function projectgallery_sync_permission() {
+  return array(
+    'administer propjectgallery_sync' => array(
+      'title' => t('Administer Project Gallery Sync'),
+      'description' => t('Perform Adminstration Tasks for Project Gallery Sync with BUILD.'),
+    ),
+  );
+}
+
+/**
+* Implement hook menu ().
+*/
+function projectgallery_sync_menu() {
+
+  //Child Menu Item
+  $items['admin/config/cronmonitor/projectgallery_sync'] = array(
+      'title' => 'Project Gallery Synchronization with BUILD',
+      'description' => 'Project Gallery Synchronization with BUILD',
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('projectgallery_sync_admin_form'),
+      'access arguments' => array('administer projectgallery_sync'),
+  );
+  return $items;
+}
+
+/*
+* Administration form for Project Gallery Sync with BUID Cron Monitor
+*/
+
+function projectgallery_sync_admin_form($form, &$form_state) {
+  
+  $timestamp = time();
+  $dbv = $timestamp;
+  $value = NULL;
+  $dateformat = 'Y-m-d H:i:s';
+  
+//  variable_get('projectgallery_sync_last', $dbv );
+    
+    // construct date, if db value is empty, default to now
+    if (!empty($dbv)) {
+      $d = new DateTime('@'.$dbv);
+      $value = $d->format($dateformat);
+    } else {
+      $d = new DateTime();
+      $value = $d->format($dateformat);
+    }
+  
+//  variable_set('projectgallery_sync_last', $value );
+	
+  $form['#encrypted_fields'] = TRUE;
+  $form['projectgallery_sync_enable'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Allow Project Gallery Sync with BUILD with cron run'),
+    '#default_value' => variable_get('projectgallery_sync_enable', 0),
+  );
+
+  $form['projectgallery_sync_datasource'] = array(
+  '#type' => 'radios',
+  '#title' => t('Data Source'),
+  '#default_value' => variable_get('projectgallery_sync_datasource', 1),
+  '#options' => array(t('BUILD'), t('File System')),
+    );
+  
+  $form['projectgallery_sync_local'] = array(
+  '#title' => t('Local Path'),
+  '#type' => 'textfield',
+  '#description' => t('path/to/files'),
+  '#default_value' =>  variable_get('projectgallery_sync_local', 
+    "sites/default/files/projectgallery"),
+  );
+
+  $form['projectgallery_sync_ziproot'] = array(
+  '#title' => t('Zip File Root'),
+  '#type' => 'textfield',
+  '#description' => t('path/to/zip'),
+  '#default_value' =>  variable_get('projectgallery_sync_ziproot', 
+    "sites/default/files/zip"),
+  );
+
+  $form['projectgallery_sync_last'] = array(
+  '#title' => t('Timestamp of Last Execution in UTC'),
+  '#type' => 'date_text',
+//  '#description' => t('Timestamp of Last Execution'),
+  '#default_value' =>  variable_get('projectgallery_sync_last', ''),
+  '#date_format' => $dateformat,
+  );
+  
+
+  
+   $form['projectgallery_sync_next'] = array(
+  '#title' => t('Timestamp of Next Execution in UTC'),
+  '#type' => 'date_text',
+//  '#description' => t('Timestamp of Next Execution'),
+  '#default_value' =>  variable_get('projectgallery_sync_next', '' ),
+  '#date_format' => $dateformat,
+  );
+
+  return system_settings_form($form);
+}
+
+/**
+* Implements hook_cron()
+*/
+function projectgallery_sync_cron() {
+    
+    //Get current timetsamp
+    date_default_timezone_set('UTC');
+    $dateformat = 'Y-m-d H:i:s';
+    $d = new DateTime();
+    $currentTimestamp = $d->format($dateformat); 
+    $futureTimestamp = strtotime($currentTimestamp)+(60*15); 
+    $nextdateTimestamp = date("Y-m-d H:i:s", $futureTimestamp);
+    $source = '';
+    
+    watchdog('ProjectGallery_Sync', 'Processing CRON Job: Enabled: %1, Last TimeStamp: %2, Next Timestamp: %3', 
+	array('%1' => variable_get('projectgallery_sync_enable'),
+	'%2' => variable_get('projectgallery_sync_last'),
+	'%3' => variable_get('projectgallery_sync_next')), WATCHDOG_INFO);
+  
+    if(variable_get('projectgallery_sync_enable',1)) { 
+        
+        // Process data from BUILD integration via REST call or from Local File System
+        $projectgallery_sync_datasource = variable_get('projectgallery_sync_datasource');
+        switch($projectgallery_sync_datasource) {
+            		
+            case '0':
+                $source = t('BUILD');
+                if(variable_get('projectgallery_sync_next') < $currentTimestamp) {   
+                    $lastTimestamp = variable_get('projectgallery_sync_last');
+  
+                    if(isset($lastTimestamp) && strlen($lastTimestamp) ==  19) {
+                        $startdate = substr($lastTimestamp,0,10).'T'.substr($lastTimestamp,11,8).'Z'; 
+                    } else {
+                        //What to do? If default to current date then only get projects Published after that date. IF get all Projects then may get way too many.  
+                        $startdate = substr($currentTimestamp,0,10).'T'.'00:00:00Z';
+                    } 
+                          $api = callapi($startdate);
+                }
+              
+                break;
+    		
+            case '1':
+                $source = t('Local File System');
+                $api = loadfiles(); 
+                break;
+        }
+        
+        watchdog('ProjectGallery_Sync', 'Poject Gallery Source is %1', 
+	array('%1' => $source), WATCHDOG_INFO);
+    		
+        //Process the API JSON Files 	
+        foreach ($api as $key => $apiarray) {
+    	
+            //For each BUILD Project Unzip the Zip Files in the specified directory
+            processFiles($apiarray);
+            //Process the data
+            processData($apiarray['dir'],$apiarray['zipdir'], $apiarray['id']);
+      
+        } 
+ 
+        if ($projectgallery_sync_datasource == '0') {
+        //Set the Variables for the next execution of the Cron Job
+        variable_set('projectgallery_sync_last', $currentTimestamp );
+        variable_set('projectgallery_sync_next', $nextdateTimestamp ); 
+        }
+    }
+}
+
+function callapi($startdate) {
+    	
+    $api = array();
+    
+    $url = variable_get('splashforum_buildhost');
+    $url .= ':'.variable_get('splashforum_buildport');
+    $url .= '/api-public/projects/v1/snapshots';
+
+    $data = array( 'startDate' => $startdate,);
+    $full_url = url($url, array('query' => $data));
+    
+    $timeout = variable_get('splashforum_buildtimeout');
+    $options = array(
+      'method' => 'GET',
+      'timeout' => $timeout,
+    );
+   
+   $result = drupal_http_request($full_url, $options );
+    if($result->code != '200') {
+        watchdog('ProjectGallery_Sync', 'DRUPAL_HTTP_REQUEST failed, error %1', 
+            array( '%1' => $result->error), WATCHDOG_ERROR);
+        return $api;
+    }
+    
+    $body = $result->data;  
+    $content_type = $result->headers['content-type'];
+  
+    $matches = array();
+    preg_match('/boundary=\"([^\=].*)\"$/', $content_type, $matches);
+   
+    if( count($matches) == 0 ) {	
+	  watchdog('ProjectGallery_Sync', 'No Boundary defined in Content-Type from Response Header', null, WATCHDOG_ERROR);
+    return;
+  }
+   
+  $boundary = $matches[1]; 
+
+  $parts = explode($boundary, $body); 
+  array_shift($parts); # delete up to the first boundary
+  array_pop($parts); # delete after the last boundary
+
+  foreach($parts as $part) {
+    list($header, $binary) = explode("\n\n", $part, 2);
+    
+    $matchesName = array();
+    $matchesFilename = array();
+    $matchesType = array(); 
+    preg_match('/name=\"([^\"]*)\"/', $header, $matchesName); 
+    preg_match('/filename=\"([^\"]*?)\"/', $header, $matchesFilename); 
+    preg_match('/Content-Type:\s+([^\s]*?)[\s]/', $header, $matchesType); 
+    
+    //Create the base ZIP directiry if it does not already exist.
+    $dir = mkdir_zip();
+
+//Get the _id value for the Project. The application/jsaon Snapshots file always comes before the applciation/zip files.
+    if ($matchesType[1] == 'application/json') {
+       
+//If no JSON Binary data do not process the file.
+// When there is no BUILD Projects selected they send a single Snapshot.json file with no json.
+	if (strlen($binary) <= 2) {           
+            watchdog('ProjectGallery_Sync', 'No BUILD data to process for Content-Type %1 File Name %2', 
+            array( '%1' => $matchesType[1], '%2' => $matchesFilename[1]), WATCHDOG_INFO);
+	} else {
+            $json = json_decode($binary, true);   
+            $api = process_snapshots($json, $dir, $matchesFilename[1]);
+	}
+
+    }   
+    //Process the application/zip files. The $api array is already populated.
+    if ($matchesType[1] == 'application/zip') {
+	$idx = array_search($matchesFilename[1], array_column($api,'zipfile'));
+	if (isset($idx)) {
+             file_put_contents($api[$idx]['dir'].'//'.$matchesFilename[1], $binary);
+	 }
+    }           
+
+  }   
+          
+return $api;
+	
+}
+
+// This function unzip the file into the corresponding folder
+function ExtractFile($filepath, $subPath, $path) {
+ $zip = new ZipArchive;
+
+ if($subPath != "none") {
+	 $originalPath = $path . '/' . $subPath;
+ }
+ else{
+	 $originalPath = $path;
+ }
+ $res = $zip->open($filepath);
+	if ($res === TRUE) {
+		$folderName = basename($filepath, ".zip");
+		$newPath = $originalPath . '/' . $folderName;
+		if (!is_dir($newPath)) {
+			mkdir($newPath , 0770, true);
+		}
+		
+		$zip->extractTo($newPath);
+		$zip->close();
+		echo 'extraction done successfully' . "\n";
+	} 
+	else {
+		echo 'extraction failed' . "\n";
+	}
+}
+
+// parse the directory and process the zip file in the order
+function pickZipPath($zipPath) {
+	$directory = $zipPath;
+
+	$it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory));
+
+	while($it->valid()) {
+
+		if (!$it->isDot()) {
+
+			$info = new SplFileInfo($it->key());
+			if($info->getExtension() == "zip")
+			{
+				ExtractFile($it->key(), $it->getSubPath(), $zipPath);
+				//unlink($it->key());
+			}
+		}
+		$it->next();
+	}
+}
+
+
+function processFiles($apiarray) {
+	
+//Process the JSON File Array Values
+  foreach ($apiarray as $key => $value) {
+    		
+   switch($key) {
+    			
+   case 'dir':
+   $dir = $value;
+   break;
+    		
+   case 'jsonfile':
+   $jsonfile = $value;
+   break;
+    		
+   case 'id':
+   $id = $value;
+   break;
+    		
+   }	
+    		   		
+  }
+    	
+  //Open the Snapshots.json file and read the data into an array.
+  $file = $dir.'/'.$jsonfile;
+  $jsonstring = file_get_contents($file);
+  $json = json_decode($jsonstring, true);       
+  $path = variable_get('projectgallery_sync_ziproot').'/'.$id;
+  $zipfile = $dir.'/'.$json['filename'];  
+  //Extract all of the Zip Files in the directory.    
+  ExtractFile($zipfile, "none", $path);
+  pickZipPath($path);
+  
+}
+
+/**
+* Creates a Drupal node object (Project)
+*/
+
+function createNode($dir, $subdir, $id, $json_snapshots, $json_projects) {
+  //To check whether a  node is being created or an exsisting node is being loaded,
+  //$isNewNode is true for new node and false if exsisting node being loaded
+  $isNewNode=false;
+  //Set the Node data for Insert or Update
+  $node = setNode($json_snapshots,$isNewNode);
+  
+  //Process the Snapshots.json data
+  foreach ($json_snapshots as $key => $value) {
+
+    switch($key){
+      case "_id" :
+        $node->field_from_id['und'][0]['value'] = $value;
+        break;
+      case "filename" :
+        $project_filename = substr($value, 0, -4);
+        break;
+      case "project" :
+        $projid = $value;
+        $node->field_project_id['und'][0]['value'] = $projid;
+        break;
+      case "version" :
+        $node->field_from_version_id['und'][0]['value'] = $value;
+        $projversion = $value;  
+        break;
+      case "deepLink" :
+        $node->field_from_link_project_home['und'][0]['url'] = $value;
+        $node->field_from_link_project_home['und'][0]['title'] = 'Link to Project Home';
+        break;
+      case "cloneDeepLink" :
+        $node->field_link_to_clone['und'][0]['url'] = $value;
+        $node->field_link_to_clone['und'][0]['title'] = 'Link to Clone';
+        break;
+      case "clone" :
+        $node->field_clone_id['und'][0]['value'] = $value;
+        break;
+      case "created_at" :
+        $node->field__from_published_date['und'][0]['value'] = date("Y-m-d H:i:s", strtotime($value));
+        $node->field__from_published_date['und'][0]['timezone'] = 'UTC';
+        $node->field__from_published_date['und'][0]['timezone_db'] = 'UTC';
+        break;
+      default : break;
+        }
+    }
+    
+    //Only map the Demo Link if the Directory Exists.
+    $demoUrl = '/splash/'.variable_get('projectgallery_sync_ziproot').'/'.$id.'/'.$subdir.'/'.'Prototype-Clickable';
+    $demoUrl .= '/'.'index.html';
+    $demoDir = DRUPAL_ROOT.'/'.variable_get('projectgallery_sync_ziproot').'/'.$id.'/'.$subdir.'/'.'Prototype-Clickable';
+    $demoDir .= '/'.'index.html';
+    
+    if (file_exists($demoDir)) {
+      
+      $node->field_from_link_project_demo['und'][0]['url'] = $demoUrl;
+      $node->field_from_link_project_demo['und'][0]['title'] = 'Link to Project Demo';
+      
+    }
+ 
+    //Process the Projects.json data
+    foreach ($json_projects as $key => $value) {
+      switch($key){
+          case "name" :
+                    $node->title = $value;
+                    break;
+          case "description" :
+                    $node->field_from_summary['und'][0]['value'] = $value;
+                    $node->field_from_summary['und'][0]['summary'] = 'Summary';
+                    break;
+         case "tags" :
+                    foreach ($value as $key => $val) {
+                        $node->field_from_tags['und'][$key]['value'] = $val;
+                    }
+                    break;
+                    
+         case "publisher_name" :
+           $node->field_publisher_name['und'][0]['value'] = $value;
+           break;
+         
+         case "thumbnail" :
+            $image = base64_decode($value);
+            if (strlen($image) > 0) {
+              $file = new StdClass();
+              $file->uid = 1;
+              $file->display = 1;
+              $file->description = "";
+
+              $dest = file_default_scheme() . '://'."thumbnail.png";
+              if ($file = file_save_data($image, $dest)) {
+                file_save($file);
+              // replace the base64 image string in the payload with the file id reference of the newly created image
+              $node->field_from_thumbnail_image['und'][0]['fid'] = $file->fid;
+              }
+            }
+            break;
+      }
+    }
+
+    //Read Assets JSON file
+
+    $assets_json_file = $dir;
+    $assets_json_file .= "/";
+    $assets_json_file .= $subdir;
+    $assets_json_file .= "/Assets.json";
+    
+    $json_assets = array();
+
+    if (is_file($assets_json_file)) {
+        $assets_data = file_get_contents($assets_json_file);
+        $json_assets = json_decode($assets_data, true);
+    } else {
+        watchdog('ProjectGallery_Sync', 'No Assets.json File exists for %1', 
+            array( '%1' => $assets_json_file), WATCHDOG_INFO);
+    }
+
+    $index = 0;
+    foreach ($json_assets as $key => $value) {
+
+      if (isset($value['metadata'])) {
+
+        if ($value['metadata']['deleted'] != true and $value['metadata']['isThumb'] != true) {
+
+        foreach ($value as $key => $val) {
+        switch($key){
+              case "filename" :
+
+                $destfile = saveAssetFile($val, $dir, $subdir);
+                $path = variable_get('file_public_path', conf_path() . '/files');
+                list($part1, $part2) = explode("//", $destfile->uri, 2);
+                $url = '/splash/'.$path.'/'.$part2;
+                $node->field_assets_link['und'][$index]['url'] = $url;
+                $node->field_assets_link['und'][$index]['title'] = $val;
+                $index++;
+                break;
+              }
+          }
+        }
+      }
+    }
+    
+    // Map the PageMap Image to the Node, upload the File, if the File exists.
+    $pagemap = $dir . '/' . $subdir . "/PageMap.png";
+    if (file_exists($pagemap)) {
+      $dest = file_default_scheme() . '://'. 'PageMap.png';
+
+      $file = new StdClass();
+      $file->display = 1;
+      $file->description = "Page Map Image for Project";
+
+      $dest = file_default_scheme() . '://'."pagemap.png";
+      if ($file = file_save_data(file_get_contents($pagemap), $dest)) {
+       file_save($file);
+       $node->field_pagemap['und'][0]['fid'] = $file->fid;
+      }
+    }
+
+   try {
+          $rank = -1;
+          //Run setNodeIsLatest only when  a new node is being created
+          if($isNewNode===true)
+          {
+            setNodeIsLatest($projversion, $projid, $rank);
+            if($rank !==-1)
+            {
+              $node->field_ranking['und'][0]['value']=$rank;
+            }
+          }
+       }
+    catch (Exception $ex) {
+      watchdog('ProjectGallery_Sync - Update latest node', $ex, array(), WATCHDOG_ERROR);
+    }
+    
+    try {
+        node_save($node);
+      }
+      catch (Exception $ex) {
+        watchdog('ProjectGallery_Sync', $ex, array(), WATCHDOG_ERROR);
+      }
+}
+
+/**
+* Update the nodes with 'is latest' flag
+*/
+
+function setNodeIsLatest($projversion, $projid, &$rank) {
+
+  $query = new EntityFieldQuery();
+  $entities = $query->entityCondition('entity_type', 'node')
+  ->propertyCondition('type', 'mapped')
+  ->fieldCondition('field_project_id', 'value', $projid, '=')
+  ->fieldCondition('field_from_version_id', 'value', $projversion, '!=')
+  ->fieldCondition('field_is_latest', 'value', 1, '=')
+  ->range(0,1)
+  ->execute();
+  
+  // Ensure we've got some node results.
+  if (!isset($entities['node'])) {
+    //drush_log("No nodes to process.", "ok");
+    return;
+  } 
+    
+  // Iterate over the result, loading each node at a time.
+  foreach($entities['node'] as $nid => $stub_node) {
+    // Load the full node.
+    $node = node_load($nid);
+    $node->field_is_latest['und'][0]['value'] = '0';
+    $rank=$node->field_ranking['und'][0]['value'];
+    node_save($node);
+  }
+  
+  return;
+}
+
+/**
+* Saves files in Assets folder and link to Drupal node object (Project)
+*/
+
+function saveAssetFile($filename, $dir, $subdir) {
+    /**
+     * Requires $file_path to be defined with absolute path to file.
+     */
+
+    $file_path  = $dir;
+    $file_path .= "/";
+    $file_path .= $subdir;
+    $file_path .= "/Assets/";
+    $file_path .= $filename;
+
+    $dest = file_default_scheme() . '://'.$filename;
+    if ($destfile = file_save_data(file_get_contents($file_path), $dest)) {
+        file_save($destfile);
+    }
+
+    return $destfile;
+}
+
+function setNode($json_snapshots, &$isNewNode) {
+    
+    $entities = nodeLoad($json_snapshots);
+  
+  if (!empty($entities['node'])) {
+    
+    $arr1 = array_keys($entities['node']);
+    $arr2 = array_shift($arr1);
+    $node = node_load($arr2);
+    $isNewNode=false;
+  
+  } else {
+    
+    // Create node object.
+    $node = new StdClass();
+    $node->type = 'mapped';
+    $node->language = LANGUAGE_NONE;
+    $node->field_published['und'][0]['value'] = '1';
+    $node->field_is_latest['und'][0]['value'] = '1';
+    $isNewNode=true;
+  }
+  
+  node_object_prepare($node);
+      
+  return $node;
+}
+
+function projectsJson($dir, $subdir) {
+  
+  $project_json_file = $dir;  //UUID folder
+  $project_json_file .= "/";
+  $project_json_file .= $subdir;
+  $project_json_file .= "/Project.json";
+  $json_projects = array();
+
+  if (is_file($project_json_file)) {
+      $project_data = file_get_contents($project_json_file);
+      $json_projects = json_decode($project_data, true);
+    } else {
+        watchdog('ProjectGallery_Sync', 'No Project.json File exists for %1', 
+            array( '%1' => $project_json_file), WATCHDOG_INFO);
+    }
+  
+  return $json_projects;
+}
+
+function snapshotsJson($dir) {
+  
+  $folder_name = $dir; //UUID folder
+  $folder_name .= "/Snapshots.json";
+  
+  $snapshot_data = file_get_contents($folder_name);
+  $json_snapshots = json_decode($snapshot_data, true);
+  
+  return $json_snapshots;
+}
+
+function mkdir_zip() {
+    
+    $dir = DRUPAL_ROOT.'/'.variable_get('projectgallery_sync_ziproot'); 
+    if (!file_exists($dir)) {
+      mkdir($dir, 0770);
+    }
+    
+    return $dir;
+}
+
+function mkdir_project($dir, $project_id) {
+    $project_dir = '';
+    $project_dir = $dir.'/'.$project_id;
+    if (!is_dir($project_dir)) {                                
+        mkdir($project_dir, 0770);
+    }
+    return $project_dir;
+}
+
+function save_project_file($project_dir, $filename, $value) {
+    if (isset($project_dir)) {
+        $tmp_name = $project_dir.'/'.$filename; 
+        file_put_contents($tmp_name, json_encode($value));
+    }
+}
+
+function process_snapshots($json, $dir, $filename) {
+    
+    $api = array();
+            
+    foreach($json as $key=>$value) {
+              
+        foreach($value as $key1=>$value1) {
+							         
+            if ($key1=='_id') {                       
+			
+                $project_id = $value1;
+			
+                if(isset($project_id)) {
+                            
+                    $project_dir = mkdir_project($dir, $project_id);                    
+                    save_project_file($project_dir, $filename, $value );
+
+                }
+            }
+					
+            if ($key1 == 'filename') {
+                $zipfile = $value1;
+            }
+	}
+				
+        //Create array of processed json data
+        list($zipdir, $ext) = explode(".", $zipfile, 2);
+        array_push($api, array(
+            "id" => $project_id,
+            "dir" => $project_dir,
+            "jsonfile" => $filename,
+            "zipfile" => $zipfile,
+            "zipdir" => $zipdir));
+    }
+    
+    return $api;
+}
+
+function loadfiles() {
+    
+    $emptyarray = array();
+    
+    //Create the base ZIP directiry if it does not already exist.
+    $dir = mkdir_zip();
+    //Read the Snapshots.json file
+    $location = DRUPAL_ROOT.'/'.variable_get('projectgallery_sync_local');
+    $file = $location.'/Snapshots.json';
+    
+    if (is_file($file)) {
+        
+    
+        $jsondata = file_get_contents($file);
+        if (!$jsondata) {
+            watchdog('ProjectGallery_Sync', 'Error parsing JSON File %1', 
+            array( '%1' => $file), WATCHDOG_ERROR);
+            return;
+        }
+    } else {
+        watchdog('ProjectGallery_Sync', 'Snapshots.json File does not exist %1', 
+        array( '%1' => $file), WATCHDOG_ERROR);
+        return $emptyarray; 
+    }
+    
+    $json = json_decode($jsondata);
+    if (!$json) {
+        watchdog('ProjectGallery_Sync', 'Error decoding JSON data %1', 
+        array( '%1' => $jsondata), WATCHDOG_ERROR); 
+        return $emptyarray;
+    }
+    
+    $api = process_snapshots($json, $dir, 'Snapshots.json');
+    
+    //Copy the Zip Files to the required destinations.
+    foreach ($api as $data) {
+	if (isset($data['zipfile'])) {
+            $src = $location.'/'.$data['zipfile'];
+            $dst = $data['dir'].'/'.$data['zipfile'];
+            if (!copy($src, $dst)) {
+                watchdog('ProjectGallery_Sync', 'Error Copying Zip File %1 File Name %2', 
+                array( '%1' => $src, '%2' => $dst), WATCHDOG_INFO);
+            }
+            
+	 }
+    }
+    
+    return $api;  
+}
+
+function processData($dir, $subdir, $id) {
+    
+  //Read the Snapshots.json file data
+  $json_snapshots = snapshotsJson($dir);
+  
+  //Read the Projects.json file data
+  $json_projects = projectsJson($dir, $subdir);
+
+  
+  //Process the Snapshots.json data
+  foreach ($json_projects as $key => $value) {
+
+    switch($key){
+      case "isPublic":
+        $isPublic = $value;
+        break;
+    }
+  }
+  
+  if ($isPublic == 1) {
+      createNode($dir, $subdir, $id, $json_snapshots, $json_projects); 
+  }
+  
+  if ($isPublic == 0 ) {
+      deleteNode($dir, $subdir, $id, $json_snapshots, $json_projects);
+  }
+    
+}
+
+function nodeLoad($json_snapshots) {
+    
+    foreach ($json_snapshots as $key => $value) {
+
+        switch($key){
+            case "_id" :
+              $id = $value;
+              break;
+
+            case "version" :
+              $version = $value;
+              break;
+            
+            case "project" :
+              $projid = $value;
+              break;
+                    
+            default : break;
+        }
+    }
+
+  $query = new EntityFieldQuery();
+  $entities = $query->entityCondition('entity_type', 'node')
+  ->propertyCondition('type', 'mapped')
+  ->fieldCondition('field_project_id', 'value', $projid, '=')
+  ->fieldCondition('field_from_version_id', 'value', $version, '=')
+  ->range(0,1)
+  ->execute();
+  
+  return $entities;
+}
+
+function deleteNode($dir, $subdir, $id, $json_snapshots, $json_project) {
+    
+    // Delete the Project Subdirectory
+    // Delete the Node regardless of whether the Directory is deleted successfully.
+    deleteDir($dir);
+    rmdir($dir);
+    
+    // Load the Node to be deleted
+    $entities = nodeLoad($json_snapshots);
+    
+    if (!empty($entities['node'])) {
+        $arr1 = array_keys($entities['node']);
+        $arr2 = array_shift($arr1);
+      
+    // Delete the Node
+        try {
+            node_delete($arr2);
+        }
+            catch (Exception $ex) {
+            watchdog('ProjectGallery_Sync', $ex, array(), WATCHDOG_ERROR);
+        }
+    }
+}
+
+function deleteDir($path) {
+    
+    try{
+        $iterator = new DirectoryIterator($path);
+        foreach ( $iterator as $fileinfo ) {
+          if($fileinfo->isDot()) {
+              continue;
+          }
+          if($fileinfo->isDir()){
+            if(deleteDir($fileinfo->getPathname())) {
+              rmdir($fileinfo->getPathname());
+            }
+          }
+          if($fileinfo->isFile()){
+            unlink($fileinfo->getPathname());
+          }
+        }
+      } catch ( Exception $ex ){
+         watchdog('ProjectGallery_Sync', $ex, array(), WATCHDOG_ERROR);
+         return false;
+      }
+
+      return true;
+    }

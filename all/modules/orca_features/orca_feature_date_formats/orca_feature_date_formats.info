@@ -1,0 +1,10 @@
+name = orca_feature_date_formats
+core = 7.x
+package = Features
+dependencies[] = ctools
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = date_format_build
+features[variable][] = date_format_global
+project path = sites/all/modules/orca_features

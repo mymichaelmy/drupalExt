@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the orca_features_card_views feature.
+ */
+
+include_once 'orca_features_cards_views.features.inc';

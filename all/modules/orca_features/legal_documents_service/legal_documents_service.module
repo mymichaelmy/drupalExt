@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the legal_documents_service feature.
+ */
+
+include_once 'legal_documents_service.features.inc';

@@ -1,0 +1,88 @@
+<?php
+
+/**
+ * Implements hook_hook_info().
+ */
+function services_search_hook_info() {
+  $hooks = array(
+    'services_search_results_alter',
+  );
+
+  return array_fill_keys($hooks, array('group' => 'services_search'));
+}
+
+/**
+ * Implements hook_services_resources().
+ */
+function services_search_services_resources() {
+  $search_resource = array(
+    'search_node' => array(
+      'operations' => array(
+        'retrieve' => array(
+          'file' => array('type' => 'inc', 'module' => 'services_search', 'name' => 'services_search.resource'),
+          'callback' => '_services_search_resource_node',
+          'args' => array(
+            array(
+              'name' => 'op',
+              'optional' => FALSE,
+              'source' => array('path' => 0),
+              'type' => 'string',
+              'description' => 'The operation',
+            ),
+            array(
+              'name' => 'keys',
+              'optional' => FALSE,
+              'source' => array('param' => 'keys'),
+              'type' => 'string',
+              'description' => 'The search key(s)',
+            ),
+            array(
+              'name' => 'simple',
+              'optional' => TRUE,
+              'source' => array('param' => 'simple'),
+              'type' => 'boolean',
+              'description' => 'Return a simple result or full nodes.',
+            ),
+            array(
+              'name' => 'fields',
+              'optional' => TRUE,
+              'source' => array('param' => 'fields'),
+              'type' => 'array',
+              'description' => 'Limit nodes to these fields when not using simple results.',
+            ),
+          ),
+          'access arguments' => array('search content'),
+          'access arguments append' => FALSE,
+        ),
+      ),
+    ),
+    'search_user' => array(
+      'operations' => array(
+        'retrieve' => array(
+          'file' => array('type' => 'inc', 'module' => 'services_search', 'name' => 'services_search.resource'),
+          'callback' => '_services_search_resource_user',
+          'args' => array(
+            array(
+              'name' => 'op',
+              'optional' => FALSE,
+              'source' => array('path' => 0),
+              'type' => 'string',
+              'description' => 'The operation',
+            ),
+            array(
+              'name' => 'keys',
+              'optional' => FALSE,
+              'source' => array('param' => 'keys'),
+              'type' => 'string',
+              'description' => 'The search key(s)',
+            ),
+          ),
+          'access arguments' => array('search content'),
+          'access arguments append' => FALSE,
+        ),
+      ),
+    ),
+  );
+
+  return $search_resource;
+}

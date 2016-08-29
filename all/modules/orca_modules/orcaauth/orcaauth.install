@@ -1,0 +1,7 @@
+<?php
+/**
+ * Implements hook_uninstall()
+ */
+function orcaauth_uninstall() {
+  variable_del('orca_jwt_secret');
+}

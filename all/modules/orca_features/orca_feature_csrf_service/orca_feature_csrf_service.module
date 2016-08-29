@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Orca_feature_csrf_service feature.
+ */
+
+include_once 'orca_feature_csrf_service.features.inc';

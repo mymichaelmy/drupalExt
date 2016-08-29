@@ -1,0 +1,11 @@
+name = "Cron Monitor"
+description = "Monitor and import html on cron run"
+core = "7.x"
+version = "7.x.1.0"
+package = "Orca Modules"
+dependencies[] = import_html
+dependencies[] = globalredirect
+dependencies[] = pathauto
+dependencies[] = encryptfapi
+configure = admin/config/cronmonitor
+configuration = admin/config/cronmonitor

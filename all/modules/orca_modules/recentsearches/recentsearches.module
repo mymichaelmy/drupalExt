@@ -1,0 +1,152 @@
+<?php
+/**
+ * @file
+ * Custom functionality for persisting recently searched terms by user.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function recentsearches_help($path, $arg) {
+    $ret_val = '';
+    switch($path) {
+        case 'admin/help#recentsearches':{
+            $ret_val .= '<h3>' . t('About') . '</h3>';
+            $ret_val .= '<p>' . t('The Recent Searches module enables persistence of a logged-in user\'s latest search terms.') . '</p>';
+            break;
+        }
+    }
+    return $ret_val;
+}
+
+/** Gets most recent search terms for the current user.
+ * 
+ *  @return object
+ *    The result set.
+ */
+function recentsearches_get_view() {
+  global $user;
+  $uid = $user->uid;
+  $limit = 2;
+  $results = array();
+  if (isset($uid) && $uid > 0){
+      $results = db_query('SELECT term FROM {searched} '
+                    . 'WHERE uid = :uid '
+                    . 'ORDER BY last_used desc '
+                    . 'limit :limit', 
+                    array(':uid' => $uid, ':limit' => $limit))
+           ->fetchAll();   
+  } else {
+      watchdog("recentsearches", t('No search terms are persisted for anonymous users.'), NULL, WATCHDOG_INFO);
+  }
+  return $results;
+}
+
+/** Writes a recent search term to the database if new for this user,
+ *  else updates usage metrics if term already exists for this user.
+ *
+ * @param object $term
+ *    The search term
+  * @return void
+ */
+function recentsearches_write_view($term) {
+    global $user;
+    $uid = $user->uid;
+    $no_op = array();
+    if (!isset($uid) || 0 === $uid){
+        watchdog("recentsearches", t('No search terms will be persisted for anonymous users.'), NULL, WATCHDOG_INFO);
+        return drupal_json_output($no_op);
+    }     
+    $exists = db_query("SELECT count(*) FROM {searched} "
+                            . "WHERE uid = :uid and "
+                            . "term = :term", array(':uid' => $uid, ':term' => $term))
+                    ->fetchField();   
+    if (!$exists){
+        _recentsearches_write_new($term, $uid);
+        //watchdog("recentsearches", t('New search term created for user @user.'), array('@user' => $uid), WATCHDOG_INFO);
+    }    
+    else {
+        _recentsearches_update($term, $uid);
+        //watchdog("recentsearches", t('Search term found for user @user, updated usage metrics.'), array('@user' => $uid), WATCHDOG_INFO);
+   }
+exit;
+}
+
+/**
+ * Helper functions
+ */
+function _recentsearches_write_new($term, $uid) {
+       
+    try{
+        // Run an insert 
+        db_query('INSERT INTO {searched} '
+                 . 'values(nextval(\'searched_tid_seq\'::regclass), :uid, :term, :current_timestamp, :current_timestamp, 1)', 
+                 array(':uid' => $uid,
+                       ':term' => $term,
+                       ':current_timestamp' => REQUEST_TIME
+                ));
+    }catch (Exception $ex){
+        drupal_json_output(array(
+          'status' => t('error'),
+          'data' => $ex,
+        ));
+   } 
+   drupal_json_output(array(
+      'status' => t('success'),
+      'data' => t('Recent search term persisted.'),
+   )); 
+}
+
+function _recentsearches_update($term, $uid) {
+    try{
+        // Run an update
+        db_query('UPDATE {searched} SET last_used = :current_timestamp, use_count = (use_count + 1) '
+                . 'WHERE uid = :uid and term = :term' , array(':uid' => $uid, ':term' => $term, 'current_timestamp' => REQUEST_TIME));
+    } catch (Exception $ex){
+        drupal_json_output(array(
+          'status' => t('error'),
+          'data' => $ex,
+        ));
+   } 
+   drupal_json_output(array(
+      'status' => t('success'),
+      'data' => t('Recent search term updated.'),
+   )); 
+}
+
+
+/**
+ * Implements hook_services_resources().
+ */
+function recentsearches_services_resources() {
+  return array(
+    'recent' => array(
+      'create' => array(
+        'help' => 'Persists a recently searched term.',
+        'file' => array('file' => 'inc', 'module' => 'recentsearches'),
+        'callback' => '_recentsearches_create',
+        'access callback' => '_recentsearches_access',
+        'access arguments' => array('create'),
+        'access arguments append' => TRUE,
+        'args' => array(
+          array(
+            'name' => 'term',
+            'type' => 'varchar',
+            'description' => 'The searched term',
+            'source' => 'data',
+            'optional' => FALSE,
+            ),
+        ),       
+      ),
+      'index' => array(
+        'help' => 'Retrieves a list of recently searched terms for the current user.',
+        'file' => array('file' => 'inc', 'module' => 'recentsearches'),
+        'callback' => '_recentsearches_index', 
+        'access callback' => '_recentsearches_access',
+        'access arguments' => array('index'),
+        'access arguments append' => FALSE,
+      ),
+    ),
+  );
+}
+?>

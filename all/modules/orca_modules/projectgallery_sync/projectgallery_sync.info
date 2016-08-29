@@ -1,0 +1,5 @@
+name = "Project Gallery Sync"
+description = "Sync Project Gallery from BUILD"
+package = "Orca Modules"
+core = "7.x"
+version = "7.x-1.0"

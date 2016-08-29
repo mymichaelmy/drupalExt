@@ -1,0 +1,21 @@
+<?php
+
+function customfieldsolr_apachesolr_index_document_build(&$document, $entity, $entity_type)
+{
+	 if($entity_type=='node')
+	 {
+	 	$document->addField('ts_field_author', $entity->field_author['und'][0]['value']);
+	 }
+}
+
+function customfieldsolr_apachesolr_query_alter(&$query) {
+  $query->addParam('fl', 'ts_field_author');
+}
+
+// &&($entity->type == 'class_tip'||$entity->type == 'course_example'
+// function customsolr_apachesolr_index_document_build(&$document, $entity, $entity_type) {
+//   if ($entity_type == 'node' && $entity->type == 'custom_node_type') {
+//     $document->addField('ts_field_text_field_name', $entity->field_text_field_name['und'][0]['value']);
+//     $document->addField('is_field_integer_field_name', $entity->field_integer_field_name['und'][0]['value']);
+//   }
+// }

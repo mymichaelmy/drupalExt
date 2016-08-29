@@ -1,0 +1,174 @@
+<?php
+// cloneresource.module
+
+/**
+ * Implements hook_permission().
+ */
+  
+function cloneresource_permission() {
+  return array(
+    'administer cloneresource' => array(
+      'title' => t('Administer Clone Resource'),
+      'description' => t('Perform Adminstration Tasks for Clone resource with BUILD.'),
+    ),
+  );
+}
+
+/** Gets a clone object by id.
+ *
+ * @param int $id
+ * @return object
+ */
+function cloneresource_get_view($id) {
+  return db_query('SELECT nid, totalcount as clonecount FROM {node_clone} WHERE nid = :id', array(':id' => $id))
+           ->fetchAll();
+}
+/** Writes a clone to the database
+ *
+ * @param object $view
+ * @return void
+ */
+function cloneresource_write_view($clone) {
+    try{
+        if (db_query("SELECT COUNT(*) FROM {node_clone} WHERE nid = :nid", array(':nid' => $clone->nid))
+                ->fetchField()) {
+             // Run an update using WHERE id = $id
+            db_query('UPDATE {node_clone} SET timestamp = CURRENT_TIMESTAMP, totalcount = (totalcount+1) WHERE nid = :nid', array(':nid' => $clone->nid));
+        }else{
+            // Run an insert, inserting $id for id 
+            db_query('INSERT INTO {node_clone} values(:nid, CURRENT_TIMESTAMP, :totalcount)', array(':nid' => $clone->nid, ':totalcount' => 1));
+        }
+    }catch (Exception $ex){
+        drupal_json_output(array(
+          'status' => t('error'),
+          'data' => $ex,
+        ));
+   }
+   drupal_json_output(array(
+      'status' => t('success'),
+      'data' => t('node clone count updated'),
+   ));
+exit;
+}
+/**
+ * Deletes a clone from the database.
+ *
+ * @param int $id
+ * @return void
+ */
+function cloneresource_delete_view($id) {
+  db_query('DELETE FROM {node_clone} WHERE id=:id', array(':id' => $id));
+}
+/**
+ * Implementation of hook_services_resources().
+ */
+function cloneresource_services_resources() {
+  return array(
+    'clone' => array(
+      'retrieve' => array(
+        'help' => 'Retrieves a view',
+        'file' => array('file' => 'inc', 'module' => 'cloneresource'),
+        'callback' => '_cloneresource_retrieve',
+        'access callback' => '_cloneresource_access',
+        'access arguments' => array('view'),
+        'access arguments append' => TRUE,
+        'args' => array(
+          array(
+            'name' => 'id',
+            'type' => 'int',
+            'description' => 'The id of the view to get',
+            'source' => array('path' => '0'),
+            'optional' => FALSE,
+          ),
+        ),
+      ),
+      'create' => array(
+        'help' => 'Creates a clone',
+        'file' => array('file' => 'inc', 'module' => 'cloneresource'),
+        'callback' => '_cloneresource_create',
+        'access callback' => '_cloneresource_access',
+        'access arguments' => array('create'),
+        'access arguments append' => TRUE,
+        'args' => array(
+          array(
+            'name' => 'data',
+            'type' => 'struct',
+            'description' => 'The clone object',
+            'source' => 'data',
+            'optional' => FALSE,
+          ),
+        ),
+      ),
+      'update' => array(
+        'help' => 'Updates a clone',
+        'file' => array('file' => 'inc', 'module' => 'cloneresource'),
+        'callback' => '_cloneresource_update',
+        'access callback' => '_cloneresource_access',
+        'access arguments' => array('update'),
+        'access arguments append' => TRUE,
+        'args' => array(
+          array(
+            'name' => 'id',
+            'type' => 'int',
+            'description' => 'The id of the node to update',
+            'source' => array('path' => '0'),
+            'optional' => FALSE,
+          ),
+          array(
+            'name' => 'data',
+            'type' => 'struct',
+            'description' => 'The clone data object',
+            'source' => 'data',
+            'optional' => FALSE,
+          ),
+        ),
+      ),
+      'delete' => array(
+        'help' => 'Deletes a view',
+        'file' => array('file' => 'inc', 'module' => 'cloneresource'),
+        'callback' => '_cloneresource_delete',
+        'access callback' => '_cloneresource_access',
+        'access arguments' => array('delete'),
+        'access arguments append' => TRUE,
+        'args' => array(
+          array(
+            'name' => 'nid',
+            'type' => 'int',
+            'description' => 'The id of the view to delete',
+            'source' => array('path' => '0'),
+            'optional' => FALSE,
+          ),
+        ),
+      ),
+      'index' => array(
+        'help' => 'Retrieves a listing of views',
+        'file' => array('file' => 'inc', 'module' => 'cloneresource'),
+        'callback' => '_cloneresource_index',
+        'access callback' => '_cloneresource_access',
+        'access arguments' => array('access content'),
+        'access arguments append' => FALSE,
+        'args' => array(
+          array(
+            'name' => 'page',
+            'type' => 'int',
+            'description' => '',
+            'source' => array(
+              'param' => 'page',
+            ),
+            'optional' => TRUE,
+            'default value' => 0,
+          ),
+          array(
+           'name' => 'parameters',
+           'type' => 'array',
+           'description' => '',
+           'source' => 'param',
+           'optional' => TRUE,
+           'default value' => array(),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+?>

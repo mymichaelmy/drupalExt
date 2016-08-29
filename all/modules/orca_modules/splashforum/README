@@ -1,0 +1,55 @@
+Splash Forum BUILD Integration Settings
+
+From the Drupal Menu select Configure - BUILD System Settings - BUILD System Integration
+
+BUILD System - enter the value to reference the BUILD system. Example: http://shared-splash-ci.mo.sap.corp
+BUILD Port - enter the BUILD Port Number. Example: 8000
+BUILD HTTP Request Timeout - enter the value, in seconds, for the HTTP Request Timeoute. When DRUPAL_HTTP_REQUEST is executed this value is used for the Timeout paramater.
+
+HTTP Proxy Configuration
+From the Drupal Menu select Configuration - System - HTTP Proxy.
+
+Server
+Enter the IP Address or Hostname of the Proxy Server. Example: proxy
+
+Port
+Enter the Port Number used by the Proxy Server. Example: 8080 
+
+Enter any remaining parameter values as required.
+
+
+This is a Splash Forum service that has a Retrieve ( by Forum Id ) and Index ( All Forums ) method.
+These API�s can also provide the Forum Topics.
+
+There are two url parameters:
+
+1.	Page � number of Forum Topics per Page, the default value is 6.
+2.	Sortby � for the Forum Topics, default value is 1.
+    a.	1 � Date � newest
+    b.	2 � Date � oldest
+    c.	3 � Forum Topic with most Comments first
+    d.	4 � Forum Topic with least Comments first
+
+These Api�s use the same function calls as the Drupal UI for Forums.
+
+Method Retrieve
+Retrieve Forum by Forum Id
+
+Tid	Page Sortby URL	                                                                      Comments
+2	  3	   1	http://10.1.153.250:8080/splash/forums/splashforum/2.json?page=3&sortby=1 Get Topics for Forum 2, show 3 Topics for the Forum sorted by newest date
+2	 N/A  N/A	http://10.1.153.250:8080/splash/forums/splashforum/2.json                 Get Topics for Forum 2, show 6 Topics for the Forum sorted by newest date
+2	  4	  N/A	http://10.1.153.250:8080/splash/forums/splashforum/2.json?page=4          Get Topics for Forum 2, show 4 Topics for the Forum sorted by newest date
+2	 N/A   4	http://10.1.153.250:8080/splash/forums/splashforum/2.json?sortby=4        Get Topics for Forum 2, show 6 Topics for the Forum sorted by least number of Comments
+2	  0	  N/A	http://10.1.153.250:8080/splash/forums/splashforum/2.json?page=0          Get Forum information only, do not show any Topics.
+
+Method Index
+Retrieve all Forums
+
+Tid Page Sortby URL                                                                      Comments
+N/A	 3	   1	http://10.1.153.250:8080/splash/forums/splashforum?page=3&sortby=1       Get Topics for all Forums, show 3 Topics per Forum sorted by newest date
+N/A	N/A	  N/A	http://10.1.153.250:8080/splash/forums/splashforum                       Get Topics for all Forums, show 6 Topics per Forum sorted by newest date
+N/A	 4	  N/A	http://10.1.153.250:8080/splash/forums/splashforum?page=4                Get Topics for all Forums, show 4 Topics per Forum sorted by newest date
+N/A	N/A    4	http://10.1.153.250:8080/splash/forums/splashforum?sortby=4              Get Topics for all Forums, show 6 Topics per Forum sorted by least number of Comments
+N/A	 0	  N/A	http://10.1.153.250:8080/splash/forums/splashforum?page=0                Get Forum information only, do not show any Topics.
+
+One observation is that when calling for a TID the num_topics and num_posts are not returned, it is assumed that the list of Forums was already returned and it contained that information so it is not required when calling for an individual Forum. I can add the necessary database logic if necessary.

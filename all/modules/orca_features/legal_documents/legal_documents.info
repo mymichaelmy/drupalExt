@@ -1,0 +1,12 @@
+name = Legal Documents
+core = 7.x
+package = Features
+dependencies[] = import_html
+dependencies[] = orca_feature_base
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features_exclude[dependencies][ctools] = ctools
+features_exclude[dependencies][features] = features
+features_exclude[dependencies][privacy] = privacy
+features_exclude[dependencies][strongarm] = strongarm
+project path = sites/all/modules/orca_features

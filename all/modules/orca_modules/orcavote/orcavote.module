@@ -1,0 +1,188 @@
+<?php
+/**
+ * @file
+ * This module provides orca vote (likes) resource
+ * 
+ */
+
+/**
+ * Access permission
+ *
+ * @param string $op
+ *  The operation that's going to be performed.
+ * @param array $args
+ *  The arguments that will be passed to the callback.
+ * @return bool
+ *  Whether access is given or not.
+ */
+function _orcavote_access ($op) {
+  return TRUE;
+}
+
+function _orcavote_get_votes ($ctype = 'node', $tag = 'like', $uid = NULL){
+  
+  $criteria = array(
+    'entity_type' => $ctype, 
+    'value_type' => 'points', 
+    'tag' => $tag,
+  );
+
+  $votes = array();
+
+  $results = votingapi_select_results($criteria);
+  foreach ($results as $result) {
+    if ($result['function'] == 'sum') {
+      $vote = array();
+      $vote['likecount'] = $result['value'];
+      $vote['nid'] = $result['entity_id'];
+      array_push($votes, $vote);
+    }
+  }
+  
+  return $votes;
+
+}
+
+function _orcavote_get_vote ($cid, $ctype = 'node', $tag = 'like', $uid = NULL){
+  global $user;
+  //$user_criteria = votingapi_current_user_identifier();
+  $isloggedin = user_is_logged_in();
+  if (!isset($uid)) {
+    $uid = $user->uid;
+  }
+
+  $criteria = array(
+    'entity_type' => $ctype, 
+    'entity_id' => $cid, 
+    'value_type' => 'points', 
+    'tag' => $tag,
+  );
+
+  $votes = array(
+    'count' => array(), 
+    'user' => array(),
+    'nid' => $cid,
+  );
+
+  $results = votingapi_select_results($criteria);
+  //$results = votingapi_select_votes($criteria);
+  foreach ($results as $result) {
+    if ($result['function'] == 'sum') {
+      $votes['count'] = $result['value'];
+    }
+  }
+  
+  if (empty($votes['count'])){
+    $votes['count'] = 0;
+  }
+  
+  if ($uid) {
+    $user_vote = votingapi_select_votes($criteria += array('uid' => $uid));
+    if ($user_vote) {
+      $userVoteInfo = $user_vote[0];
+      $votes['user']['value'] = $userVoteInfo['value'];
+      //$votes['user']['function'] = 'user';
+    } else {
+      $votes['user']['value'] = 0;
+    }
+  }
+  else {
+    // If the user is anonymous, don't loading their existing votes.
+    $votes['user']['value'] = 0;
+  }
+
+  return $votes;
+
+}
+
+function _orcavote_cast_vote($cid, $value, $ctype = 'node', $tag = 'like', $uid = NULL) {
+  global $user;
+ 
+  $tag = empty($tag) ? 'like' : $tag;
+  $uid = isset($uid) ? $uid : $user->uid;
+  if (!isset($uid) || $uid < 1){
+    watchdog("orcavote", t('only authenticated user can cast a vote'), NULL, WATCHDOG_WARNING);
+    return;
+  }
+  // Get the user's current vote.
+  $criteria = array(
+     'entity_type' => $ctype,
+     'entity_id' => $cid,
+     'value_type' => 'points',
+     'tag' => $tag,
+     'uid' => $uid,
+  );
+    // Get the unique identifier for the user (IP Address if anonymous).
+    $user_criteria = votingapi_current_user_identifier();
+    $user_votes = votingapi_select_votes($criteria + $user_criteria);
+
+    if ($value == 0) {
+      votingapi_delete_votes($user_votes);
+    }
+    else {
+      $votes = $criteria += array('value' => $value);
+      votingapi_set_votes($votes);
+    }
+
+    // Moving the calculationg after saving/deleting the vote but before getting the votes.
+    votingapi_recalculate_results($ctype, $cid);
+    return _orcavote_get_vote($cid, $ctype, $tag, $uid);
+}
+
+/**
+ * Implementation of hook_services_resources().
+ */
+function orcavote_services_resources() {
+  return array(
+    'like' => array(
+      'retrieve' => array(
+        'help' => 'Retrieves vote for content object anonymously',
+        'callback' => '_orcavote_get_vote', 
+        'access callback' => '_orcavote_access',
+        'access arguments' => array('view'),
+        'access arguments append' => TRUE,
+        'args' => array(
+          array(
+            'name' => 'cid',
+            'type' => 'int',
+            'description' => 'The id of the content object',
+            'source' => array('path' => '0'),
+            'optional' => FALSE,
+          ),
+        ),
+      ),
+      'index' => array(
+        'help' => 'Retrieves all votes for content object anonymously',
+        'callback' => '_orcavote_get_votes', 
+        'access callback' => '_orcavote_access',
+        'access arguments' => array('index'),
+        'access arguments append' => FALSE,
+      ),
+     
+     'create' => array(
+        'help' => 'cast a vote',
+        'callback' => '_orcavote_cast_vote',
+        'access callback' => '_orcavote_access',
+        'access arguments' => array('create'),
+        'access arguments append' => FALSE,
+        'args' => array(
+          array(
+            'name' => 'cid',
+            'type' => 'int',
+            'description' => 'The id of the content object',
+            'source' => array('path' => '0'),
+            'optional' => FALSE,
+          ),
+          array(
+            'name' => 'value',
+            'type' => 'int',
+            'description' => 'Vote value, 1 or 0',
+            'source' => array('param' => 'value'),
+            'optional' => FALSE,
+          ),
+        ),
+      ),
+    ),
+  );
+}
+?>

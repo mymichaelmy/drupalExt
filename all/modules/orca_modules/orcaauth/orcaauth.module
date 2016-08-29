@@ -1,0 +1,394 @@
+<?php
+/**
+ * @file
+ * This module provides Orca Drupal authentication that is integrated with Orca Appliciton Rounter through Orca JWT.
+ * 
+ */
+/*
+ * check readme about this line.
+ */
+require_once 'JWT.php';
+
+define('MAX_USERNAME_LENGHT', 60);
+
+/**
+ * implement hook_help
+ * @param type $path
+ * @param type $arg
+ * @return type
+ */
+function orcaauth_help($path, $arg){
+  switch ($path) {
+    case 'admin/help/orcaauth':
+      $output = t('<p>This module integrates Orca Drupal authentication and user provisioning with Orca Application Router.</p>');
+      $output .= t('<p></p>');
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_menu().
+ */
+function orcaauth_menu() {
+  $items = array();
+
+//  $items['admin/config/people/orcaauth'] = array(
+//    'title' => 'Orca Auth Settings',
+//    'description' => 'Control settings of the Orca Drupal Authentication module',
+//    'page callback' => 'drupal_get_form',
+//    'page arguments' => array('orcaauth_settings'),
+//    'access arguments' => array('Administer orcaauth authentication'),
+//    'type' => MENU_LOCAL_TASK | MENU_NORMAL_ITEM,
+//  );
+  
+  $items['slo'] = array(
+    'title' => 'Orca CMS logout',
+    'description' => 'Orca CMS logout',
+    'page callback' => 'orcaauth_destroy_drupal_session',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+ 
+  return $items;
+}
+
+/**
+ * Implements hook_admin_paths().
+ */
+function orcaauth_admin_paths() {
+  return array('admin/config/people/orcaauth' => TRUE);
+}
+
+/**
+ * Implements hook_permission().
+ */
+function orcaauth_permission() {
+  return array(
+    'administer orcaauth authentication' => array(
+      'title' => t('Administer orcaauth authentication'),
+      'description' => t('Warning: Give to trusted roles only.'),
+    ),
+  );
+}
+
+/**
+ * Implements settings for the module.
+ */
+//function orcaauth_settings() {
+//$form['orcaauth_grp_setup'] = array(
+//    '#type' => 'fieldset',
+//    '#title' => t('Basic Setup'),
+//    '#collapsible' => FALSE, 
+//  );
+//
+//  $form['orcaauth_grp_setup']['orca_jwt_secret'] = array(
+//    '#type' => 'textfield',
+//    '#title' => t('Orca JWT Secret Key'),
+//    '#default_value' => variable_get('orca_jwt_secret', 'NDEzMWM4MjYzOGMyYzYwODhjZTA0ZTBkYmViODQzNTVmY2I4NTFmM2QxOTQzZTNjODk2MTc0ZWVmOTNhMGQ0MQ=='),
+//    '#description' => t('Base64 encoded Orca JWT Secret Key'),
+//    '#size' => 150,
+//  );
+//  
+//  return system_settings_form($form);
+//}
+
+/**
+ * implement hook_init
+ * @return boolean
+ */
+function orcaauth_init() {
+//user roles:
+//$user->roles[0] admin
+//$user->roles[1] anonymous user
+//$user->roles[2] authenticated user1
+//$user->roles[3] authenticated user2 
+//user uids:
+//$user->uid === 0, anonymouse user
+  $path = request_path();
+  
+  if (exemptPath($path)){
+    return;
+  }
+  
+  global $user;
+  $jwttoken = getJWT();
+  
+   if ($jwttoken){
+    if (!isset($jwttoken->user)){
+      watchdog("orcaauth", t('orca userid is not defined in JWT. cannot perform Drupal authentication'), NULL, WATCHDOG_WARNING);
+      return;
+    }
+    
+    if (!isset($jwttoken->email)){
+      watchdog("orcaauth", 'orca user email for user [%orcaUserId] is not defined in JWT. cannot perform Drupal authentication', array('%orcaUserId' => $user->orcaUserId), WATCHDOG_WARNING);
+      return;
+    }
+    
+    if (!isset($jwttoken->name)){
+      watchdog("orcaauth", 'orca user name for user [%orcaUserId] is not defined in JWT. cannot perform Drupal authentication', array('%orcaUserId' => $user->orcaUserId), WATCHDOG_WARNING);
+      return;
+    }
+    //an user always has orca user id and name
+    watchdog("orcaauth", 'user [%name] accessed Orca webcms, orca userid is [%orcaUserId]', array('%name' => $jwttoken->email, '%orcaUserId' => $jwttoken->user), WATCHDOG_DEBUG);
+  }
+  
+  
+  
+  if ($jwttoken && !empty($authname = $jwttoken->user)){
+    $username = $jwttoken->user . " ".$jwttoken->name;
+    $username = preg_replace('/[^a-z0-9\.\-\'\"_ ]+/i', '', $username);
+    $username = substr($username, 0, MAX_USERNAME_LENGHT);
+
+  
+    //user is authenticated by Orca Application Rounter;
+    try {
+      if (!user_is_logged_in()){
+        // user is authenticated by Orca Application Rounter but he is not logged in Drupal
+        // Retrieve user mapping and attempt to log the user in.
+        watchdog("orcaauth", 'Authname is [%authname] user email is [%name]', array('%authname' => $authname, '%name' => $jwttoken->email), WATCHDOG_DEBUG);
+
+        $ext_user = user_external_load($authname);
+        
+        $user = user_load_by_mail($jwttoken->email);
+        
+        
+        //$user = user_load_by_name($jwttoken->user);
+        if (!$ext_user && !$user) {
+          //We need to register the user in Drupal
+          //create user and log in the user
+          user_external_login_register($authname, 'orca_auth');
+          watchdog("orcaauth", 'Register user [%name], orca user id is [%authname]', array('%name' => $user->name, '%authname' => $authname), WATCHDOG_INFO);
+
+          if ($user){
+            //Populate roles based on JWT.
+            //TODO: Add Orca Drupal role info in Orca JWT
+            //if (!empty($orcaroles = $user -> orcaRoles)){
+                //user roles are default as "authenticated" for now
+                //$drupalRoles = explode(",", $orcaroles);
+                //$user = user_save($user, $drupalRoles); 
+            //$user->orcaUserId = $jwttoken->user;
+            $user->mail = $jwttoken->email;
+            
+            $user->name = $username;
+            $user->init = $jwttoken->email;
+            $user -> timezone = date_default_timezone_get();
+
+            if (isset($jwttoken->role)){
+              $user->orcaRoles = $jwttoken->role;
+            }
+
+            $user = user_save($user, array("authenticated"));
+          }
+        } else if ($ext_user) {
+          //Found Orca Drupal user account; user logged in;
+          //TODO: Update user role based on Orca JWT?
+          //$user = user_save($ext_user, array("authenticated"));
+          if (isUpdated($ext_user, $user, $username)){
+            $user -> uid = $ext_user -> uid;
+            $user -> mail = $jwttoken->email;
+            $user->name = $username;
+            $user = user_save($user, array("authenticated"));
+          } else {
+            $user = $ext_user;
+          }
+//        } else if (!$ext_user && $user){
+//          //user email is already used by an drupal user. cannot create new drupal account that is linked to Orca user id. Log the error 
+//          //condition and do nothing.
+//          //
+//          $user = drupal_anonymous_user();
+//          watchdog("orcaauth", 'Email %email is already used by an Drupal user. Cannot create Drupla account for Orca user %orcauserid .', array('%email' => $jwttoken->email, '%orcauserid' => $jwttoken -> user), WATCHDOG_ERROR);
+//          return;
+        }
+
+        // Finalizing the Drupal login
+        $edit = array();
+        user_login_finalize($edit);
+      } else {
+        //user is authenticated by both orca and drupal
+
+        $ext_user = user_external_load($authname);
+        $user = user_load_by_mail($jwttoken->email);
+        //$user = user_load_by_name($jwttoken->user);
+        if (!$ext_user && !$user){
+          //User session mismatch!
+          //TODO: error handling
+          watchdog("orcaauth", 'User %name drupal session does not match Orca session. Recreate user session', array('%name' => $jwttoken->email), WATCHDOG_WARNING);
+          orcaauth_destroy_drupal_session();
+          //create user and log in the user
+          user_external_login_register($authname, 'orca_auth');
+
+          if ($user){
+            $user->mail = $jwttoken->email;
+            //$user->name = $jwttoken->user;
+            $user->name = $username;
+            $user->init = $jwttoken->email;
+            $user -> timezone = date_default_timezone_get();
+
+            if (isset($jwttoken->role)){
+              $user->orcaRoles = $jwttoken->role;
+            }
+
+            $user = user_save($user, array("authenticated"));
+          }
+
+        } else if (!$ext_user && $user){
+          //user sesssion mismatch. terminate user session. log error.
+          watchdog("orcaauth", 'User %name drupal session does not match Orca session. Destroy user session', array('%name' => $jwttoken->email), WATCHDOG_WARNING);
+          orcaauth_destroy_drupal_session();
+          return;
+          
+        } else if ($ext_user && !$user){
+          $user = $ext_user;
+          $user->mail = $jwttoken->email;
+          $user->name = $username;
+          $user->init = $jwttoken->email;
+          $user -> timezone = date_default_timezone_get();
+          if (isset($jwttoken->role)){
+              $user->orcaRoles = $jwttoken->role;
+          }
+          $user = user_save($user, array("authenticated"));
+        } else if ($ext_user && $user && $ext_user->uid === $user->uid){
+          if (isUpdated($ext_user, $user, $username)){
+            watchdog("orcaauth", 'User %name drupal username or email does not match Orca. Update drupal username and email', array('%name' => $username), WATCHDOG_DEBUG);
+            $user -> mail = $jwttoken->email;
+            $user->name = $username;
+            $user = user_save($user, array("authenticated"));
+          }          
+        }
+      }
+    } //end jwttoke and empty(authname)
+ 
+    catch (Exception $e) {
+      //log error. silent the error.
+      watchdog("orcaauth", 'Error to authentication user %name. %error.', array('%name' => $user->name, '%error' => $e->getMessage()), WATCHDOG_ERROR);
+    }
+      
+  } else {
+     //user is not authenticated by Orca. Do nothing for now.
+    return;
+   }
+}
+
+function isUpdated($extuser, $curruser, $username){
+  $ret = false;
+   if ((isset($extuser -> mail) && !isset($curruser->mail)) ||
+       (isset($username) && !isset($curruser->name)) ||
+       (isset($extuser -> mail) && isset($curruser->mail) && $curruser->mail !== $extuser->mail) ||
+       (isset($username) && isset($curruser->name) && $curruser->name !== $username)) {
+    $ret = true;
+  }
+  return $ret;
+}
+
+function exemptPath ($path){
+  $ret = false;
+  if (strpos(strtolower ($path), 'slo') !== false) {
+    $ret = true;
+  }
+  return $ret;
+}
+
+function getJWT(){
+  $ret = false;
+  $headers = getallheaders();
+  $authHeader = null;
+  
+  foreach ($headers as $name => $value) {
+    if (strtolower($name) === 'authorization'){
+      $authHeader = $value;
+      break;
+    }
+  }
+  
+  if ($authHeader) {
+    try {       
+
+      list($jwt) = sscanf( $authHeader, 'Bearer %s');
+
+      if ($jwt) {
+        $ret = jwt_validate_data($jwt);
+      } 
+    } catch (Exception $e){
+        watchdog("orcaauth", $e->getMessage(), NULL, WATCHDOG_ERROR);
+    }
+  } 
+  return $ret;
+}
+
+
+/**
+ * Implements hook_user_insert().
+ * 
+ */
+function orcaauth_user_insert(&$edit, $account, $category = NULL) {
+  //If user registration has a valid session...
+
+  $jwttoken = getJWT();
+  $account->name = "";
+  $account->mail = "";
+  $account->init = "";
+
+  
+  if ($jwttoken) {
+    // Get name from default attributes.
+    
+    if (isset($jwttoken->email)){
+      $account->mail = $jwttoken->email; 
+      $account->name = $jwttoken->email;
+      $account->init = $jwttoken->email;
+    }
+
+    db_update('users')
+        ->fields(array('name' => $account->name, 'mail' => $account -> mail, 'init' => $account -> init))
+        ->condition('uid', $account->uid)
+        ->execute();
+
+    watchdog ("orcaauth", 'Updating name of user [%acctname]', array('%acctname' => $account->name));
+  }
+}
+
+/**
+ * logging out a user that is has a active session in Drupal.
+ */
+function orcaauth_destroy_drupal_session() {
+  global $user;
+  
+  if (user_is_logged_in()){
+
+    watchdog("orcaauth", 'Session closed for %name.', array('%name' => $user->name));
+
+    // Destroy the current session:
+    session_destroy();
+    // Only variables can be passed by reference workaround.
+    $NULL = NULL;
+    user_module_invoke('logout', $NULL, $user);
+
+    // Load the anonymous user.
+    $user = drupal_anonymous_user();
+  }
+  //TODO: single logout? 
+  //drupal_goto();
+}
+
+
+function jwt_validate_data($token, $type = NULL) {
+  $secret = variable_get('orca_jwt_secret', NULL);
+  if (!isset($secret)){
+    watchdog("orcaauth", "orcaauth secret key is not set", NULL, WATCHDOG_ERROR);
+    return false;
+  }
+  $base64DecodeSecret = base64_decode(strtr($secret, '-_', '+/'));
+  try {
+    $decoded_token = Firebase\JWT\JWT::decode($token, $base64DecodeSecret, array('HS256'));
+  }  catch (Exception $e) {
+    watchdog("orcaauth", $e->getMessage(), NULL, WATCHDOG_ERROR);
+    return false;
+  }
+  
+  if (!$decoded_token){
+     watchdog('orcaauth', "invalid jwt token ".$token, NULL, WATCHDOG_ERROR);
+     return false;    
+  }
+  
+  return $decoded_token;
+}

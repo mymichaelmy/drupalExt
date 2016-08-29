@@ -1,0 +1,142 @@
+<?php
+/**
+* Implements hook_permission()
+*/
+function cronmonitor_permission() {
+  return array(
+    'administer cronmonitor' => array(
+      'title' => t('Administer Cron Monitor'),
+      'description' => t('Perform administration tasks for Cron Monitor'),
+    ),
+  );
+}
+/**
+* Implement hook menu
+*/
+function cronmonitor_menu() {
+//  $items['admin/config/cronmonitor'] = array(
+//    'title' => 'Cron Monitor Settings',
+//    'type' => MENU_NORMAL_ITEM,
+//    'page callback' => 'drupal_get_form',
+//    'page arguments' => array('cronmonitor_admin_form'),
+//    'access arguments' => array('administer cronmonitor'),
+//  );
+  
+  // Parent Menu Item
+  $items['admin/config/cronmonitor'] = array(
+      'title' => 'Cron Monitor Settings',
+      'description' => 'Cron Monitor Settings',
+      'position' => 'left',
+      'weight' => -100,
+      'page callback' => 'system_admin_menu_block_page',
+      'access arguments' => array('administer cronmonitor'),
+      'file' => 'system.admin.inc',
+      'file path' => drupal_get_path('module', 'system'),
+  );
+  
+  //Child Menu Item
+  $items['admin/config/cronmonitor/html-import'] = array(
+      'title' => 'HTML Import Settings',
+      'description' => 'HTML Import Settings',
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('cronmonitor_admin_form'),
+      'access arguments' => array('administer cronmonitor'),
+  );
+  return $items;
+}
+/*
+* Administration form for Cron Monitor
+*/
+
+function cronmonitor_admin_form($form, &$form_state) {
+  $form['#encrypted_fields'] = TRUE;
+  $form['cronmonitor_enable'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Allow import-html with cron run'),
+    '#default_value' => variable_get('cronmonitor_enable', 0),
+  );
+
+  $form['cronmonitor_account'] = array(
+  '#title' => t('Github Account'),
+  '#type' => 'textfield',
+  '#description' => t('Github ID'),
+  '#default_value' =>  variable_get('cronmonitor_account'),
+  );
+
+
+  $form['cronmonitor_pass'] = array(
+    '#type' => 'textfield',
+    '#title' => t('A Sample Textfield'),
+    '#default_value' => variable_get('cronmonitor_pass'),
+    '#encrypt' => TRUE,
+  );
+
+  $form['cronmonitor_pass'] = array(
+  '#type' => 'password', 
+  '#title' => t('Password'), 
+  '#maxlength' => 64, 
+  '#size' => 15,
+  );
+
+  $form['cronmonitor_localroot'] = array(
+  '#title' => t('Local Root'),
+  '#type' => 'textfield',
+  '#description' => t('path/to/root'),
+  '#default_value' =>  variable_get('cronmonitor_localroot', 
+    "sites/default/files/github"),
+  );
+
+  $form['cronmonitor_localreponame'] = array(
+  '#title' => t('Local Reponame'),
+  '#type' => 'textfield',
+  '#description' => t('localreponame'),
+  '#default_value' =>  variable_get('cronmonitor_localreponame', 
+    "web"),
+  );
+
+  $form['cronmonitor_remoterepo'] = array(
+  '#title' => t('Remote Repo'),
+  '#type' => 'textfield',
+  '#description' => t('github.com/path/to/repo.git"'),
+  '#default_value' =>  variable_get('cronmonitor_remoterepo', 
+    "github.com/i848593/web.git"),
+  );
+  return system_settings_form($form);
+}
+
+/**
+* Implements hook_cron()
+*/
+function cronmonitor_cron() {
+  git_pull();
+  if(variable_get('cronmonitor_enable',0)){
+    $file_list = ["index.html"];
+    $context = array();
+    $context['profile_id'] = import_html_current_profile_id();
+    $context['source_siteroot'] = variable_get('import_html_source_siteroot', NULL);
+    import_html_import_files($file_list, $context);
+  }
+}
+
+function git_pull(){
+
+  $localRoot        = variable_get('cronmonitor_localroot');
+  $localRepoName    = variable_get('cronmonitor_localreponame');
+  $localRepo        = "{$localRoot}/{$localRepoName}";
+  $username         = variable_get('cronmonitor_account');
+  $password         = variable_get('cronmonitor_pass');
+  $remoteRepoName   = variable_get('cronmonitor_remoterepo');
+  $remoteRepo       = "https://{$username}:{$password}@{$remoteRepoName}";
+  if( file_exists($localRepo) ) {
+      // If there is already a Repo, just run a git pull to 
+      //grab the latest changes
+      shell_exec("cd {$localRepo} && git pull");
+  } 
+  else {
+      // If the Repo does not exist, then clone it into the 
+      //parent directory
+    exec("echo in this other");
+      shell_exec("git clone {$remoteRepo} {$localRepo} ");
+      //die("done omg" . mktime());
+  }
+}

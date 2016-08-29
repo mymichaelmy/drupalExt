@@ -1,0 +1,18 @@
+========================
+Installation
+========================
+Requires BSD-3-Clause licensed JWT class available at:
+  https://github.com/firebase/php-jwt
+
+Installation steps:
+
+1. Download and extract the PHP JWT package from https://github.com/firebase/php-jwt into this module's root. JWT.php is required by the module.
+
+Example:
+composer require firebase/php-jw
+cd <module root>
+cp JWT.php .
+
+Adjust require line in the module to match file path if necessary.
+
+2. Access admin/config/people/orcaauth as Drupal administrator user. Enter Base64 encoded Orca JWT secret key. Select "Save Configuration".

@@ -1,0 +1,17 @@
+name = Service cards
+core = 7.x
+package = Features
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = import_html
+dependencies[] = orca_feature_cards_content_types
+dependencies[] = strongarm
+dependencies[] = uuid_features
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = field_bundle_settings_node__service_card
+features_exclude[field_base][field_button_text] = field_button_text
+features_exclude[field_base][field_launch_url] = field_launch_url
+features_exclude[field_instance][node-service_card-field_button_text] = node-service_card-field_button_text
+features_exclude[field_instance][node-service_card-field_launch_url] = node-service_card-field_launch_url
+project path = sites/all/modules/orca_features

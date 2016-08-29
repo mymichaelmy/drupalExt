@@ -1,0 +1,7 @@
+name = "Clone Resource"
+description = "Increment clone count from BUILD"
+package = "Orca Modules"
+core = 7.x
+
+files[] = cloneresource.inc
+files[] = cloneresource.module

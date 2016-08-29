@@ -1,0 +1,6 @@
+name = orca_features_import_html_settings
+core = 7.x
+package = Features
+dependencies[] = import_html
+features[features_api][] = api:2
+features[import_html_profile][] = default

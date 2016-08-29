@@ -1,0 +1,38 @@
+<?php
+/**
+ * @file
+ * Code for the orca_feature_date_formats feature.
+ */
+
+include_once 'orca_feature_date_formats.features.inc';
+
+
+/**
+ * Implements hook_date_formats().
+ */
+function orca_feature_date_formats_date_formats() {
+  return array(
+    // Creates a new format for a new, custom format type.
+    array(
+      'type' => 'build',
+      'format' => 'm/d/y',
+      'locales' => array(),
+    ),
+    // Defines a format and makes it available to core's short format type.
+    array(
+      'type' => 'global',
+      'format' => 'D, d M Y H:i:s T',
+      'locales' => array(),
+    ),
+  );
+}
+
+/**
+ * Implements hook_date_format_types().
+ */
+function orca_feature_date_formats_date_format_types() {
+  return array(
+    'build' => t('build'),
+    'global' => t('Global'),
+  );
+}

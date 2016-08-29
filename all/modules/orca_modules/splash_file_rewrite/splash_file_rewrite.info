@@ -1,0 +1,8 @@
+name = "Splash File Rewriter"
+description = "Changes file URLs of local public files served by Splash"
+core = "7.x"
+version = "7.x.1.0"
+package = "Orca Modules"
+dependencies[] = encryptfapi
+configure = admin/config/splash_file_rewrite
+configuration = admin/config/splash_file_rewrite

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the orca_feature_forum_index feature.
+ */
+
+include_once 'orca_feature_forum_index.features.inc';

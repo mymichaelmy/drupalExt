@@ -1,0 +1,6 @@
+name = "Recent Searches"
+description = "Enables persistence of terms recently searched by an authenticated user."
+package = "Orca Modules"
+dependencies[] = services
+core = 7.x
+version = 7.x-1.0

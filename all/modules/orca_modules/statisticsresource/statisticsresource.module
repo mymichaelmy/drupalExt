@@ -1,0 +1,244 @@
+<?php
+// statisticsresource.module
+/** Gets a statistics object by id.
+ *
+ * @param int $id
+ * @return object
+ */
+function statisticsresource_get_view($nid) {
+  try{
+   $query = 'SELECT n.nid, cn.totalcount as viewcount, cl.totalcount as clonecount '
+           . 'FROM {node} n left outer join {node_counter} cn ON (n.nid = cn.nid) left outer join {node_clone} cl ON (n.nid = cl.nid) '
+           . 'WHERE n.nid = :nid';
+   
+   return db_query($query,  array(':nid' => $nid))
+           ->fetchAll();
+  }catch(Exception $ex){
+      drupal_json_output(array(
+          'status' => t('error'),
+          'data' => $ex,
+        ));
+  }
+  exit;
+}
+
+/** Gets statistics object by type.
+ *
+ * @return object
+ */
+function statisticsresource_get_views() {
+
+	// This is the original behavior when statistics was only for Gallery nodes of type 'mapped'.
+	$type = "('mapped')";
+	
+	// This is new for Learning nodes.
+	if ( $_GET['type'] == "learning" ) {
+		$type = "('method_card', 'service_card', 'course_card')";
+	}
+	
+	//watchdog("statisticsresource_get_views", 'type [%type]', array('%type' => $type), WATCHDOG_DEBUG);
+	
+    try{
+        $query = 'SELECT n.nid, cn.totalcount as viewcount, cl.totalcount as clonecount '
+                . 'FROM {node} n left outer join {node_counter} cn ON (n.nid = cn.nid) left outer join {node_clone} cl ON (n.nid = cl.nid) '
+				. 'WHERE n.type in ' . $type;
+							
+        $viewClones = db_query($query)->fetchAll();
+        
+        $likes = statisticsresource_get_likes();
+        
+        foreach ($viewClones as $viewClone) {
+          $count = 0;
+          foreach($likes as $like){
+            if ($like['nid'] == ($viewClone -> nid)){
+              $count = $like['likecount'];
+              break;
+            }
+          }
+          $viewClone -> likecount = $count;
+        }
+        
+        return $viewClones;
+    }catch(Exception $ex){
+        drupal_json_output(array(
+            'status' => t('error'),
+            'data' => $ex,
+          ));
+    }
+  exit;
+}
+
+function statisticsresource_get_likes (){
+  $ctype = 'node';
+  $tag = 'like';
+  $criteria = array(
+    'entity_type' => $ctype, 
+    'value_type' => 'points', 
+    'tag' => $tag,
+  );
+
+  $votes = array();
+
+  $results = votingapi_select_results($criteria);
+  foreach ($results as $result) {
+    if ($result['function'] == 'sum') {
+      $vote = array();
+      $vote['likecount'] = $result['value'];
+      $vote['nid'] = $result['entity_id'];
+      array_push($votes, $vote);
+    }
+  }
+  
+  return $votes;
+
+}
+
+
+/** Writes a statistics to the database
+ *
+ * @param object $view
+ * @return void
+ */
+function statisticsresource_write_view($clone) {
+    try{
+        if (db_query("SELECT COUNT(*) FROM {node_clone} WHERE nid = :nid", array(':nid' => $clone->nid))
+                ->fetchField()) {
+             // Run an update using WHERE id = $id
+            db_query('UPDATE {node_clone} SET timestamp = CURRENT_TIMESTAMP, totalcount = (totalcount+1) WHERE nid = :nid', array(':nid' => $clone->nid));
+        }else{
+            // Run an insert, inserting $id for id 
+            db_query('INSERT INTO {node_clone} values(:nid, CURRENT_TIMESTAMP, :totalcount)', array(':nid' => $clone->nid, ':totalcount' => 1));
+        }
+    }catch (Exception $ex){
+        drupal_json_output(array(
+          'status' => t('error'),
+          'data' => $ex,
+        ));
+   }
+   drupal_json_output(array(
+      'status' => t('success'),
+      'data' => t('node clone count updated'),
+   ));
+exit;
+}
+/**
+ * Deletes a statistics from the database.
+ *
+ * @param int $id
+ * @return void
+ */
+function statisticsresource_delete_view($id) {
+  db_query('DELETE FROM {node_clone} WHERE id=:id', array(':id' => $id));
+}
+/**
+ * Implementation of hook_services_resources().
+ */
+function statisticsresource_services_resources() {
+  return array(
+    'statistics' => array(
+      'retrieve' => array(
+        'help' => 'Retrieves a view',
+        'file' => array('file' => 'inc', 'module' => 'statisticsresource'),
+        'callback' => '_statisticsresource_retrieve',
+        'access callback' => '_statisticsresource_access',
+        'access arguments' => array('view'),
+        'access arguments append' => TRUE,
+        'args' => array(
+          array(
+            'name' => 'id',
+            'type' => 'int',
+            'description' => 'The id of the view to get',
+            'source' => array('path' => '0'),
+            'optional' => FALSE,
+          ),
+        ),
+      ),
+      'create' => array(
+        'help' => 'Creates a view',
+        'file' => array('file' => 'inc', 'module' => 'statisticsresource'),
+        'callback' => '_statisticsresource_create',
+        'access arguments' => array('view resource create'),
+        'access arguments append' => FALSE,
+        'args' => array(
+          array(
+            'name' => 'data',
+            'type' => 'struct',
+            'description' => 'The view object',
+            'source' => 'data',
+            'optional' => FALSE,
+          ),
+        ),
+      ),
+      'update' => array(
+        'help' => 'Updates a view',
+        'file' => array('file' => 'inc', 'module' => 'statisticsresource'),
+        'callback' => '_statisticsresource_update',
+        'access callback' => '_statisticsresource_access',
+        'access arguments' => array('update'),
+        'access arguments append' => TRUE,
+        'args' => array(
+          array(
+            'name' => 'id',
+            'type' => 'int',
+            'description' => 'The id of the node to update',
+            'source' => array('path' => '0'),
+            'optional' => FALSE,
+          ),
+          array(
+            'name' => 'data',
+            'type' => 'struct',
+            'description' => 'The view data object',
+            'source' => 'data',
+            'optional' => FALSE,
+          ),
+        ),
+      ),
+      'delete' => array(
+        'help' => 'Deletes a view',
+        'file' => array('file' => 'inc', 'module' => 'statisticsresource'),
+        'callback' => '_statisticsresource_delete',
+        'access callback' => '_statisticsresource_access',
+        'access arguments' => array('delete'),
+        'access arguments append' => TRUE,
+        'args' => array(
+          array(
+            'name' => 'nid',
+            'type' => 'int',
+            'description' => 'The id of the view to delete',
+            'source' => array('path' => '0'),
+            'optional' => FALSE,
+          ),
+        ),
+      ),
+      'index' => array(
+        'help' => 'Retrieves a listing of views',
+        'file' => array('file' => 'inc', 'module' => 'statisticsresource'),
+        'callback' => '_statisticsresource_index',
+        'access callback' => 'user_access',
+        'access arguments' => array('access content'),
+        'access arguments append' => FALSE,
+        'args' => array(
+          array(
+            'name' => 'page',
+            'type' => 'int',
+            'description' => '',
+            'source' => array(
+              'param' => 'page',
+            ),
+            'optional' => TRUE,
+            'default value' => 0,
+          ),
+          array(
+           'name' => 'parameters',
+           'type' => 'array',
+           'description' => '',
+           'source' => 'param',
+           'optional' => TRUE,
+           'default value' => array(),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+?>

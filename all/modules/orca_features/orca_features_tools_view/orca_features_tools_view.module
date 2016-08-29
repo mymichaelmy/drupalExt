@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the orca_features_tools_view feature.
+ */
+
+include_once 'orca_features_tools_view.features.inc';

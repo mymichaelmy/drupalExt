@@ -1,0 +1,4 @@
+core="7.x"
+description="add custom fields to solr"
+name="customfieldsolr"
+dependencies[]=drupal:apachesolr

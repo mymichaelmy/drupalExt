@@ -1,0 +1,157 @@
+
+
+# download and enable any modules needed by our features or tools.
+drush dl feeds-7.x-2.0-alpha9 -y
+drush dl node_export-7.x-3.0 -y
+drush en features admin_menu ctools import_html node_export uuid views -y
+drush en views_content admin_menu_toolbar node_export_features views_ui -y
+
+drush en libraries -y
+drush en services -y
+drush en cors -y
+drush dis cors -y
+drush en globalredirect -y
+drush en pathauto -y
+drush en link -y
+drush en feeds -y
+drush en feeds_ui -y 
+drush en job_scheduler -y
+drush en feeds_imagegrabber -y
+drush en smart_trim -y
+drush en statistics -y
+drush en statistics_ajax -y
+drush en votingapi -y
+drush role-add-perm "anonymous user" "administer statistics"
+drush role-add-perm "authenticated user" "administer statistics"
+drush role-add-perm "anonymous user" "access statistics"
+drush role-add-perm "authenticated user" "access statistics"
+drush role-add-perm "anonymous user" "view post access counter"
+drush role-add-perm "authenticated user" "view post access counter"
+drush role-add-perm "anonymous user" "use statistics_ajax"
+drush role-add-perm "authenticated user" "use statistics_ajax"
+drush role-add-perm "anonymous user" "administer statistics_ajax"
+drush role-add-perm "authenticated user" "administer statistics_ajax"
+
+
+drush en rest_server -y
+
+drush en media file_entity -y
+drush en date -y
+drush en feeds_mediarss -y
+drush en feeds_url_fetcher -y
+drush en feeds_xpathparser -y
+drush en media_feeds -y
+drush en mediafield -y
+
+drush en media_internet -y
+drush en strongarm -y
+drush dl views_datasource -y
+drush en views_json -y
+
+drush en search_api search_api_grouping search_api_live_results search_api_page search_api_solr search_api_attachments -y
+
+
+drush dis toolbar -y
+
+
+# seperate DL and enablement for certain features
+drush dl features_extra -y
+drush en fe_block -y
+drush dl delete_all-7.x-1.1 -y
+drush en delete_all
+
+
+# Orca created module for administering cronmonitor.
+drush en cronmonitor -y
+
+
+# set node_export variable for import to recreate not duplicate
+# can be new, revision, or skip
+drush vset node_export_existing skip
+drush vset node_export_file_mode inline
+php -r "print json_encode(array('article' => 'article','page' => 'page','blog_post' => 'blog_post','course_card' => 'course_card','forum' => 'forum','help_snippet_content' => 'help_snippet_content','learning_sections' => 'learning_sections','legal_documents' => 'legal_documents','mapped' => 'mapped','method_card' => 'method_card','service_card' => 'service_card','tools_section' => 'tools_section'));" | drush vset --format=json node_export_file_types -
+
+
+# set cors configuration
+#drush vset cors_domains '{"*":"|*|Content-Type, X-CSRF-Token|"}' --format=json
+
+#set statistics configuration defaults
+drush vset statistics_count_content_views 1
+drush vset statistics_count_content_views_ajax 1
+drush vset statistics_flush_accesslog_timer '0'
+
+#set statistics_ajax configuration defaults
+drush vset statistics_ajax_limit_requests_xmlhttprequest 0
+drush vset statistics_ajax_limit_requests_get 0
+drush vset statistics_ajax_limit_requests_post 1
+
+# feeds not to use cUrl so bypasses proxy issues
+# drush vset feeds_never_use_curl false
+
+# feeds_imagegrabber enable and set required values
+drush vset feeds_imagegrabber '{"enabled":1,"id_class":"0","id_class_desc":"","feeling_lucky":"1","exec_time":"75"}' --format=json
+drush en forum -y
+
+#SPLASHFORUM Module
+drush en splashforum -y
+
+#HTTP_PROXY
+drush dl http_proxy-7.x-1.0 -y
+drush en http_proxy -y
+drush vset splashforum_buildtimeout '1200'
+drush vset proxy_server 'proxy'
+drush vset proxy_port '8080'
+
+# Extra Domains for URL Check
+php -r "print json_encode(array('corp'));" | drush vset --format=json link_extra_domains -
+
+#ClamAv Module
+drush dl clamav-7.x-1.x-dev -y
+drush en clamav -y
+drush vset clamav_enabled 0
+drush vset clamav_mode 0
+
+#UUID_FEATURES Module
+drush dl uuid_features-7.x-1.x-dev -y
+drush en uuid_features -y
+drush vset uuid_features_vocabulary_terms '1'
+drush vset uuid_features_entity_node_forum 'forum'
+drush vset uuid_features_file_node_forum 'forum'
+drush vset uuid_features_entity_node_method_card 'method_card'
+drush vset uuid_features_file_node_method_card 'method_card'
+drush vset uuid_features_entity_node_mapped 'mapped'
+drush vset uuid_features_file_node_mapped 'mapped'
+drush vset uuid_features_entity_node_course_card 'course_card'
+drush vset uuid_features_file_node_course_card 'course_card'
+drush vset uuid_features_entity_node_learning_sections 'learning_sections'
+drush vset uuid_features_file_node_learning_sections 'learning_sections'
+drush vset uuid_features_entity_node_service_card 'service_card'
+drush vset uuid_features_file_node_service_card 'service_card'
+drush vset uuid_features_entity_node_tools_section 'tools_section'
+drush vset uuid_features_file_node_tools_section 'tools_section'
+drush vset uuid_features_entity_taxonomy_term_forums 'forums'
+drush vset uuid_features_file_taxonomy_term_forums 'forums'
+drush vset uuid_features_file_file_image 'image'
+drush vset uuid_features_file_file_video 'video'
+drush vset uuid_features_file_file_audio 'audio'
+drush vset uuid_features_file_file_document 'document'
+drush vset uuid_features_entity_file_image 'image'
+drush vset uuid_features_entity_file_video 'video'
+drush vset uuid_features_entity_file_audio 'audio'
+drush vset uuid_features_entity_file_document 'document'
+drush vset uuid_features_file_mode 'local'
+drush vset uuid_features_file_assets_path 'sites/default/files/export'
+
+# Drupal Patches
+# node_export patch
+cd modules/node_export
+curl https://www.drupal.org/files/node_export-1911638_2.patch | git apply -v || true
+
+# services patch
+cd ../services
+curl https://www.drupal.org/files/issues/services-clamav-12345-3-D7_0.patch | git apply -v || true
+
+cd ../../../..
+curl https://www.drupal.org/files/issues/drupal-add_basic_svg_support-2539478-3-D7.patch | git apply -v || true
+cd sites/all/
+

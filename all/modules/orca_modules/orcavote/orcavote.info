@@ -1,0 +1,8 @@
+name = orcavote
+description = Orca voting resource
+package = Orca Modules
+dependencies[] = services
+core = "7.x"
+version = "7.x.1.0"
+
+files[] = orcavote.module

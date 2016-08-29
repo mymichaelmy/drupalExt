@@ -1,0 +1,11 @@
+name = orca_feature_recent_searches
+description = Enables the persistence of terms recently searched by the logged in user.
+core = 7.x
+package = Features
+version = 7.x-1.0
+dependencies[] = ctools
+dependencies[] = import_html
+dependencies[] = services
+features[ctools][] = services:services:3
+features[features_api][] = api:2
+features[services_endpoint][] = recentsearches

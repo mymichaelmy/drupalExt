@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Method Cards feature.
+ */
+
+include_once 'method_cards.features.inc';

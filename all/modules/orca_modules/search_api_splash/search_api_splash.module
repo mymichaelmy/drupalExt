@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Drupal hooks
+ */
+
+/**
+ * Implements hook_search_api_alter_callback_info().
+ */
+//function search_api_search_api_alter_callback_info() {
+function search_api_splash_search_api_alter_callback_info() {
+  $callbacks['search_api_splash_alter_settings'] = array(
+    'name' => t('Splash specific alterations'),
+    'description' => t('Create Splash specific custom SOLR indices.'),
+    'class' => 'SearchApiSplashAlterSettings',
+  );
+  return $callbacks;
+}

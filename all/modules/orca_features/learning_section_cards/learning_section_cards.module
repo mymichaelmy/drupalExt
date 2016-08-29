@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Learning Section cards feature.
+ */
+
+include_once 'learning_section_cards.features.inc';

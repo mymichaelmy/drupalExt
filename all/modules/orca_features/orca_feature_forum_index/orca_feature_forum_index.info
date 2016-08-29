@@ -1,0 +1,15 @@
+name = orca_feature_forum_index
+description = Forum Index
+core = 7.x
+package = Features
+dependencies[] = entity
+dependencies[] = search_api
+dependencies[] = search_api_live_results
+dependencies[] = search_api_page
+dependencies[] = search_api_solr
+features[features_api][] = api:2
+features[search_api_index][] = forum_node
+features[search_api_live_results_search][] = search_api_page_3
+features[search_api_page][] = forums
+features[search_api_server][] = community
+project path = sites/all/modules/orca_features

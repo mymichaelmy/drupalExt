@@ -1,0 +1,5 @@
+name = orcaauth
+description = "Authenticates users against Orca Application Rounter"
+package = "Orca Modules"
+core = "7.x"
+version = "7.x.1.0"

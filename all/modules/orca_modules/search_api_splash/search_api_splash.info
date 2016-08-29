@@ -1,0 +1,14 @@
+name = Search API Splash Alterations
+description = "Provides a generic API for Splash specific alterations"
+core = 7.x
+package = "Orca Modules"
+configure = admin/config/search/search_api/custom
+
+dependencies[] = search_api
+
+files[] = includes/callback_splash.inc
+
+;Information added by Drupal.org packaging script on 2015-12-22
+core = 7.x
+version = 7.x-1.0
+project = "search_api_splash"

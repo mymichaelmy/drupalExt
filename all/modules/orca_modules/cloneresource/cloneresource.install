@@ -1,0 +1,58 @@
+<?php
+
+// $Id$
+/**
+* @file
+* Module for counting cloned project.
+*/
+
+/**
+* Implementation of hook_install().
+*/
+function cloneresource_install() {
+// Use schema API to create database table.
+drupal_install_schema('cloneresource');
+}
+
+
+
+/**
+* Implementation of hook_uninstall().
+*/
+function cloneresource_uninstall() {
+// Remove tables.
+drupal_uninstall_schema('cloneresource');
+}
+
+/** 
+ *	 Implements hook_schema().
+ */
+
+function cloneresource_schema() {
+	$schema = array();
+	
+  $schema ['node_clone'] = array(
+
+    'description' => 'Clone Resource Table.',
+    'fields' => array(
+      'nid' => array(
+        'description' => 'The primary identifier for the table.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'timestamp' => array(
+        'description' => 'Timestamp of last cloning.',
+        'pgsql_type' => 'timestamp',
+        'not null' => TRUE,
+      ),
+      'totalcount' => array(
+        'description' => 'Number of clones',
+        'type' => 'int',
+        'not null' => TRUE,
+      ),
+    ),
+    'primary key' => array('nid'),
+  );
+  return $schema;
+}

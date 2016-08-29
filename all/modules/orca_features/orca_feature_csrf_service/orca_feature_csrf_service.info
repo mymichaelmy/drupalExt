@@ -1,0 +1,11 @@
+name = Orca_feature_csrf_service
+description = Enable Orca Drupal CSRF token Rest Service
+core = 7.x
+package = Features
+dependencies[] = ctools
+dependencies[] = import_html
+dependencies[] = services
+features[ctools][] = services:services:3
+features[features_api][] = api:2
+features[services_endpoint][] = csrf
+project path = sites/all/modules/orca_features

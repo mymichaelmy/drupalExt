@@ -1,0 +1,112 @@
+<?php
+// statsresource.module
+/** Gets a view object by id.
+ *
+ * @param int $id
+ * @return object
+ */
+function viewresource_get_view($nid) {
+  try{
+   $query = 'SELECT n.nid, cn.totalcount as viewcount, cl.totalcount as clonecount '
+           . 'FROM {node} n left outer join {node_counter} cn ON (n.nid = cn.nid) left outer join {node_clone} cl ON (n.nid = cl.nid) '
+           . 'WHERE n.nid = :nid';
+   
+   return db_query($query,  array(':nid' => $nid))
+           ->fetchAll();
+  }catch(Exception $ex){
+      drupal_json_output(array(
+          'status' => t('error'),
+          'data' => $ex,
+        ));
+  }
+  exit;
+}
+
+/** Gets objects by type.
+ *
+ * @return object
+ */
+function viewresource_get_views() {
+   //$query = 'SELECT n.nid, cn.totalcount as viewcount, cl.totalcount as clonecount '
+   //        . 'FROM {node} n left outer join {node_counter} cn ON (n.nid = cn.nid) left outer join {node_clone} cl ON (n.nid = cl.nid) '
+   //        . 'WHERE n.nid IN (:nids)';
+
+    try{
+        $query = 'SELECT n.nid, cn.totalcount as viewcount, cl.totalcount as clonecount '
+                . 'FROM {node} n left outer join {node_counter} cn ON (n.nid = cn.nid) left outer join {node_clone} cl ON (n.nid = cl.nid) '
+                . 'WHERE n.type like \'mapped\'';
+
+        return db_query($query)
+               ->fetchAll();
+    }catch(Exception $ex){
+        drupal_json_output(array(
+            'status' => t('error'),
+            'data' => $ex,
+          ));
+    }
+  exit;
+}
+
+/** Writes a view to the database
+ *
+ * @param object $view
+ * @return void
+ */
+function viewresource_write_view($view) {
+  $primary_key = !empty($view->id) ? array('id') : NULL;
+  drupal_write_record('view', $view, $primary_key);
+}
+/**
+ * Deletes a view from the database.
+ *
+ * @param int $id
+ * @return void
+ */
+function viewresource_delete_view($id) {
+  db_query('DELETE FROM {node_counter} WHERE id=:id', array(':id' => $id));
+}
+/**
+ * Implementation of hook_services_resources().
+ */
+function viewresource_services_resources() {
+  return array(
+    'stats' => array(
+      'retrieve' => array(
+        'help' => 'Retrieves a view',
+        'file' => array('file' => 'inc', 'module' => 'statsresource'),
+        'callback' => '_viewresource_retrieve',
+        'access callback' => '_viewresource_access',
+        'access arguments' => array('view'),
+        'access arguments append' => TRUE,
+        'args' => array(
+          array(
+            'name' => 'id',
+            'type' => 'int',
+            'description' => 'The id of the view to get',
+            'source' => array('path' => '0'),
+            'optional' => FALSE,
+          ),
+        ),
+      ),
+      'index' => array(
+        'help' => 'Retrieves a listing of views',
+        'file' => array('file' => 'inc', 'module' => 'statsresource'),
+        'callback' => '_viewresource_index',
+        'access callback' => 'user_access',
+        'access arguments' => array('access content'),
+        'access arguments append' => FALSE,
+        'args' => array(
+          array(
+           'name' => 'parameters',
+           'type' => 'array',
+           'description' => '',
+           'source' => 'param',
+           'optional' => TRUE,
+           'default value' => array(),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+?>

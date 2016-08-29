@@ -1,0 +1,7 @@
+name = "Orca/Splash Statistics Resource"
+description = "Statistics - Likes, Views, Clones - count from BUILD"
+package = "Orca Modules"
+core = 7.x
+
+files[] = statisticsresource.inc
+files[] = statisticsresource.module

@@ -1,0 +1,39 @@
+<?php
+/**
+ * @file
+ * Installation file for recentsearches module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function recentsearches_schema() {
+  $schema['searched'] = array(
+    'description' => 'Table of Terms Searched.',
+    'fields' => array(
+      'tid' => array('type' => 'serial', 'unsigned' => TRUE, 'not null' => TRUE, 'description' => 'The primary identifier for the table.'),
+      'uid' => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0, 'description' => 'The user who searched for this term.  0 if user is anonymous.'),
+      'term' => array('type' => 'varchar', 'length' => 64, 'not null' => TRUE, 'description' => 'The term searched.'),
+      'created' => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0, 'description' => 'The timestamp this row was created.'),
+      'last_used' => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0, 'description' => 'The timestamp this term was last used by this user.'),
+      'use_count' => array('type' => 'int', 'not null' => TRUE, 'default' => 1, 'description' => 'The number of times this term has been used by this user.'),
+    ),
+    'primary key' => array('tid'),
+    'indexes' => array(
+      'uid' => array('uid'),
+     ),
+  );
+  return $schema;
+}
+
+/**
+* Implements hook_install().
+*/
+function recentsearches_install() {
+}
+
+/**
+* Implements hook_uninstall().
+*/
+function recentsearches_uninstall() {
+}

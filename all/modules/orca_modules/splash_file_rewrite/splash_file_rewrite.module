@@ -1,0 +1,106 @@
+<?php
+
+/**
+* Implements hook_permission()
+*/
+function splash_file_rewrite_permission() {
+  return array(
+    'administer splashrewrite' => array(
+      'title' => t('Administer Splash System Settings'),
+      'description' => t('Perform administration tasks for Splash System Settings'),
+    ),
+  );
+}
+
+
+/**
+* Implement hook menu
+*/
+function splash_file_rewrite_menu() {
+  
+  // Parent Menu Item
+  $items['admin/config/splash_file_rewrite'] = array(
+      'title' => 'Splash System Settings',
+      'description' => 'Splash System Settings',
+      'position' => 'left',
+      'weight' => -100,
+      'page callback' => 'system_admin_menu_block_page',
+      'access arguments' => array('administer splashrewrite'),
+      'file' => 'system.admin.inc',
+      'file path' => drupal_get_path('module', 'system'),
+  );
+  
+  //Child Menu Item
+  $items['admin/config/splash_file_rewrite/settings'] = array(
+      'title' => 'Splash System Integration',
+      'description' => 'Splash System Integration',
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('splash_file_rewrite_admin_form'),
+      'access arguments' => array('administer splashrewrite'),
+  );
+  return $items;
+}
+
+function splash_file_rewrite_admin_form($form, &$form_state) {
+  $form['#encrypted_fields'] = TRUE;
+
+  $form['splash_file_rewrite_enable'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Enable SPLASH public file path rewriting'),
+    '#default_value' => variable_get('splash_file_rewrite_enable', 0),
+  );
+
+
+
+  $form['splash_file_rewrite_url'] = array(
+  '#title' => t('Splash System'),
+  '#type' => 'textfield',
+  '#description' => t('Splash public file URL base - example http://www.experiencesplash.com/splash'),
+  '#default_value' =>  variable_get('splash_file_rewrite_url','localhost:8080/splash'),
+  );
+
+
+  
+  return system_settings_form($form);
+}
+
+
+
+
+
+function splash_file_rewrite_file_url_alter(&$uri) {
+
+
+  // get the scheme (public, private) for the requested file
+  $scheme = file_uri_scheme($uri);
+
+  // validate the file is from public files
+  if($scheme == 'public')
+  {
+
+    $enabled = variable_get('splash_file_rewrite_enable', 0);
+    $publicPath = variable_get('splash_file_rewrite_url','localhost:8080/splash');
+
+    //remove trailing slash if there is one
+    $publicPath = rtrim($publicPath, '/');
+
+    if ($enabled)
+    {
+
+      $wrapper = file_stream_wrapper_get_instance_by_scheme($scheme);
+      $path = $wrapper->getDirectoryPath() . '/' . file_uri_target($uri);
+
+      //watchdog('Splash File Rewrite', 'pub file found', null, WATCHDOG_INFO);
+
+      // Clean up Windows paths.
+      $path = str_replace('\\', '/', $path);
+
+      $uri = $publicPath . '/' . $path;
+
+
+
+    }
+
+  }
+
+}

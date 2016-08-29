@@ -1,0 +1,333 @@
+<?php
+
+/**
+* Implements hook_permission()
+*/
+function splashforum_permission() {
+  return array(
+    'administer splashforum' => array(
+      'title' => t('Administer BUILD System Settings'),
+      'description' => t('Perform administration tasks for BUILD System Settings'),
+    ),
+  );
+}
+
+/**
+* Implement hook menu
+*/
+function splashforum_menu() {
+  
+  // Parent Menu Item
+  $items['admin/config/build'] = array(
+      'title' => 'BUILD System Settings',
+      'description' => 'BUILD System Settings',
+      'position' => 'left',
+      'weight' => -100,
+      'page callback' => 'system_admin_menu_block_page',
+      'access arguments' => array('administer splashforum'),
+      'file' => 'system.admin.inc',
+      'file path' => drupal_get_path('module', 'system'),
+  );
+  
+  //Child Menu Item
+  $items['admin/config/build/system'] = array(
+      'title' => 'BUILD System Integration',
+      'description' => 'BUILD System Integration',
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('splashforum_admin_form'),
+      'access arguments' => array('administer splashforum'),
+  );
+  return $items;
+}
+
+function splashforum_admin_form($form, &$form_state) {
+  $form['#encrypted_fields'] = TRUE;
+
+  $form['splashforum_buildhost'] = array(
+  '#title' => t('BUILD System'),
+  '#type' => 'textfield',
+  '#description' => t('BUILD System - Example: http://localhost'),
+  '#default_value' =>  variable_get('splashforum_buildhost'),
+  '#required' => TRUE
+  );
+
+
+  $form['splashforum_buildport'] = array(
+  '#title' => t('BUILD Port'),
+  '#type' => 'textfield',
+  '#description' => t('BUILD Port - Example: 8000'),
+  '#default_value' =>  variable_get('splashforum_buildport'),
+  '#required' => TRUE
+  );
+
+  $form['splashforum_buildtimeout'] = array(
+  '#title' => t('BUILD HTTP Request Timeout'),
+  '#type' => 'textfield',
+  '#description' => t('Timeout HTTP Request after this many seconds'),
+  '#default_value' =>  variable_get('splashforum_buildtimeout', '1200'), 
+  );
+  
+  return system_settings_form($form);
+}
+
+/** function splashforum_permission() {
+  // Bangkok, City of Angels, Travel & Leisure Best City 2011
+  // Thaksin and Reds, runaway crimal & convict, ruler of Mordor.
+  return array(
+	'forumtopic create'=> array('title' => t('forumtopic create'),'description' => t('create'),),
+	'forumtopic view any topic'=> array('title' => t('forumtopic view any topic'),'description' => t('view any topics'),),
+	'forumtopic view own topic'=> array('title' => t('forumtopic view own topic'),'description' => t('view own topics'),),
+	'forumtopic edit any topic'=> array('title' => t('forumtopic edit any topic'),'description' => t('edit any topics'),),
+	'forumtopic edit own topic'=> array('title' => t('forumtopic edit own topic'),'description' => t('edit own topics'),),
+	'forumtopic delete any topic'=> array('title' => t('forumtopic delete any topic'),'description' => t('delete any topic'),),
+	'forumtopic delete own topic'=> array('title' => t('forumtopic delete own topic'),'description' => t('delete own topic'),),
+  );
+} */
+
+    /**
+     * Gets all the Splash Community Forums.
+     *
+     * @param int $id
+     * @return object                                                                                                                                                                                                                                                                                                                           
+     */
+    function splashforum_index($page, $sortby) {
+        
+    
+//       $vocabulary = taxonomy_vocabulary_machine_name_load('forums');
+/**        dpm($vocabulary,'$vocabulary');
+        
+        $query = new EntityFieldQuery();
+        $result = $query->entityCondition('entity_type', 'taxonomy_term')
+//                        ->propertyCondition('vid', (int) $vocabulary['vid'], '=')
+                        ->execute(); */
+//        $forums = forum_forum_load(null);
+        
+//        $containerId = taxonomy_get_term_by_name('Splash Community Forum Container');
+//        $containerTid = array_pop($containerId)->tid;
+        $xforums = array();
+        
+//Get all fo the Forums
+        $allForums = forum_forum_load(NULL);
+//Iterate over each Forum        
+        foreach ($allForums->forums as $forum) {
+            $xtopics = array();
+//Get the Forum Topics            
+            $id = $forum->tid;
+            $topics = forum_get_topics($id, $sortby, $page);
+            $xtopics = format_topics($topics);
+            
+            array_push($xforums, array(
+              "tid" => $forum->tid,
+              "vid" => $forum->vid,
+              "name" => $forum->name,
+              "description" => $forum->description,
+              "num_topics" => $forum->num_topics,
+              "num_posts" => $forum->num_posts,
+              "topics" => $xtopics,
+              ));              
+
+        }
+        
+     return $xforums;
+     
+    }
+    
+    function splashforum_retrieve($tid, $page, $sortby) {
+        
+        $xforums = array();
+        
+        $forum = forum_forum_load($tid);
+            
+        $id = $forum->tid;
+        $topics = forum_get_topics($id, $sortby, $page);
+        $xtopics = format_topics($topics);
+            
+        array_push($xforums, array(
+          "tid" => $forum->tid,
+          "vid" => $forum->vid,
+          "name" => $forum->name,
+          "description" => $forum->description,
+//          "num_topics" => $forum->num_topics,
+//          "num_posts" => $forum->num_posts,
+          "topics" => $xtopics,
+          ));            
+        
+     return $xforums;
+     
+    }
+     
+    
+    /**
+     * Implements hook_services_resources().
+     */
+    function splashforum_services_resources() {
+        
+      return array(
+       'splashforum' => array(
+         'retrieve' => array(
+           'help' => 'Retrieves a Forum and Topics',
+           'file' => array('type' => 'inc', 'module' => 'splashforum', 'name' => 'splashforum'),
+           'callback' => '_splashforum_retrieve',
+//           'access callback' => '_splashforum_access',
+//           'access arguments' => array('view'),
+//           'access arguments append' => TRUE,
+           
+           'access callback' => 'user_access',
+           'access arguments' => array('access content'),
+           'access arguments append' => FALSE,
+           'args' => array(
+             array(
+               'name' => 'tid',
+               'type' => 'int',
+               'description' => 'The TID of the Forum',
+               'source' => array('path' => '0'),
+               'optional' => FALSE,
+             ),
+             array(
+               'name' => 'page',
+               'type' => 'int',
+               'description' => 'Topic per Page',
+               'source' => array('param' => 'page'),
+               'optional' => TRUE,
+               'default value' => '6'   
+               ),
+             array(
+               'name' => 'sortby',
+               'type' => 'int',
+               'description' => 'Sort Topics by 1 Date-newest first, 2 Date-oldest first, 3 Post with most comments first, 4 Posts with least comments first',
+               'source' => array('param' => 'sortby'),
+               'optional' => TRUE,
+               'default value' => '1', 
+             ),              
+           ),
+         ), 
+         'index' => array(
+           'help' => 'Retrieves a listing of Splash Community Forums',
+           'file' => array('type' => 'inc', 'module' => 'splashforum', 'name' => 'splashforum'),
+           'callback' => '_splashforum_index',
+           'access callback' => 'user_access',
+           'access arguments' => array('access content'),
+           'access arguments append' => FALSE,
+           'args' => array(
+             array(
+               'name' => 'page',
+               'type' => 'int',
+               'description' => 'Topics per Page',
+               'source' => array('param' => 'page'),
+               'optional' => TRUE,
+               'default value' => '6'   
+               ),
+             array(
+               'name' => 'sortby',
+               'type' => 'int',
+               'description' => 'Sort Topics by 1 Date-newest first, 2 Date-oldest first, 3 Post with most comments first, 4 Posts with least comments first',
+               'source' => array('param' => 'sortby'),
+               'optional' => TRUE,
+               'default value' => '1', 
+             ), 
+           ),
+         ),
+       ),
+      );
+    
+
+    }
+    
+    /**
+     * Access callback for the note resource.
+     *
+     * @param string $op
+     *  The operation that's going to be performed.
+     * @param array $args
+     *  The arguments that will be passed to the callback.
+     * @return bool
+     *  Whether access is given or not.
+     */
+    function _splashforum_access($op, $args) {
+      global $user;
+      $access = FALSE;
+
+      switch ($op) {
+        case 'view':
+          $forum = splashforum_retrieve($args[0], $args[1], $args[3]);
+          $access = user_access('forumtopic view any topic');
+          $access = $access || $forum->uid == $user->uid && user_access('forumtopic view own topic');
+          break;
+/**        case 'update':
+          $note = noteresource_get_note($args[0]->id);
+          $access = user_access('note resource edit any note');
+          $access = $access || $note->uid == $user->uid && user_access('note resource edit own notes');
+          break;
+        case 'delete':
+          $note = noteresource_get_note($args[0]);
+          $access = user_access('note resource delete any note');
+          $access = $access || $note->uid == $user->uid && user_access('note resource delete own notes');
+          break; */
+      }
+
+      return $access;
+    }
+    
+    function get_user($uid) {
+        
+        $avatar = array();
+    // Load the Drupal User Information
+        $u = user_load($uid);
+        $data = explode(" ", $u->name);
+    // Get the Drupal User Name
+        $id = $data[0];
+    // Get the BUILD System Configuration        
+        $sys = variable_get('splashforum_buildhost');
+        $port = variable_get('splashforum_buildport');
+    // Only call BUILD API if configiration values exist.        
+        if (isset($sys) && isset($port)) {
+            
+        
+            $url = $sys.':'.$port.'/api-public/common/users/'.$id.'/avatar';
+            $options = array(
+                'method' => 'GET',
+            );
+    // HTTP Request to BUILD for Avatar        
+            $info = drupal_http_request($url, $options);
+        
+            if ($info->code == '200') {
+                
+          
+                $avatar = array(
+                    "content-type" => $info->headers['content-type'],
+                    "content-length" => $info->headers['content-length'],
+                    "image" => base64_encode($info->data),
+                );
+            }  
+        
+        }
+        
+        return $avatar;
+        
+    }
+    
+    function format_topics($topics) {
+    //Iterate over each Topic and assign the Avatar Information and map the attributes
+        $xtopics = array();
+        foreach ($topics as $topic) {
+            
+            $avatar = get_user($topic->uid);
+
+            array_push($xtopics, array(
+              "title" => $topic->title,
+              "nid" => $topic->nid,
+              "type" => $topic->type,
+              "created" => $topic->created,
+              "uid" => $topic->uid,
+              "name" => $topic->name,
+              "forum_tid" => $topic->forum_tid,
+              "comment_count" => $topic->comment_count,
+              "last_comment_uid" => $topic->last_comment_uid,
+              "last_comment_timestamp" => $topic->last_comment_timestamp,
+              "last_comment-name" => $topic->last_comment_name,
+              "last_reply" => $topic->last_reply,
+              "avatar" => $avatar));
+
+            }
+            return $xtopics;
+    }
