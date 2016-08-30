@@ -1,0 +1,4631 @@
+array(
+  (object) array(
+      'vid' => '23',
+      'uid' => '1',
+      'title' => 'Forming student groups-3',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => 'a29571e4-c1c3-4812-8f04-51d967fa5c52',
+      'nid' => '23',
+      'type' => 'class_tip',
+      'language' => 'und',
+      'created' => '1470787690',
+      'changed' => '1471905334',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => 'e562f65b-e1fa-4ff9-a7ec-1481a0857eed',
+      'revision_timestamp' => '1471905334',
+      'revision_uid' => '0',
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+            'format' => NULL,
+            'safe_value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+          ),
+        ),
+      ),
+      'field_author' => array(
+        'und' => array(
+          array(
+            'value' => 'Petra Royse',
+            'format' => NULL,
+            'safe_value' => 'Petra Royse',
+          ),
+        ),
+      ),
+      'field_learning_goals' => array(
+        'und' => array(
+          array(
+            'value' => "1. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n2. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n3. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+            'format' => NULL,
+            'safe_value' => "1. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n2. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n3. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+          ),
+        ),
+      ),
+      'body' => array(),
+      'field_about' => array(
+        'und' => array(
+          array(
+            'value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+            'format' => NULL,
+            'safe_value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+          ),
+        ),
+      ),
+      'field_author_title' => array(
+        'und' => array(
+          array(
+            'value' => 'Professor of Cognitive Science at UC San Diego',
+            'format' => NULL,
+            'safe_value' => 'Professor of Cognitive Science at UC San Diego',
+          ),
+        ),
+      ),
+      'field_endorse' => array(
+        'und' => array(
+          array(
+            'value' => 'IDEO',
+            'format' => NULL,
+            'safe_value' => 'IDEO',
+          ),
+        ),
+      ),
+      'field_recommended' => array(
+        'und' => array(
+          array(
+            'value' => '1',
+          ),
+        ),
+      ),
+      'field_things_to_consider' => array(
+        'und' => array(
+          array(
+            'value' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dictum est vel hendrerit dapibus. Duis imperdiet vel ligula eget consectetur. Phasellus malesuada dui sed lacus ornare lacinia. Donec tincidunt maximus fermentum. Morbi et est tincidunt, malesuada est eu, feugiat diam. Nunc vulputate sollicitudin dignissim. Curabitur consequat vitae nisl quis commodo. Suspendisse orci neque, sagittis eu lacus sit amet, porta efficitur elit.\r\n\r\nDuis quam eros, dignissim vitae purus vitae, feugiat tristique felis. In mi ligula, tristique non suscipit luctus, porta id sem. Integer condimentum lobortis varius. Fusce ullamcorper ex felis, fringilla pretium sapien gravida quis. Nunc congue molestie turpis ut egestas. Nunc imperdiet elit sed tellus efficitur, at pulvinar metus scelerisque. Aliquam fermentum faucibus magna in facilisis. Proin id arcu porttitor eros dignissim feugiat sed et dui. Integer laoreet scelerisque enim eget vehicula. Cras tincidunt a nibh nec euismod. Nullam at lorem mi. Suspendisse pellentesque vestibulum metus id viverra. Praesent vulputate venenatis ex sit amet tristique.\r\n\r\nCras a tincidunt lacus. Nunc vitae ante pretium, commodo libero iaculis, congue ligula. Morbi enim ante, cursus ut fringilla ac, congue sed mauris. Curabitur bibendum erat sed lobortis tempor. Maecenas vitae felis a orci rhoncus aliquam. Sed mi elit, porttitor ac vestibulum quis, gravida vitae risus. Mauris tristique in est porttitor aliquam. Aenean facilisis nisi mauris, ut pulvinar mauris blandit non.",
+            'format' => 'plain_text',
+            'safe_value' => "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dictum est vel hendrerit dapibus. Duis imperdiet vel ligula eget consectetur. Phasellus malesuada dui sed lacus ornare lacinia. Donec tincidunt maximus fermentum. Morbi et est tincidunt, malesuada est eu, feugiat diam. Nunc vulputate sollicitudin dignissim. Curabitur consequat vitae nisl quis commodo. Suspendisse orci neque, sagittis eu lacus sit amet, porta efficitur elit.</p>\n<p>Duis quam eros, dignissim vitae purus vitae, feugiat tristique felis. In mi ligula, tristique non suscipit luctus, porta id sem. Integer condimentum lobortis varius. Fusce ullamcorper ex felis, fringilla pretium sapien gravida quis. Nunc congue molestie turpis ut egestas. Nunc imperdiet elit sed tellus efficitur, at pulvinar metus scelerisque. Aliquam fermentum faucibus magna in facilisis. Proin id arcu porttitor eros dignissim feugiat sed et dui. Integer laoreet scelerisque enim eget vehicula. Cras tincidunt a nibh nec euismod. Nullam at lorem mi. Suspendisse pellentesque vestibulum metus id viverra. Praesent vulputate venenatis ex sit amet tristique.</p>\n<p>Cras a tincidunt lacus. Nunc vitae ante pretium, commodo libero iaculis, congue ligula. Morbi enim ante, cursus ut fringilla ac, congue sed mauris. Curabitur bibendum erat sed lobortis tempor. Maecenas vitae felis a orci rhoncus aliquam. Sed mi elit, porttitor ac vestibulum quis, gravida vitae risus. Mauris tristique in est porttitor aliquam. Aenean facilisis nisi mauris, ut pulvinar mauris blandit non.</p>\n",
+          ),
+        ),
+      ),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1470787690',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '20',
+      'uid' => '1',
+      'title' => 'Forming student groups',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => 'e99fb663-f40f-4dff-9f15-014eb86c2e2c',
+      'nid' => '20',
+      'type' => 'class_tip',
+      'language' => 'und',
+      'created' => '1470787569',
+      'changed' => '1471562613',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => '9a6c1651-b917-4a37-98f3-65e461934503',
+      'revision_timestamp' => '1471562613',
+      'revision_uid' => '1',
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+            'format' => NULL,
+            'safe_value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+          ),
+        ),
+      ),
+      'field_author' => array(
+        'und' => array(
+          array(
+            'value' => 'Petra Royse',
+            'format' => NULL,
+            'safe_value' => 'Petra Royse',
+          ),
+        ),
+      ),
+      'field_learning_goals' => array(
+        'und' => array(
+          array(
+            'value' => "1. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n2. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n3. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+            'format' => NULL,
+            'safe_value' => "1. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n2. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n3. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+          ),
+        ),
+      ),
+      'body' => array(),
+      'field_about' => array(
+        'und' => array(
+          array(
+            'value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+            'format' => NULL,
+            'safe_value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+          ),
+        ),
+      ),
+      'field_author_title' => array(
+        'und' => array(
+          array(
+            'value' => 'Professor of Cognitive Science at UC San Diego',
+            'format' => NULL,
+            'safe_value' => 'Professor of Cognitive Science at UC San Diego',
+          ),
+        ),
+      ),
+      'field_endorse' => array(
+        'und' => array(
+          array(
+            'value' => 'IDEO',
+            'format' => NULL,
+            'safe_value' => 'IDEO',
+          ),
+        ),
+      ),
+      'field_recommended' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_things_to_consider' => array(),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1470787569',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '22',
+      'uid' => '1',
+      'title' => 'Forming student groups-2',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => 'a6280a66-b06e-474b-8dac-32a4c96ade9a',
+      'nid' => '22',
+      'type' => 'class_tip',
+      'language' => 'und',
+      'created' => '1470787680',
+      'changed' => '1471562590',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => 'bd29dfb5-f382-4048-a6c3-f9bd7df2f321',
+      'revision_timestamp' => '1471562590',
+      'revision_uid' => '1',
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+            'format' => NULL,
+            'safe_value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+          ),
+        ),
+      ),
+      'field_author' => array(
+        'und' => array(
+          array(
+            'value' => 'Petra Royse',
+            'format' => NULL,
+            'safe_value' => 'Petra Royse',
+          ),
+        ),
+      ),
+      'field_learning_goals' => array(
+        'und' => array(
+          array(
+            'value' => "1. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n2. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n3. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+            'format' => NULL,
+            'safe_value' => "1. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n2. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n3. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+          ),
+        ),
+      ),
+      'body' => array(),
+      'field_about' => array(
+        'und' => array(
+          array(
+            'value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+            'format' => NULL,
+            'safe_value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+          ),
+        ),
+      ),
+      'field_author_title' => array(
+        'und' => array(
+          array(
+            'value' => 'Professor of Cognitive Science at UC San Diego',
+            'format' => NULL,
+            'safe_value' => 'Professor of Cognitive Science at UC San Diego',
+          ),
+        ),
+      ),
+      'field_endorse' => array(
+        'und' => array(
+          array(
+            'value' => 'UCSD',
+            'format' => NULL,
+            'safe_value' => 'UCSD',
+          ),
+        ),
+      ),
+      'field_recommended' => array(
+        'und' => array(
+          array(
+            'value' => '1',
+          ),
+        ),
+      ),
+      'field_things_to_consider' => array(),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1470787680',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '21',
+      'uid' => '1',
+      'title' => 'Forming student groups-1',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => 'f178fff1-b9fc-4541-ba82-4622018f378e',
+      'nid' => '21',
+      'type' => 'class_tip',
+      'language' => 'und',
+      'created' => '1470787672',
+      'changed' => '1471562565',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => 'a6934f9a-d5d3-4b5b-a79b-bfb746b55b28',
+      'revision_timestamp' => '1471562565',
+      'revision_uid' => '1',
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+            'format' => NULL,
+            'safe_value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+          ),
+        ),
+      ),
+      'field_author' => array(
+        'und' => array(
+          array(
+            'value' => 'Petra Royse',
+            'format' => NULL,
+            'safe_value' => 'Petra Royse',
+          ),
+        ),
+      ),
+      'field_learning_goals' => array(
+        'und' => array(
+          array(
+            'value' => "1. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n2. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n3. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+            'format' => NULL,
+            'safe_value' => "1. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n2. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n3. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+          ),
+        ),
+      ),
+      'body' => array(),
+      'field_about' => array(
+        'und' => array(
+          array(
+            'value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+            'format' => NULL,
+            'safe_value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+          ),
+        ),
+      ),
+      'field_author_title' => array(
+        'und' => array(
+          array(
+            'value' => 'Professor of Cognitive Science at UC San Diego',
+            'format' => NULL,
+            'safe_value' => 'Professor of Cognitive Science at UC San Diego',
+          ),
+        ),
+      ),
+      'field_endorse' => array(
+        'und' => array(
+          array(
+            'value' => 'IDEO',
+            'format' => NULL,
+            'safe_value' => 'IDEO',
+          ),
+        ),
+      ),
+      'field_recommended' => array(
+        'und' => array(
+          array(
+            'value' => '19',
+          ),
+        ),
+      ),
+      'field_things_to_consider' => array(),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1470787672',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '18',
+      'uid' => '1',
+      'title' => 'Introduction to Human-Computer Interaction-2',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => '706dfcd4-9b7e-43e6-ad47-2662478f7d71',
+      'nid' => '18',
+      'type' => 'course_example',
+      'language' => 'und',
+      'created' => '1470786655',
+      'changed' => '1471389057',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => '4383189e-b5bb-4cb8-a5b2-651e63cedbba',
+      'revision_timestamp' => '1471389057',
+      'revision_uid' => '1',
+      'field_learning_goals' => array(
+        'und' => array(
+          array(
+            'value' => "1. Students will learn how to design technologies that bring people joy, rather than frustration. \r\n2. To do this they’ll learn techniques for rapidly prototyping and evaluating multiple interface alternatives — and why rapid prototyping and comparative evaluation are essential to excellent interaction design. \r\n3. They’ll learn how to conduct fieldwork with people to help generate design ideas. \r\n4. They'll learn how to make paper prototypes and low-fidelity mock-ups that are interactive — and how to use these designs to get feedback from teammates, clients, and users. \r\n5. They'll learn principles of visual design, perception and cognition so that they can effectively organize and present information with their interfaces. \r\n6. They’ll learn how to perform and analyze controlled experiments online.",
+            'format' => 'unfiltered_html',
+            'safe_value' => "1. Students will learn how to design technologies that bring people joy, rather than frustration. \n2. To do this they’ll learn techniques for rapidly prototyping and evaluating multiple interface alternatives — and why rapid prototyping and comparative evaluation are essential to excellent interaction design. \n3. They’ll learn how to conduct fieldwork with people to help generate design ideas. \n4. They'll learn how to make paper prototypes and low-fidelity mock-ups that are interactive — and how to use these designs to get feedback from teammates, clients, and users. \n5. They'll learn principles of visual design, perception and cognition so that they can effectively organize and present information with their interfaces. \n6. They’ll learn how to perform and analyze controlled experiments online.",
+          ),
+        ),
+      ),
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => 'Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. ',
+            'format' => NULL,
+            'safe_value' => 'Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. ',
+          ),
+        ),
+      ),
+      'field_about' => array(
+        'und' => array(
+          array(
+            'value' => "Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. Topics: user-centered design, rapid prototyping, experimentation, direct manipulation, cognitive principles, visual design, social software, software tools. Learn by doing: work with a team on a quarter-long design project. Recommended preparation: basic familiarity with HTML. This course covers the time span of 10 weeks, and 250+ students are typically enrolled in this course.\r\n\r\nThese are past project done by students who have taken the class before and demonstrated exemplary work:  <a href=\"\">Example 1</a> <a href=\"\">Example 2</a> <a href=\"\">Example 3</a>",
+            'format' => 'filtered_html',
+            'safe_value' => "<p>Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. Topics: user-centered design, rapid prototyping, experimentation, direct manipulation, cognitive principles, visual design, social software, software tools. Learn by doing: work with a team on a quarter-long design project. Recommended preparation: basic familiarity with HTML. This course covers the time span of 10 weeks, and 250+ students are typically enrolled in this course.</p>\n<p>These are past project done by students who have taken the class before and demonstrated exemplary work:  <a href=\"\">Example 1</a> <a href=\"\">Example 2</a> <a href=\"\">Example 3</a></p>\n",
+          ),
+        ),
+      ),
+      'field_syllabus' => array(),
+      'field_author_title' => array(
+        'und' => array(
+          array(
+            'value' => 'Professor of Cognitive Science at UC San Diego',
+            'format' => NULL,
+            'safe_value' => 'Professor of Cognitive Science at UC San Diego',
+          ),
+        ),
+      ),
+      'field_author' => array(
+        'und' => array(
+          array(
+            'value' => 'Rayna Dantas',
+            'format' => NULL,
+            'safe_value' => 'Rayna Dantas',
+          ),
+        ),
+      ),
+      'field_links' => array(
+        'und' => array(
+          array(
+            'url' => '/classroomtips/1',
+            'title' => 'Forming student groups',
+            'attributes' => array(),
+          ),
+        ),
+      ),
+      'field_recommended' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_endorse' => array(
+        'und' => array(
+          array(
+            'value' => 'UCSD',
+            'format' => NULL,
+            'safe_value' => 'UCSD',
+          ),
+        ),
+      ),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1470786655',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '8',
+      'uid' => '1',
+      'title' => 'Brainstorm with your team',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => '35ae95d3-f9fa-4606-82bf-7f4995e6d3d1',
+      'nid' => '8',
+      'type' => 'method_card',
+      'language' => 'und',
+      'created' => '1469565240',
+      'changed' => '1471037960',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => 'd608a204-8d8f-478f-b73e-bc5333397eba',
+      'revision_timestamp' => '1471037960',
+      'revision_uid' => '1',
+      'field_consumption_time' => array(
+        'und' => array(
+          array(
+            'value' => '2 hours',
+            'format' => NULL,
+            'safe_value' => '2 hours',
+          ),
+        ),
+      ),
+      'field_dld_step' => array(
+        'und' => array(
+          array(
+            'value' => 'Ideate',
+          ),
+        ),
+      ),
+      'field_arsenal_files' => array(
+        'und' => array(
+          array(
+            'fid' => '13',
+            'uid' => '652',
+            'filename' => 'Brainstorming_howto.pdf',
+            'uri' => 'public://Brainstorming_howto_0.pdf',
+            'filemime' => 'application/pdf',
+            'filesize' => '993593',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'document',
+            'uuid' => '0b43016d-363d-4cd8-93e6-33927678b4cc',
+            'rdf_mapping' => array(),
+            'metadata' => array(),
+            'alt' => '',
+            'title' => '',
+            'display' => '1',
+            'description' => 'HOW TO BRAINSTORM',
+          ),
+          array(
+            'fid' => '14',
+            'uid' => '652',
+            'filename' => 'Halfsheet_ideas_example.pdf',
+            'uri' => 'public://Halfsheet_ideas_example_0.pdf',
+            'filemime' => 'application/pdf',
+            'filesize' => '135859',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'document',
+            'uuid' => '54f4e1bc-3467-4a2b-a569-3b8fe32a5c9b',
+            'rdf_mapping' => array(),
+            'metadata' => array(),
+            'alt' => '',
+            'title' => '',
+            'display' => '1',
+            'description' => 'HALF-SHEET IDEAS EXAMPLE',
+          ),
+        ),
+      ),
+      'field_feature_on_the_home_page' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_participants' => array(
+        'und' => array(
+          array(
+            'value' => 'Project team and non-project-related people',
+            'format' => NULL,
+            'safe_value' => 'Project team and non-project-related people',
+          ),
+        ),
+      ),
+      'field_steps' => array(
+        'und' => array(
+          array(
+            'value' => "Get a group of 5 to 8 participants of different backgrounds.\r\nTake sufficient sheets of printer paper and cut out half sheets in preparation for the exercise.\r\nSet up room with these half sheets, pencils, erasers, markers, sticky notes and wall space.\r\nGo over brainstorming rules (no judgment, go for quantity, etc.).\r\nAsk the participants to take 5-10 minutes to write down ideas on half sheets (one idea per half-sheet, drawings welcome!) around your HMW or topic area.\r\nPresent and discuss each person's half sheets while sticking them on the wall.\r\nCapture the discussion points on sticky notes and paste them alongside the sketches. These points maybe about why the concept works, concerns and ideas that build on it.\r\nCluster the ideas to find themes, and prioritize based on user needs.",
+            'format' => 'unfiltered_html',
+            'safe_value' => "Get a group of 5 to 8 participants of different backgrounds.\nTake sufficient sheets of printer paper and cut out half sheets in preparation for the exercise.\nSet up room with these half sheets, pencils, erasers, markers, sticky notes and wall space.\nGo over brainstorming rules (no judgment, go for quantity, etc.).\nAsk the participants to take 5-10 minutes to write down ideas on half sheets (one idea per half-sheet, drawings welcome!) around your HMW or topic area.\nPresent and discuss each person's half sheets while sticking them on the wall.\nCapture the discussion points on sticky notes and paste them alongside the sketches. These points maybe about why the concept works, concerns and ideas that build on it.\nCluster the ideas to find themes, and prioritize based on user needs.",
+          ),
+        ),
+      ),
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => 'More ideas, more chances for a delightful solution. Generate a large variety of ideas quickly by bringing together a diverse set of minds.',
+            'format' => NULL,
+            'safe_value' => 'More ideas, more chances for a delightful solution. Generate a large variety of ideas quickly by bringing together a diverse set of minds.',
+          ),
+        ),
+      ),
+      'field_video' => array(),
+      'field_needs' => array(
+        'und' => array(
+          array(
+            'value' => 'Sticky notes, half sheets, felt tip pens, pencils, erasers, wall space',
+            'format' => NULL,
+            'safe_value' => 'Sticky notes, half sheets, felt tip pens, pencils, erasers, wall space',
+          ),
+        ),
+      ),
+      'field_orca_tags' => array(
+        'und' => array(
+          array(
+            'value' => 'brainstorm',
+            'format' => NULL,
+            'safe_value' => 'brainstorm',
+          ),
+        ),
+      ),
+      'field_order_number' => array(
+        'und' => array(
+          array(
+            'value' => '50',
+          ),
+        ),
+      ),
+      'field_video_thumbnail' => array(),
+      'field_zip_files' => array(
+        'und' => array(
+          array(
+            'fid' => '37',
+            'uid' => '1',
+            'filename' => 'Brainstorm_with_your-team.zip',
+            'uri' => 'public://Brainstorm_with_your-team.zip',
+            'filemime' => 'application/zip',
+            'filesize' => '1007305',
+            'status' => '1',
+            'timestamp' => '1471037960',
+            'type' => 'undefined',
+            'uuid' => 'af83425e-b089-44b6-95a6-f20ca56d1fab',
+            'rdf_mapping' => array(),
+            'metadata' => array(),
+            'alt' => '',
+            'title' => '',
+            'display' => '1',
+            'description' => '',
+          ),
+        ),
+      ),
+      'field_arsenal' => array(),
+      'field_video_url' => array(
+        'und' => array(
+          array(
+            'url' => 'https://player.vimeo.com/external/175294927.sd.mp4?s=487716cc4abd8421f9413057ab3f577a1f3503b6&profile_id=165',
+            'title' => '',
+            'attributes' => array(),
+          ),
+        ),
+      ),
+      'field_card_image' => array(
+        'und' => array(
+          array(
+            'fid' => '15',
+            'uid' => '1',
+            'filename' => 'Brainstorming.png',
+            'uri' => 'public://Brainstorming.png',
+            'filemime' => 'image/png',
+            'filesize' => '8515',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'image',
+            'uuid' => 'e67cfd5e-11ce-483a-9bd8-15d01bda2444',
+            'field_file_image_alt_text' => array(),
+            'field_file_image_title_text' => array(),
+            'rdf_mapping' => array(),
+            'metadata' => array(
+              'height' => 116,
+              'width' => 130,
+            ),
+            'alt' => '',
+            'title' => '',
+            'height' => '116',
+            'width' => '130',
+          ),
+        ),
+      ),
+      'field_links' => array(),
+      'field_activity_description' => array(
+        'und' => array(
+          array(
+            'value' => 'Every problem is an opportunity for innovation. By framing your challenge as a "How Might We" (HMW) question, you will be prepared for the next step: the brainstorming. Use either your point of view or persona as a starting point to formulate your HMW. Then, brainstorm possible concepts and solutions, and prioritize them based on user needs. Diverse perspectives and backgrounds lead to innovative ideas.',
+            'format' => NULL,
+            'safe_value' => 'Every problem is an opportunity for innovation. By framing your challenge as a &quot;How Might We&quot; (HMW) question, you will be prepared for the next step: the brainstorming. Use either your point of view or persona as a starting point to formulate your HMW. Then, brainstorm possible concepts and solutions, and prioritize them based on user needs. Diverse perspectives and backgrounds lead to innovative ideas.',
+          ),
+        ),
+      ),
+      'field_recommended' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_endorse' => array(
+        'und' => array(
+          array(
+            'value' => 'IDEO',
+            'format' => NULL,
+            'safe_value' => 'IDEO',
+          ),
+        ),
+      ),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1469565240',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '11',
+      'uid' => '1',
+      'title' => 'Distill Findings',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => '44d29b17-0126-444c-bcee-27fb71ef84d7',
+      'nid' => '11',
+      'type' => 'method_card',
+      'language' => 'und',
+      'created' => '1469565240',
+      'changed' => '1470952019',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => 'bc67d367-db71-4cf2-98d0-e841a5f46fb0',
+      'revision_timestamp' => '1470952019',
+      'revision_uid' => '1',
+      'field_consumption_time' => array(
+        'und' => array(
+          array(
+            'value' => '1 hour preparation, 60 mins distilling for each user interview',
+            'format' => NULL,
+            'safe_value' => '1 hour preparation, 60 mins distilling for each user interview',
+          ),
+        ),
+      ),
+      'field_dld_step' => array(
+        'und' => array(
+          array(
+            'value' => 'Synthesize',
+          ),
+        ),
+      ),
+      'field_arsenal_files' => array(
+        'und' => array(
+          array(
+            'fid' => '22',
+            'uid' => '652',
+            'filename' => 'Distill_findings_howto.pdf',
+            'uri' => 'public://Distill_findings_howto_0.pdf',
+            'filemime' => 'application/pdf',
+            'filesize' => '683276',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'document',
+            'uuid' => 'a484f82d-a2d2-4e07-a966-30586a9239f6',
+            'rdf_mapping' => array(),
+            'metadata' => array(),
+            'alt' => '',
+            'title' => '',
+            'display' => '1',
+            'description' => '',
+          ),
+        ),
+      ),
+      'field_feature_on_the_home_page' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_participants' => array(
+        'und' => array(
+          array(
+            'value' => 'Project team',
+            'format' => NULL,
+            'safe_value' => 'Project team',
+          ),
+        ),
+      ),
+      'field_steps' => array(
+        'und' => array(
+          array(
+            'value' => "In preparation for the session, everyone who participated in the interview should review interview notes and highlight key points. If you have artifacts or images from the interviews, hang them on the walls to complement your research report.\r\nHave the note taker share highlights of the research.\r\nWhile highlights are presented, have the team take notes - one data point per sticky note: Listen for user characteristics, needs, tasks, pain points, tools used, work environment, key solution features, etc.\r\nPut the sticky notes on the wall and look for common data points, such as similar goals, tools used, etc.. Cluster your sticky notes into common topics, and name each cluster appropriately.",
+            'format' => 'unfiltered_html',
+            'safe_value' => "In preparation for the session, everyone who participated in the interview should review interview notes and highlight key points. If you have artifacts or images from the interviews, hang them on the walls to complement your research report.\nHave the note taker share highlights of the research.\nWhile highlights are presented, have the team take notes - one data point per sticky note: Listen for user characteristics, needs, tasks, pain points, tools used, work environment, key solution features, etc.\nPut the sticky notes on the wall and look for common data points, such as similar goals, tools used, etc.. Cluster your sticky notes into common topics, and name each cluster appropriately.",
+          ),
+        ),
+      ),
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => 'Use this method to effectively organize your findings, and identify common needs and insights from research without getting lost in a heap of information.',
+            'format' => NULL,
+            'safe_value' => 'Use this method to effectively organize your findings, and identify common needs and insights from research without getting lost in a heap of information.',
+          ),
+        ),
+      ),
+      'field_video' => array(),
+      'field_needs' => array(
+        'und' => array(
+          array(
+            'value' => 'Meeting room with plenty of wall space, whiteboard, sticky notes and felt tip pens',
+            'format' => NULL,
+            'safe_value' => 'Meeting room with plenty of wall space, whiteboard, sticky notes and felt tip pens',
+          ),
+        ),
+      ),
+      'field_orca_tags' => array(
+        'und' => array(
+          array(
+            'value' => 'synthesize ',
+            'format' => NULL,
+            'safe_value' => 'synthesize ',
+          ),
+        ),
+      ),
+      'field_order_number' => array(
+        'und' => array(
+          array(
+            'value' => '20',
+          ),
+        ),
+      ),
+      'field_video_thumbnail' => array(),
+      'field_zip_files' => array(
+        'und' => array(
+          array(
+            'fid' => '36',
+            'uid' => '1',
+            'filename' => 'Distill_findings_howto.zip',
+            'uri' => 'public://Distill_findings_howto.zip',
+            'filemime' => 'application/zip',
+            'filesize' => '594933',
+            'status' => '1',
+            'timestamp' => '1470952019',
+            'type' => 'undefined',
+            'uuid' => '4c397dd3-c4b1-4751-ba95-abd15a4b37f0',
+            'rdf_mapping' => array(),
+            'metadata' => array(),
+            'alt' => '',
+            'title' => '',
+            'display' => '1',
+            'description' => '',
+          ),
+        ),
+      ),
+      'field_arsenal' => array(),
+      'field_video_url' => array(
+        'und' => array(
+          array(
+            'url' => 'https://player.vimeo.com/external/175294864.sd.mp4?s=3c486a17cfc864edb0e60ddef656cbf687488b58&profile_id=165',
+            'title' => '',
+            'attributes' => array(),
+          ),
+        ),
+      ),
+      'field_card_image' => array(
+        'und' => array(
+          array(
+            'fid' => '23',
+            'uid' => '1',
+            'filename' => 'synthesize finding.png',
+            'uri' => 'public://synthesize finding.png',
+            'filemime' => 'image/png',
+            'filesize' => '14438',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'image',
+            'uuid' => '16d649e7-9d79-4780-b164-ab634c4e0615',
+            'field_file_image_alt_text' => array(),
+            'field_file_image_title_text' => array(),
+            'rdf_mapping' => array(),
+            'metadata' => array(
+              'width' => 154,
+              'height' => 183,
+            ),
+            'alt' => '',
+            'title' => '',
+            'width' => '154',
+            'height' => '183',
+          ),
+        ),
+      ),
+      'field_links' => array(),
+      'field_activity_description' => array(
+        'und' => array(
+          array(
+            'value' => 'Get your team together, and share the user stories collected during your interviews. Sharing stories and artifacts creates a common understanding within your team of who the user is, what they do, and exactly what they need.',
+            'format' => NULL,
+            'safe_value' => 'Get your team together, and share the user stories collected during your interviews. Sharing stories and artifacts creates a common understanding within your team of who the user is, what they do, and exactly what they need.',
+          ),
+        ),
+      ),
+      'field_recommended' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_endorse' => array(
+        'und' => array(
+          array(
+            'value' => 'IDEO',
+            'format' => NULL,
+            'safe_value' => 'IDEO',
+          ),
+        ),
+      ),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1469565240',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '10',
+      'uid' => '1',
+      'title' => 'Create a persona',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => '5be55bb3-86d6-4d34-8af8-d71749c161a2',
+      'nid' => '10',
+      'type' => 'method_card',
+      'language' => 'und',
+      'created' => '1469565240',
+      'changed' => '1470867934',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => 'bc671a1c-a9d6-425e-83d6-c92416b925e6',
+      'revision_timestamp' => '1470867934',
+      'revision_uid' => '1',
+      'field_consumption_time' => array(
+        'und' => array(
+          array(
+            'value' => '2 hours per Persona',
+            'format' => NULL,
+            'safe_value' => '2 hours per Persona',
+          ),
+        ),
+      ),
+      'field_dld_step' => array(
+        'und' => array(
+          array(
+            'value' => 'Synthesize',
+          ),
+        ),
+      ),
+      'field_arsenal_files' => array(
+        'und' => array(
+          array(
+            'fid' => '19',
+            'uid' => '652',
+            'filename' => 'persona_howto.pdf',
+            'uri' => 'public://persona_howto.pdf',
+            'filemime' => 'application/pdf',
+            'filesize' => '2097869',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'document',
+            'uuid' => 'bbce9c81-fd0c-4823-944d-ccc777d9ab02',
+            'rdf_mapping' => array(),
+            'metadata' => array(),
+            'alt' => '',
+            'title' => '',
+            'display' => '1',
+            'description' => 'HOW TO CREATE A PERSONA',
+          ),
+          array(
+            'fid' => '20',
+            'uid' => '652',
+            'filename' => 'Persona_example_template.pptx',
+            'uri' => 'public://Persona_example_template_0.pptx',
+            'filemime' => 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+            'filesize' => '2012276',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'document',
+            'uuid' => '4e31a42c-6278-46aa-82a7-0b7d69d2aa83',
+            'rdf_mapping' => array(),
+            'metadata' => array(),
+            'alt' => '',
+            'title' => '',
+            'display' => '1',
+            'description' => 'PERSONA EXAMPLE + TEMPLATE',
+          ),
+        ),
+      ),
+      'field_feature_on_the_home_page' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_participants' => array(
+        'und' => array(
+          array(
+            'value' => 'Interview moderator and note-taker',
+            'format' => NULL,
+            'safe_value' => 'Interview moderator and note-taker',
+          ),
+        ),
+      ),
+      'field_steps' => array(
+        'und' => array(
+          array(
+            'value' => "Give the persona a name, and add a photo or sketch that illustrates that persona's characteristics.\r\nCreate a short quote - real or pieced together from various real quotes - that illustrates the user's goals or motivations.\r\nOutline needs, goals, characteristics and tools and include anything else that might be important for the design of your solution.\r\nValidate your persona with your end users.",
+            'format' => 'unfiltered_html',
+            'safe_value' => "Give the persona a name, and add a photo or sketch that illustrates that persona's characteristics.\nCreate a short quote - real or pieced together from various real quotes - that illustrates the user's goals or motivations.\nOutline needs, goals, characteristics and tools and include anything else that might be important for the design of your solution.\nValidate your persona with your end users.",
+          ),
+        ),
+      ),
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => 'Summarize common user characteristics, needs and pain points in a single persona so that you can strongly empathize with your target user and build the solution that is right for them.',
+            'format' => NULL,
+            'safe_value' => 'Summarize common user characteristics, needs and pain points in a single persona so that you can strongly empathize with your target user and build the solution that is right for them.',
+          ),
+        ),
+      ),
+      'field_video' => array(),
+      'field_needs' => array(),
+      'field_orca_tags' => array(
+        'und' => array(
+          array(
+            'value' => 'persona',
+            'format' => NULL,
+            'safe_value' => 'persona',
+          ),
+        ),
+      ),
+      'field_order_number' => array(
+        'und' => array(
+          array(
+            'value' => '30',
+          ),
+        ),
+      ),
+      'field_video_thumbnail' => array(),
+      'field_zip_files' => array(),
+      'field_arsenal' => array(),
+      'field_video_url' => array(
+        'und' => array(
+          array(
+            'url' => 'https://player.vimeo.com/external/175294889.sd.mp4?s=73c52f3b1a995aa243d8abc255353f819c8b1eef&profile_id=165',
+            'title' => '',
+            'attributes' => array(),
+          ),
+        ),
+      ),
+      'field_card_image' => array(
+        'und' => array(
+          array(
+            'fid' => '21',
+            'uid' => '1',
+            'filename' => 'create persona.png',
+            'uri' => 'public://create persona.png',
+            'filemime' => 'image/png',
+            'filesize' => '12451',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'image',
+            'uuid' => 'c474d46c-c5e2-4fab-9420-14e61f648b54',
+            'field_file_image_alt_text' => array(),
+            'field_file_image_title_text' => array(),
+            'rdf_mapping' => array(),
+            'metadata' => array(
+              'width' => 151,
+              'height' => 115,
+            ),
+            'alt' => '',
+            'title' => '',
+            'width' => '151',
+            'height' => '115',
+          ),
+        ),
+      ),
+      'field_links' => array(),
+      'field_activity_description' => array(
+        'und' => array(
+          array(
+            'value' => 'A persona embodies the common findings of your research. It reflects the range of real user needs and pain points. You create a persona with detailed characteristics, context, needs, goals and pain points derived from your findings. A persona becomes valuable later on when you and your team make design and development decisions. Evaluating your decisions against your persona will help ensure that you stay focused on addressing the right needs.',
+            'format' => NULL,
+            'safe_value' => 'A persona embodies the common findings of your research. It reflects the range of real user needs and pain points. You create a persona with detailed characteristics, context, needs, goals and pain points derived from your findings. A persona becomes valuable later on when you and your team make design and development decisions. Evaluating your decisions against your persona will help ensure that you stay focused on addressing the right needs.',
+          ),
+        ),
+      ),
+      'field_recommended' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_endorse' => array(
+        'und' => array(
+          array(
+            'value' => 'IDEO',
+            'format' => NULL,
+            'safe_value' => 'IDEO',
+          ),
+        ),
+      ),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1469565240',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '7',
+      'uid' => '1',
+      'title' => 'Create a storyboard',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => '54d9ec74-75af-486c-a74a-d50340b99206',
+      'nid' => '7',
+      'type' => 'method_card',
+      'language' => 'und',
+      'created' => '1469565240',
+      'changed' => '1470862534',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => '15ad5644-b636-4d99-89ef-a90f59d6aa96',
+      'revision_timestamp' => '1470862534',
+      'revision_uid' => '1',
+      'field_consumption_time' => array(
+        'und' => array(
+          array(
+            'value' => '4 hours',
+            'format' => NULL,
+            'safe_value' => '4 hours',
+          ),
+        ),
+      ),
+      'field_dld_step' => array(
+        'und' => array(
+          array(
+            'value' => 'Ideate',
+          ),
+        ),
+      ),
+      'field_arsenal_files' => array(
+        'und' => array(
+          array(
+            'fid' => '10',
+            'uid' => '652',
+            'filename' => 'Storyboard_howto.pdf',
+            'uri' => 'public://Storyboard_howto_1.pdf',
+            'filemime' => 'application/pdf',
+            'filesize' => '676146',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'document',
+            'uuid' => '849fe258-cc34-4480-a07c-50a27de89601',
+            'rdf_mapping' => array(),
+            'metadata' => array(),
+            'alt' => '',
+            'title' => '',
+            'display' => '1',
+            'description' => 'HOW TO CREATE A STORYBOARD',
+          ),
+          array(
+            'fid' => '11',
+            'uid' => '1',
+            'filename' => 'Storyboard_example_template.pptx',
+            'uri' => 'public://Storyboard_example_template.pptx',
+            'filemime' => 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+            'filesize' => '1506072',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'document',
+            'uuid' => '3d63f5c2-597b-4f58-a4f8-4a175e751986',
+            'rdf_mapping' => array(),
+            'metadata' => array(),
+            'alt' => '',
+            'title' => '',
+            'display' => '1',
+            'description' => 'STORYBOARD EXAMPLE + TEMPLATE',
+          ),
+        ),
+      ),
+      'field_feature_on_the_home_page' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_participants' => array(
+        'und' => array(
+          array(
+            'value' => 'Project team',
+            'format' => NULL,
+            'safe_value' => 'Project team',
+          ),
+        ),
+      ),
+      'field_steps' => array(
+        'und' => array(
+          array(
+            'value' => "Take a few people from your product team (1-2) and find a room where you have surfaces to put sticky notes and draw on.\r\nStart with the HMW statement and ideas generated during the Brainstorming session.\r\nBuild the story around your target user. Refer to the guide and example provided in the arsenal here.\r\nStories are never formed in one shot. Share your storyboard with stakeholders, customers, and end-users, and use their input to improve.\r\nIdentify opportunities for software solutions in the storyboard.",
+            'format' => 'unfiltered_html',
+            'safe_value' => "Take a few people from your product team (1-2) and find a room where you have surfaces to put sticky notes and draw on.\nStart with the HMW statement and ideas generated during the Brainstorming session.\nBuild the story around your target user. Refer to the guide and example provided in the arsenal here.\nStories are never formed in one shot. Share your storyboard with stakeholders, customers, and end-users, and use their input to improve.\nIdentify opportunities for software solutions in the storyboard.",
+          ),
+        ),
+      ),
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => 'A story will help you combine your product ideas into a solution that meets user goals in a useful and delightful manner.',
+            'format' => NULL,
+            'safe_value' => 'A story will help you combine your product ideas into a solution that meets user goals in a useful and delightful manner.',
+          ),
+        ),
+      ),
+      'field_video' => array(),
+      'field_needs' => array(
+        'und' => array(
+          array(
+            'value' => 'Half-sheet ideas from Brainstorming, sticky notes',
+            'format' => NULL,
+            'safe_value' => 'Half-sheet ideas from Brainstorming, sticky notes',
+          ),
+        ),
+      ),
+      'field_orca_tags' => array(
+        'und' => array(
+          array(
+            'value' => 'Storyboard',
+            'format' => NULL,
+            'safe_value' => 'Storyboard',
+          ),
+        ),
+      ),
+      'field_order_number' => array(
+        'und' => array(
+          array(
+            'value' => '55',
+          ),
+        ),
+      ),
+      'field_video_thumbnail' => array(),
+      'field_zip_files' => array(),
+      'field_arsenal' => array(),
+      'field_video_url' => array(
+        'und' => array(
+          array(
+            'url' => 'https://player.vimeo.com/external/175294927.sd.mp4?s=487716cc4abd8421f9413057ab3f577a1f3503b6&profile_id=165',
+            'title' => '',
+            'attributes' => array(),
+          ),
+        ),
+      ),
+      'field_card_image' => array(
+        'und' => array(
+          array(
+            'fid' => '12',
+            'uid' => '1',
+            'filename' => 'sketch a story.png',
+            'uri' => 'public://sketch a story.png',
+            'filemime' => 'image/png',
+            'filesize' => '7718',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'image',
+            'uuid' => 'fd0427cf-9067-429e-9fbb-c2acc6d5a6cd',
+            'field_file_image_alt_text' => array(),
+            'field_file_image_title_text' => array(),
+            'rdf_mapping' => array(),
+            'metadata' => array(
+              'height' => 100,
+              'width' => 121,
+            ),
+            'alt' => '',
+            'title' => '',
+            'height' => '100',
+            'width' => '121',
+          ),
+        ),
+      ),
+      'field_links' => array(),
+      'field_activity_description' => array(
+        'und' => array(
+          array(
+            'value' => "A storyboard is a high-level journey describing a user performing a task using a newly envisioned product or service. In a storyboard, you illustrate the physical context the user is in, the tools they will be using, and the people they interact with. You don't detail out solutions with actual screens yet, instead incorporate the ideas coming from the Brainstorming. A storyboard is not only an efficient way to communicate a proposed user experience, it can also help the team and stakeholders empathize with the user, and get excited about end to end the solution.",
+            'format' => NULL,
+            'safe_value' => 'A storyboard is a high-level journey describing a user performing a task using a newly envisioned product or service. In a storyboard, you illustrate the physical context the user is in, the tools they will be using, and the people they interact with. You don&#039;t detail out solutions with actual screens yet, instead incorporate the ideas coming from the Brainstorming. A storyboard is not only an efficient way to communicate a proposed user experience, it can also help the team and stakeholders empathize with the user, and get excited about end to end the solution.',
+          ),
+        ),
+      ),
+      'field_recommended' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_endorse' => array(
+        'und' => array(
+          array(
+            'value' => 'IDEO',
+            'format' => NULL,
+            'safe_value' => 'IDEO',
+          ),
+        ),
+      ),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1469565240',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '9',
+      'uid' => '1',
+      'title' => 'Define points of view',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => '14c44f44-9f05-4f6b-b8d9-40e7421e7cab',
+      'nid' => '9',
+      'type' => 'method_card',
+      'language' => 'und',
+      'created' => '1469565240',
+      'changed' => '1470862490',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => '68ddb271-3073-4d87-99fc-a957165e214b',
+      'revision_timestamp' => '1470862490',
+      'revision_uid' => '1',
+      'field_consumption_time' => array(
+        'und' => array(
+          array(
+            'value' => '30 min per Point of View',
+            'format' => NULL,
+            'safe_value' => '30 min per Point of View',
+          ),
+        ),
+      ),
+      'field_dld_step' => array(
+        'und' => array(
+          array(
+            'value' => 'Synthesize',
+          ),
+        ),
+      ),
+      'field_arsenal_files' => array(
+        'und' => array(
+          array(
+            'fid' => '16',
+            'uid' => '652',
+            'filename' => 'PoV_howto.pdf',
+            'uri' => 'public://PoV_howto_0.pdf',
+            'filemime' => 'application/pdf',
+            'filesize' => '104501',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'document',
+            'uuid' => '71264b93-5445-49b0-b471-9c448e933cc2',
+            'rdf_mapping' => array(),
+            'metadata' => array(),
+            'alt' => '',
+            'title' => '',
+            'display' => '1',
+            'description' => 'HOW TO CREATE A POINT OF VIEW',
+          ),
+          array(
+            'fid' => '17',
+            'uid' => '1',
+            'filename' => 'PoV_example_template.pptx',
+            'uri' => 'public://PoV_example_template.pptx',
+            'filemime' => 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+            'filesize' => '141664',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'document',
+            'uuid' => '01d85f6f-61d0-4b5a-ba28-4875e41670c5',
+            'rdf_mapping' => array(),
+            'metadata' => array(),
+            'alt' => '',
+            'title' => '',
+            'display' => '1',
+            'description' => 'POINT OF VIEW EXAMPLE + TEMPLATE',
+          ),
+        ),
+      ),
+      'field_feature_on_the_home_page' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_participants' => array(
+        'und' => array(
+          array(
+            'value' => 'Project team ',
+            'format' => NULL,
+            'safe_value' => 'Project team ',
+          ),
+        ),
+      ),
+      'field_steps' => array(
+        'und' => array(
+          array(
+            'value' => "Look at your findings from your persona and the research you've done.\r\nDescribe the user based on the characteristics you uncovered.\r\nPick one of her needs you prioritized.\r\nCapture the insight associated with that need. We encourage you to go deep to understand the user's emotions and infer the reasons from there. Then, present it in an intriguing way.",
+            'format' => 'unfiltered_html',
+            'safe_value' => "Look at your findings from your persona and the research you've done.\nDescribe the user based on the characteristics you uncovered.\nPick one of her needs you prioritized.\nCapture the insight associated with that need. We encourage you to go deep to understand the user's emotions and infer the reasons from there. Then, present it in an intriguing way.",
+          ),
+        ),
+      ),
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => 'Bring focus to your design by choosing to address a specific need. This will be your anchor when creating your solution.',
+            'format' => NULL,
+            'safe_value' => 'Bring focus to your design by choosing to address a specific need. This will be your anchor when creating your solution.',
+          ),
+        ),
+      ),
+      'field_video' => array(),
+      'field_needs' => array(),
+      'field_orca_tags' => array(
+        'und' => array(
+          array(
+            'value' => 'point of view, POV',
+            'format' => NULL,
+            'safe_value' => 'point of view, POV',
+          ),
+        ),
+      ),
+      'field_order_number' => array(
+        'und' => array(
+          array(
+            'value' => '40',
+          ),
+        ),
+      ),
+      'field_video_thumbnail' => array(),
+      'field_zip_files' => array(),
+      'field_arsenal' => array(),
+      'field_video_url' => array(
+        'und' => array(
+          array(
+            'url' => 'https://player.vimeo.com/external/175294889.sd.mp4?s=73c52f3b1a995aa243d8abc255353f819c8b1eef&profile_id=165',
+            'title' => '',
+            'attributes' => array(),
+          ),
+        ),
+      ),
+      'field_card_image' => array(
+        'und' => array(
+          array(
+            'fid' => '18',
+            'uid' => '1',
+            'filename' => 'POV.png',
+            'uri' => 'public://POV.png',
+            'filemime' => 'image/png',
+            'filesize' => '10762',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'image',
+            'uuid' => 'ea1fc211-8a31-4bd4-9458-8c82fe47ea0b',
+            'field_file_image_alt_text' => array(),
+            'field_file_image_title_text' => array(),
+            'rdf_mapping' => array(),
+            'metadata' => array(
+              'height' => 135,
+              'width' => 139,
+            ),
+            'alt' => '',
+            'title' => '',
+            'height' => '135',
+            'width' => '139',
+          ),
+        ),
+      ),
+      'field_links' => array(),
+      'field_activity_description' => array(
+        'und' => array(
+          array(
+            'value' => "Once you created your persona, you may have found a long list of needs. If you go and design for all these needs, you'll end up with something clunky like a pocket knife! This is why you have to focus and address each separately by creating a Point of View (POV) for each important need of the persona.\r\n\r\nDefining a POV will help you stay focused on what problem you are trying to solve and for whom.",
+            'format' => NULL,
+            'safe_value' => "Once you created your persona, you may have found a long list of needs. If you go and design for all these needs, you&#039;ll end up with something clunky like a pocket knife! This is why you have to focus and address each separately by creating a Point of View (POV) for each important need of the persona.\r\n\r\nDefining a POV will help you stay focused on what problem you are trying to solve and for whom.",
+          ),
+        ),
+      ),
+      'field_recommended' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_endorse' => array(
+        'und' => array(
+          array(
+            'value' => 'IDEO',
+            'format' => NULL,
+            'safe_value' => 'IDEO',
+          ),
+        ),
+      ),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1469565240',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '16',
+      'uid' => '1',
+      'title' => 'Introduction to Human-Computer Interaction',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => 'edb5f73d-ea30-4eae-8d21-935708f143e7',
+      'nid' => '16',
+      'type' => 'course_example',
+      'language' => 'und',
+      'created' => '1470784214',
+      'changed' => '1470862447',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => '1f342deb-423e-4ba0-a587-c3c38ce07e71',
+      'revision_timestamp' => '1470862447',
+      'revision_uid' => '1',
+      'field_learning_goals' => array(
+        'und' => array(
+          array(
+            'value' => "1. Students will learn how to design technologies that bring people joy, rather than frustration. \r\n2. To do this they’ll learn techniques for rapidly prototyping and evaluating multiple interface alternatives — and why rapid prototyping and comparative evaluation are essential to excellent interaction design. \r\n3. They’ll learn how to conduct fieldwork with people to help generate design ideas. \r\n4. They'll learn how to make paper prototypes and low-fidelity mock-ups that are interactive — and how to use these designs to get feedback from teammates, clients, and users. \r\n5. They'll learn principles of visual design, perception and cognition so that they can effectively organize and present information with their interfaces. \r\n6. They’ll learn how to perform and analyze controlled experiments online.",
+            'format' => 'unfiltered_html',
+            'safe_value' => "1. Students will learn how to design technologies that bring people joy, rather than frustration. \n2. To do this they’ll learn techniques for rapidly prototyping and evaluating multiple interface alternatives — and why rapid prototyping and comparative evaluation are essential to excellent interaction design. \n3. They’ll learn how to conduct fieldwork with people to help generate design ideas. \n4. They'll learn how to make paper prototypes and low-fidelity mock-ups that are interactive — and how to use these designs to get feedback from teammates, clients, and users. \n5. They'll learn principles of visual design, perception and cognition so that they can effectively organize and present information with their interfaces. \n6. They’ll learn how to perform and analyze controlled experiments online.",
+          ),
+        ),
+      ),
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => 'Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. ',
+            'format' => NULL,
+            'safe_value' => 'Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. ',
+          ),
+        ),
+      ),
+      'field_about' => array(
+        'und' => array(
+          array(
+            'value' => "Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. Topics: user-centered design, rapid prototyping, experimentation, direct manipulation, cognitive principles, visual design, social software, software tools. Learn by doing: work with a team on a quarter-long design project. Recommended preparation: basic familiarity with HTML. This course covers the time span of 10 weeks, and 250+ students are typically enrolled in this course.\r\n\r\nThese are past project done by students who have taken the class before and demonstrated exemplary work:  <a href=\"\">Example 1</a> <a href=\"\">Example 2</a> <a href=\"\">Example 3</a>",
+            'format' => 'filtered_html',
+            'safe_value' => "<p>Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. Topics: user-centered design, rapid prototyping, experimentation, direct manipulation, cognitive principles, visual design, social software, software tools. Learn by doing: work with a team on a quarter-long design project. Recommended preparation: basic familiarity with HTML. This course covers the time span of 10 weeks, and 250+ students are typically enrolled in this course.</p>\n<p>These are past project done by students who have taken the class before and demonstrated exemplary work:  <a href=\"\">Example 1</a> <a href=\"\">Example 2</a> <a href=\"\">Example 3</a></p>\n",
+          ),
+        ),
+      ),
+      'field_syllabus' => array(),
+      'field_author_title' => array(
+        'und' => array(
+          array(
+            'value' => 'Professor of Cognitive Science at UC San Diego',
+            'format' => NULL,
+            'safe_value' => 'Professor of Cognitive Science at UC San Diego',
+          ),
+        ),
+      ),
+      'field_author' => array(
+        'und' => array(
+          array(
+            'value' => 'Rayna Dantas',
+            'format' => NULL,
+            'safe_value' => 'Rayna Dantas',
+          ),
+        ),
+      ),
+      'field_links' => array(
+        'und' => array(
+          array(
+            'url' => '/classroomtips/1',
+            'title' => 'Forming student groups',
+            'attributes' => array(),
+          ),
+        ),
+      ),
+      'field_recommended' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_endorse' => array(
+        'und' => array(
+          array(
+            'value' => 'IDEO',
+            'format' => NULL,
+            'safe_value' => 'IDEO',
+          ),
+        ),
+      ),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1470784214',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '17',
+      'uid' => '1',
+      'title' => 'Introduction to Human-Computer Interaction-1',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => 'ed2308b2-df8d-4189-b4af-b480ce92dddc',
+      'nid' => '17',
+      'type' => 'course_example',
+      'language' => 'und',
+      'created' => '1470786647',
+      'changed' => '1470862431',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => '630ffa41-b1da-4bc8-b5e5-6d3c0e84879a',
+      'revision_timestamp' => '1470862431',
+      'revision_uid' => '1',
+      'field_learning_goals' => array(
+        'und' => array(
+          array(
+            'value' => "1. Students will learn how to design technologies that bring people joy, rather than frustration. \r\n2. To do this they’ll learn techniques for rapidly prototyping and evaluating multiple interface alternatives — and why rapid prototyping and comparative evaluation are essential to excellent interaction design. \r\n3. They’ll learn how to conduct fieldwork with people to help generate design ideas. \r\n4. They'll learn how to make paper prototypes and low-fidelity mock-ups that are interactive — and how to use these designs to get feedback from teammates, clients, and users. \r\n5. They'll learn principles of visual design, perception and cognition so that they can effectively organize and present information with their interfaces. \r\n6. They’ll learn how to perform and analyze controlled experiments online.",
+            'format' => 'unfiltered_html',
+            'safe_value' => "1. Students will learn how to design technologies that bring people joy, rather than frustration. \n2. To do this they’ll learn techniques for rapidly prototyping and evaluating multiple interface alternatives — and why rapid prototyping and comparative evaluation are essential to excellent interaction design. \n3. They’ll learn how to conduct fieldwork with people to help generate design ideas. \n4. They'll learn how to make paper prototypes and low-fidelity mock-ups that are interactive — and how to use these designs to get feedback from teammates, clients, and users. \n5. They'll learn principles of visual design, perception and cognition so that they can effectively organize and present information with their interfaces. \n6. They’ll learn how to perform and analyze controlled experiments online.",
+          ),
+        ),
+      ),
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => 'Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. ',
+            'format' => NULL,
+            'safe_value' => 'Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. ',
+          ),
+        ),
+      ),
+      'field_about' => array(
+        'und' => array(
+          array(
+            'value' => "Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. Topics: user-centered design, rapid prototyping, experimentation, direct manipulation, cognitive principles, visual design, social software, software tools. Learn by doing: work with a team on a quarter-long design project. Recommended preparation: basic familiarity with HTML. This course covers the time span of 10 weeks, and 250+ students are typically enrolled in this course.\r\n\r\nThese are past project done by students who have taken the class before and demonstrated exemplary work:  <a href=\"\">Example 1</a> <a href=\"\">Example 2</a> <a href=\"\">Example 3</a>",
+            'format' => 'filtered_html',
+            'safe_value' => "<p>Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. Topics: user-centered design, rapid prototyping, experimentation, direct manipulation, cognitive principles, visual design, social software, software tools. Learn by doing: work with a team on a quarter-long design project. Recommended preparation: basic familiarity with HTML. This course covers the time span of 10 weeks, and 250+ students are typically enrolled in this course.</p>\n<p>These are past project done by students who have taken the class before and demonstrated exemplary work:  <a href=\"\">Example 1</a> <a href=\"\">Example 2</a> <a href=\"\">Example 3</a></p>\n",
+          ),
+        ),
+      ),
+      'field_syllabus' => array(),
+      'field_author_title' => array(
+        'und' => array(
+          array(
+            'value' => 'Professor of Cognitive Science at UC San Diego',
+            'format' => NULL,
+            'safe_value' => 'Professor of Cognitive Science at UC San Diego',
+          ),
+        ),
+      ),
+      'field_author' => array(
+        'und' => array(
+          array(
+            'value' => 'Rayna Dantas',
+            'format' => NULL,
+            'safe_value' => 'Rayna Dantas',
+          ),
+        ),
+      ),
+      'field_links' => array(
+        'und' => array(
+          array(
+            'url' => '/classroomtips/1',
+            'title' => 'Forming student groups',
+            'attributes' => array(),
+          ),
+        ),
+      ),
+      'field_recommended' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_endorse' => array(
+        'und' => array(
+          array(
+            'value' => 'IDEO',
+            'format' => NULL,
+            'safe_value' => 'IDEO',
+          ),
+        ),
+      ),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1470786647',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '19',
+      'uid' => '1',
+      'title' => 'Introduction to Human-Computer Interaction-3',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => '52755d3d-708f-4c3c-9293-9c9a3c6b77f5',
+      'nid' => '19',
+      'type' => 'course_example',
+      'language' => 'und',
+      'created' => '1470786942',
+      'changed' => '1470862399',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => 'f190fdd7-4070-4168-b70b-c18910ff0416',
+      'revision_timestamp' => '1470862399',
+      'revision_uid' => '1',
+      'field_learning_goals' => array(
+        'und' => array(
+          array(
+            'value' => "1. Students will learn how to design technologies that bring people joy, rather than frustration. \r\n2. To do this they’ll learn techniques for rapidly prototyping and evaluating multiple interface alternatives — and why rapid prototyping and comparative evaluation are essential to excellent interaction design. \r\n3. They’ll learn how to conduct fieldwork with people to help generate design ideas. \r\n4. They'll learn how to make paper prototypes and low-fidelity mock-ups that are interactive — and how to use these designs to get feedback from teammates, clients, and users. \r\n5. They'll learn principles of visual design, perception and cognition so that they can effectively organize and present information with their interfaces. \r\n6. They’ll learn how to perform and analyze controlled experiments online.",
+            'format' => 'unfiltered_html',
+            'safe_value' => "1. Students will learn how to design technologies that bring people joy, rather than frustration. \n2. To do this they’ll learn techniques for rapidly prototyping and evaluating multiple interface alternatives — and why rapid prototyping and comparative evaluation are essential to excellent interaction design. \n3. They’ll learn how to conduct fieldwork with people to help generate design ideas. \n4. They'll learn how to make paper prototypes and low-fidelity mock-ups that are interactive — and how to use these designs to get feedback from teammates, clients, and users. \n5. They'll learn principles of visual design, perception and cognition so that they can effectively organize and present information with their interfaces. \n6. They’ll learn how to perform and analyze controlled experiments online.",
+          ),
+        ),
+      ),
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => 'Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. ',
+            'format' => NULL,
+            'safe_value' => 'Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. ',
+          ),
+        ),
+      ),
+      'field_about' => array(
+        'und' => array(
+          array(
+            'value' => "Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. Topics: user-centered design, rapid prototyping, experimentation, direct manipulation, cognitive principles, visual design, social software, software tools. Learn by doing: work with a team on a quarter-long design project. Recommended preparation: basic familiarity with HTML. This course covers the time span of 10 weeks, and 250+ students are typically enrolled in this course.\r\n\r\nThese are past project done by students who have taken the class before and demonstrated exemplary work:  <a href=\"\">Example 1</a> <a href=\"\">Example 2</a> <a href=\"\">Example 3</a>",
+            'format' => 'filtered_html',
+            'safe_value' => "<p>Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. Topics: user-centered design, rapid prototyping, experimentation, direct manipulation, cognitive principles, visual design, social software, software tools. Learn by doing: work with a team on a quarter-long design project. Recommended preparation: basic familiarity with HTML. This course covers the time span of 10 weeks, and 250+ students are typically enrolled in this course.</p>\n<p>These are past project done by students who have taken the class before and demonstrated exemplary work:  <a href=\"\">Example 1</a> <a href=\"\">Example 2</a> <a href=\"\">Example 3</a></p>\n",
+          ),
+        ),
+      ),
+      'field_syllabus' => array(),
+      'field_author_title' => array(
+        'und' => array(
+          array(
+            'value' => 'Professor of Cognitive Science at UC San Diego',
+            'format' => NULL,
+            'safe_value' => 'Professor of Cognitive Science at UC San Diego',
+          ),
+        ),
+      ),
+      'field_author' => array(
+        'und' => array(
+          array(
+            'value' => 'Rayna Dantas',
+            'format' => NULL,
+            'safe_value' => 'Rayna Dantas',
+          ),
+        ),
+      ),
+      'field_links' => array(
+        'und' => array(
+          array(
+            'url' => '/classroomtips/1',
+            'title' => 'Forming student groups',
+            'attributes' => array(),
+          ),
+        ),
+      ),
+      'field_recommended' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_endorse' => array(
+        'und' => array(
+          array(
+            'value' => 'IDEO',
+            'format' => NULL,
+            'safe_value' => 'IDEO',
+          ),
+        ),
+      ),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1470786942',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '5',
+      'uid' => '1',
+      'title' => 'Test your sketches with users',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => 'c4bc4230-26bb-4d28-b58f-bf81accc6558',
+      'nid' => '5',
+      'type' => 'method_card',
+      'language' => 'und',
+      'created' => '1469565240',
+      'changed' => '1470861634',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => '495d8246-a43f-4723-b456-7f3d7bec6652',
+      'revision_timestamp' => '1470861634',
+      'revision_uid' => '0',
+      'field_consumption_time' => array(
+        'und' => array(
+          array(
+            'value' => '2 hours preparation, 45-60 mins test with each user, 60 mins for analysis',
+            'format' => NULL,
+            'safe_value' => '2 hours preparation, 45-60 mins test with each user, 60 mins for analysis',
+          ),
+        ),
+      ),
+      'field_dld_step' => array(
+        'und' => array(
+          array(
+            'value' => 'Validate',
+          ),
+        ),
+      ),
+      'field_arsenal_files' => array(
+        'und' => array(
+          array(
+            'fid' => '4',
+            'uid' => '652',
+            'filename' => 'Test_script+howto.pdf',
+            'uri' => 'public://Test_script+howto_0.pdf',
+            'filemime' => 'application/pdf',
+            'filesize' => '148638',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'document',
+            'uuid' => 'f651e6b3-fe8b-4f42-8170-56b19b1193c8',
+            'rdf_mapping' => array(),
+            'metadata' => array(),
+            'alt' => '',
+            'title' => '',
+            'display' => '1',
+            'description' => 'HOW TO CREATE A TEST SCRIPT',
+          ),
+          array(
+            'fid' => '5',
+            'uid' => '1',
+            'filename' => 'Test_script_example_template.docx',
+            'uri' => 'public://Test_script_example_template.docx',
+            'filemime' => 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+            'filesize' => '254348',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'document',
+            'uuid' => 'd0e987fb-466c-40ef-b8ea-11111355f5fb',
+            'rdf_mapping' => array(),
+            'metadata' => array(),
+            'alt' => '',
+            'title' => '',
+            'display' => '1',
+            'description' => 'TEST SCRIPT EXAMPLE + TEMPLATE',
+          ),
+        ),
+      ),
+      'field_feature_on_the_home_page' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_participants' => array(
+        'und' => array(
+          array(
+            'value' => '3-5 users (1 user per session), 1 test moderator and 1 note taker',
+            'format' => NULL,
+            'safe_value' => '3-5 users (1 user per session), 1 test moderator and 1 note taker',
+          ),
+        ),
+      ),
+      'field_steps' => array(
+        'und' => array(
+          array(
+            'value' => "Before testing, develop your testing goals. What do you want to find out? Take a look at the tasks that your user needs to be able to do, your designs and put together a scenario that involves both of them.\r\nRecruit your test participants. They should ideally reflect your persona but you can test with people who might be more easily reached as well - like friends and family.\r\nDecide on where you will run the test. It can be done in person, using the hand-sketches but also digitally using our Research Tool (coming soon!). \r\nRun the test. During the test, it is important to capture honest feedback and encourage the participants to think out loud.\r\nAfter test, analyze your findings and share them with your project team. Make improvements in your next design iteration based on the findings.",
+            'format' => 'unfiltered_html',
+            'safe_value' => "Before testing, develop your testing goals. What do you want to find out? Take a look at the tasks that your user needs to be able to do, your designs and put together a scenario that involves both of them.\nRecruit your test participants. They should ideally reflect your persona but you can test with people who might be more easily reached as well - like friends and family.\nDecide on where you will run the test. It can be done in person, using the hand-sketches but also digitally using our Research Tool (coming soon!). \nRun the test. During the test, it is important to capture honest feedback and encourage the participants to think out loud.\nAfter test, analyze your findings and share them with your project team. Make improvements in your next design iteration based on the findings.",
+          ),
+        ),
+      ),
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => 'Test your designs, get feedback, and give yourself a chance to make improvements before investing the time to develop a solution.',
+            'format' => NULL,
+            'safe_value' => 'Test your designs, get feedback, and give yourself a chance to make improvements before investing the time to develop a solution.',
+          ),
+        ),
+      ),
+      'field_video' => array(),
+      'field_needs' => array(
+        'und' => array(
+          array(
+            'value' => 'Your sketches, a test script, notepads, sticky notes, pens',
+            'format' => NULL,
+            'safe_value' => 'Your sketches, a test script, notepads, sticky notes, pens',
+          ),
+        ),
+      ),
+      'field_orca_tags' => array(
+        'und' => array(
+          array(
+            'value' => 'testing, usability test, validation, validate',
+            'format' => NULL,
+            'safe_value' => 'testing, usability test, validation, validate',
+          ),
+        ),
+      ),
+      'field_order_number' => array(
+        'und' => array(
+          array(
+            'value' => '70',
+          ),
+        ),
+      ),
+      'field_video_thumbnail' => array(),
+      'field_zip_files' => array(
+        'und' => array(
+          array(
+            'fid' => '34',
+            'uid' => '1',
+            'filename' => 'Test_your_sketch_with_users.zip',
+            'uri' => 'public://Test_your_sketch_with_users_0.zip',
+            'filemime' => 'application/zip',
+            'filesize' => '293096',
+            'status' => '1',
+            'timestamp' => '1470439648',
+            'type' => 'undefined',
+            'uuid' => '29f34ce1-6a61-4d27-93d1-3d49a8c96caa',
+            'rdf_mapping' => array(),
+            'metadata' => array(),
+            'alt' => '',
+            'title' => '',
+            'display' => '1',
+            'description' => '',
+          ),
+        ),
+      ),
+      'field_arsenal' => array(),
+      'field_video_url' => array(
+        'und' => array(
+          array(
+            'url' => 'https://player.vimeo.com/external/175294974.sd.mp4?s=7a645bc867ff43450537523d8ac6de92344c0181&profile_id=165',
+            'title' => '',
+            'attributes' => array(),
+          ),
+        ),
+      ),
+      'field_card_image' => array(
+        'und' => array(
+          array(
+            'fid' => '6',
+            'uid' => '1',
+            'filename' => 'validate.png',
+            'uri' => 'public://validate.png',
+            'filemime' => 'image/png',
+            'filesize' => '9434',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'image',
+            'uuid' => '31c2241c-9ae5-429d-a28a-df91da414675',
+            'field_file_image_alt_text' => array(),
+            'field_file_image_title_text' => array(),
+            'rdf_mapping' => array(),
+            'metadata' => array(
+              'height' => 118,
+              'width' => 128,
+            ),
+            'alt' => '',
+            'title' => '',
+            'height' => '118',
+            'width' => '128',
+          ),
+        ),
+      ),
+      'field_links' => array(),
+      'field_activity_description' => array(
+        'und' => array(
+          array(
+            'value' => 'Before you take your designs to development, you have to make sure your design will actually work for your users. Testing with your users can save you a lot of time and resources. Ask your users how they would complete a task while you watch, listen, observe and take notes. This gives you a chance to identify problems and improve your designs in the next iteration.',
+            'format' => NULL,
+            'safe_value' => 'Before you take your designs to development, you have to make sure your design will actually work for your users. Testing with your users can save you a lot of time and resources. Ask your users how they would complete a task while you watch, listen, observe and take notes. This gives you a chance to identify problems and improve your designs in the next iteration.',
+          ),
+        ),
+      ),
+      'field_recommended' => array(),
+      'field_endorse' => array(),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1469565240',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '6',
+      'uid' => '1',
+      'title' => 'Sketch a prototype',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => 'e50f8fa8-1cd1-4391-bc1d-fe07742055f2',
+      'nid' => '6',
+      'type' => 'method_card',
+      'language' => 'und',
+      'created' => '1469565240',
+      'changed' => '1470439763',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => 'f310ee66-000d-4f63-91c1-852766f4e733',
+      'revision_timestamp' => '1470439763',
+      'revision_uid' => '1',
+      'field_consumption_time' => array(
+        'und' => array(
+          array(
+            'value' => '1 day (the more you do it, the faster it becomes)',
+            'format' => NULL,
+            'safe_value' => '1 day (the more you do it, the faster it becomes)',
+          ),
+        ),
+      ),
+      'field_dld_step' => array(
+        'und' => array(
+          array(
+            'value' => 'Prototype',
+          ),
+        ),
+      ),
+      'field_arsenal_files' => array(
+        'und' => array(
+          array(
+            'fid' => '7',
+            'uid' => '652',
+            'filename' => 'Sketch_howto.pdf',
+            'uri' => 'public://Sketch_howto.pdf',
+            'filemime' => 'application/pdf',
+            'filesize' => '900327',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'document',
+            'uuid' => '80eed4ee-b5e7-4f22-82a2-f5db8b20fbcc',
+            'rdf_mapping' => array(),
+            'metadata' => array(),
+            'alt' => '',
+            'title' => '',
+            'display' => '1',
+            'description' => 'HOW TO CREATE A HAND-SKETCHED PROTOTYPE',
+          ),
+          array(
+            'fid' => '8',
+            'uid' => '1',
+            'filename' => 'Handsketch_template.pdf',
+            'uri' => 'public://Handsketch_template.pdf',
+            'filemime' => 'application/pdf',
+            'filesize' => '470476',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'document',
+            'uuid' => '5e26e4a7-5d7e-4df6-b02c-ba1e1a8087df',
+            'rdf_mapping' => array(),
+            'metadata' => array(),
+            'alt' => '',
+            'title' => '',
+            'display' => '1',
+            'description' => 'PRINTABLE TEMPLATES FOR SKETCHING',
+          ),
+        ),
+      ),
+      'field_feature_on_the_home_page' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_participants' => array(
+        'und' => array(
+          array(
+            'value' => 'You',
+            'format' => NULL,
+            'safe_value' => 'You',
+          ),
+        ),
+      ),
+      'field_steps' => array(
+        'und' => array(
+          array(
+            'value' => "By this time hopefully you have create a storyboard.\r\nIdentify the story steps that involve a software solution. This will give you an idea of the major screens your solution will have. Do not detail out the screens yet.\r\nSketch out the layout of each screen with the main elements. E.g. text, entry fields, action buttons.\r\nNow the sketches are done, run the screen flow in your head or by a colleague to ensure that progression from one screen to another is making sense. Make small adjustments if needed.\r\nTest your sketches with users. You will get valuable feedback.",
+            'format' => 'unfiltered_html',
+            'safe_value' => "By this time hopefully you have create a storyboard.\nIdentify the story steps that involve a software solution. This will give you an idea of the major screens your solution will have. Do not detail out the screens yet.\nSketch out the layout of each screen with the main elements. E.g. text, entry fields, action buttons.\nNow the sketches are done, run the screen flow in your head or by a colleague to ensure that progression from one screen to another is making sense. Make small adjustments if needed.\nTest your sketches with users. You will get valuable feedback.",
+          ),
+        ),
+      ),
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => 'Flesh out your ideas quickly in a hand-sketched prototype and to create first concepts of possible solutions. Show it to users to get feedback.',
+            'format' => NULL,
+            'safe_value' => 'Flesh out your ideas quickly in a hand-sketched prototype and to create first concepts of possible solutions. Show it to users to get feedback.',
+          ),
+        ),
+      ),
+      'field_video' => array(),
+      'field_needs' => array(
+        'und' => array(
+          array(
+            'value' => 'Plain paper (or you can print our templates below), pencils or whiteboard and markers',
+            'format' => NULL,
+            'safe_value' => 'Plain paper (or you can print our templates below), pencils or whiteboard and markers',
+          ),
+        ),
+      ),
+      'field_orca_tags' => array(
+        'und' => array(
+          array(
+            'value' => 'prototype',
+            'format' => NULL,
+            'safe_value' => 'prototype',
+          ),
+        ),
+      ),
+      'field_order_number' => array(
+        'und' => array(
+          array(
+            'value' => '60',
+          ),
+        ),
+      ),
+      'field_video_thumbnail' => array(),
+      'field_zip_files' => array(
+        'und' => array(
+          array(
+            'fid' => '35',
+            'uid' => '1',
+            'filename' => 'Sketch_a_prototype.zip',
+            'uri' => 'public://Sketch_a_prototype_0.zip',
+            'filemime' => 'application/zip',
+            'filesize' => '1081974',
+            'status' => '1',
+            'timestamp' => '1470439763',
+            'type' => 'undefined',
+            'uuid' => '4c6452d6-30fb-470e-a7b5-c5c556e8ec7c',
+            'rdf_mapping' => array(),
+            'metadata' => array(),
+            'alt' => '',
+            'title' => '',
+            'display' => '1',
+            'description' => '',
+          ),
+        ),
+      ),
+      'field_arsenal' => array(),
+      'field_video_url' => array(
+        'und' => array(
+          array(
+            'url' => 'https://player.vimeo.com/external/175294954.sd.mp4?s=ebe0d825b56cea459f9f867256283cc25d0dbdce&profile_id=165',
+            'title' => '',
+            'attributes' => array(),
+          ),
+        ),
+      ),
+      'field_card_image' => array(
+        'und' => array(
+          array(
+            'fid' => '9',
+            'uid' => '652',
+            'filename' => 'hand sketch a prototype.png',
+            'uri' => 'public://hand sketch a prototype.png',
+            'filemime' => 'image/png',
+            'filesize' => '13619',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'image',
+            'uuid' => 'f4c782f0-1bd8-4b58-b32f-f08951a001ae',
+            'field_file_image_alt_text' => array(),
+            'field_file_image_title_text' => array(),
+            'rdf_mapping' => array(),
+            'metadata' => array(
+              'height' => 257,
+              'width' => 178,
+            ),
+            'alt' => '',
+            'title' => '',
+            'height' => '257',
+            'width' => '178',
+          ),
+        ),
+      ),
+      'field_links' => array(
+        'und' => array(
+          array(
+            'url' => 'www.experiencesplash.com/login',
+            'title' => 'BUILD TOOL (quick & cool)',
+            'attributes' => array(),
+          ),
+        ),
+      ),
+      'field_activity_description' => array(
+        'und' => array(
+          array(
+            'value' => 'Create a hand-sketched prototype showing the main elements of the user interface and the general flow of your solution. Making this low-cost prototype early on will allow you to get an idea about which concepts work best for the user.',
+            'format' => NULL,
+            'safe_value' => 'Create a hand-sketched prototype showing the main elements of the user interface and the general flow of your solution. Making this low-cost prototype early on will allow you to get an idea about which concepts work best for the user.',
+          ),
+        ),
+      ),
+      'field_recommended' => array(),
+      'field_endorse' => array(),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1469565240',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '4',
+      'uid' => '1',
+      'title' => 'Create wireframes',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => 'fd41c385-60b9-447c-9f7c-c391292252e2',
+      'nid' => '4',
+      'type' => 'method_card',
+      'language' => 'und',
+      'created' => '1469565240',
+      'changed' => '1470439535',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => '5eec887e-7083-45b6-a55c-16c382381240',
+      'revision_timestamp' => '1470439535',
+      'revision_uid' => '1',
+      'field_consumption_time' => array(
+        'und' => array(
+          array(
+            'value' => '2-4 hours ',
+            'format' => NULL,
+            'safe_value' => '2-4 hours ',
+          ),
+        ),
+      ),
+      'field_dld_step' => array(
+        'und' => array(
+          array(
+            'value' => 'Prototype',
+          ),
+        ),
+      ),
+      'field_arsenal_files' => array(
+        'und' => array(
+          array(
+            'fid' => '2',
+            'uid' => '652',
+            'filename' => 'Wireframes_HowTo.pdf',
+            'uri' => 'public://Wireframes_HowTo.pdf',
+            'filemime' => 'application/pdf',
+            'filesize' => '696012',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'document',
+            'uuid' => 'ada6fda8-dea8-4fe1-abc1-5d365e2fb17a',
+            'rdf_mapping' => array(),
+            'metadata' => array(),
+            'alt' => '',
+            'title' => '',
+            'display' => '1',
+            'description' => 'How To Create Wireframes',
+          ),
+        ),
+      ),
+      'field_feature_on_the_home_page' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_participants' => array(
+        'und' => array(
+          array(
+            'value' => 'You and members of your team',
+            'format' => NULL,
+            'safe_value' => 'You and members of your team',
+          ),
+        ),
+      ),
+      'field_steps' => array(
+        'und' => array(
+          array(
+            'value' => "Think about the overall structure of your design. Create a map or sequence showing the screens of the application, and the path users should take to navigate through them.\r\nCreate a wireframe drawing that lays out each screen. Use simple box shapes to indicate where content is to be placed. Avoid making the appearance too polished, it is expected you will be exploring the design and making many changes at this stage.\r\nContent: Add additional details such as text, placeholders for images, UI elements. \r\nDescribe the interactions such as clicks, taps, data inputs, and other possible behaviors. Place notes by the wireframe providing further details. The purpose of the wireframe is to help you successfully document and explain your design to others.\r\nShare with the team and stakeholders, and ask for feedback. \r\n",
+            'format' => 'filtered_html',
+            'safe_value' => "<p>Think about the overall structure of your design. Create a map or sequence showing the screens of the application, and the path users should take to navigate through them.<br />\nCreate a wireframe drawing that lays out each screen. Use simple box shapes to indicate where content is to be placed. Avoid making the appearance too polished, it is expected you will be exploring the design and making many changes at this stage.<br />\nContent: Add additional details such as text, placeholders for images, UI elements.<br />\nDescribe the interactions such as clicks, taps, data inputs, and other possible behaviors. Place notes by the wireframe providing further details. The purpose of the wireframe is to help you successfully document and explain your design to others.<br />\nShare with the team and stakeholders, and ask for feedback.</p>\n",
+          ),
+        ),
+      ),
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => 'Wireframes act as the blueprint for a user interface design. Create wireframes to visually represent the main product features and interactions, and to foster a shared understanding of the design among both your team, and end-users.',
+            'format' => NULL,
+            'safe_value' => 'Wireframes act as the blueprint for a user interface design. Create wireframes to visually represent the main product features and interactions, and to foster a shared understanding of the design among both your team, and end-users.',
+          ),
+        ),
+      ),
+      'field_video' => array(),
+      'field_needs' => array(
+        'und' => array(
+          array(
+            'value' => 'A digital design or prototyping tool',
+            'format' => NULL,
+            'safe_value' => 'A digital design or prototyping tool',
+          ),
+        ),
+      ),
+      'field_orca_tags' => array(),
+      'field_order_number' => array(
+        'und' => array(
+          array(
+            'value' => '72',
+          ),
+        ),
+      ),
+      'field_video_thumbnail' => array(),
+      'field_zip_files' => array(
+        'und' => array(
+          array(
+            'fid' => '33',
+            'uid' => '1',
+            'filename' => 'Create_wireframes.zip',
+            'uri' => 'public://Create_wireframes_0.zip',
+            'filemime' => 'application/zip',
+            'filesize' => '483755',
+            'status' => '1',
+            'timestamp' => '1470439535',
+            'type' => 'undefined',
+            'uuid' => 'da4bcdcf-bffb-4cf6-baba-a080e4ea81b3',
+            'rdf_mapping' => array(),
+            'metadata' => array(),
+            'alt' => '',
+            'title' => '',
+            'display' => '1',
+            'description' => '',
+          ),
+        ),
+      ),
+      'field_arsenal' => array(),
+      'field_video_url' => array(
+        'und' => array(
+          array(
+            'url' => 'https://player.vimeo.com/external/175295002.sd.mp4?s=fb18e88589b204f73264679f086f44c05675adfa&profile_id=165',
+            'title' => '',
+            'attributes' => array(),
+          ),
+        ),
+      ),
+      'field_card_image' => array(
+        'und' => array(
+          array(
+            'fid' => '3',
+            'uid' => '652',
+            'filename' => 'create wireframes.png',
+            'uri' => 'public://create wireframes.png',
+            'filemime' => 'image/png',
+            'filesize' => '8385',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'image',
+            'uuid' => '90722f0e-60f5-4173-9a20-a25a5b89acca',
+            'field_file_image_alt_text' => array(),
+            'field_file_image_title_text' => array(),
+            'rdf_mapping' => array(),
+            'metadata' => array(
+              'height' => 257,
+              'width' => 178,
+            ),
+            'alt' => '',
+            'title' => '',
+            'height' => '257',
+            'width' => '178',
+          ),
+        ),
+      ),
+      'field_links' => array(
+        'und' => array(
+          array(
+            'url' => 'experience.sap.com/fiori-design',
+            'title' => 'Fiori Design Guidelines',
+            'attributes' => array(),
+          ),
+          array(
+            'url' => 'www.experiencesplash.com/splashapp/login',
+            'title' => 'BUILD tool',
+            'attributes' => array(),
+          ),
+        ),
+      ),
+      'field_activity_description' => array(
+        'und' => array(
+          array(
+            'value' => "Wireframes are visual representations of an interface – the blueprint. They are easily changeable, of low or high fidelity, and are an important tool used for product design and development.\r\n\r\nThey communicate product features and interactions, helping team members and stakeholders alike to better understand, align, and iterate on final designs.\r\n\r\nWireframes can be hand-drawn or created using any number of software tools [see Build], and provide details about an application’s structure, content, information hierarchy, functionality, and behavior.",
+            'format' => NULL,
+            'safe_value' => "Wireframes are visual representations of an interface – the blueprint. They are easily changeable, of low or high fidelity, and are an important tool used for product design and development.\r\n\r\nThey communicate product features and interactions, helping team members and stakeholders alike to better understand, align, and iterate on final designs.\r\n\r\nWireframes can be hand-drawn or created using any number of software tools [see Build], and provide details about an application’s structure, content, information hierarchy, functionality, and behavior.",
+          ),
+        ),
+      ),
+      'field_recommended' => array(),
+      'field_endorse' => array(),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1469565240',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '13',
+      'uid' => '1',
+      'title' => 'Interview your users',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => '0ec4a16b-c00f-45a8-a41a-41248a6f2fac',
+      'nid' => '13',
+      'type' => 'method_card',
+      'language' => 'und',
+      'created' => '1469565240',
+      'changed' => '1469565240',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => '12a9733b-d755-4aeb-96a9-9f98d9d9525c',
+      'revision_timestamp' => '1469565240',
+      'revision_uid' => '1',
+      'field_consumption_time' => array(
+        'und' => array(
+          array(
+            'value' => '2 hrs preparation, 45-60 mins per user interview',
+            'format' => NULL,
+            'safe_value' => '2 hrs preparation, 45-60 mins per user interview',
+          ),
+        ),
+      ),
+      'field_dld_step' => array(
+        'und' => array(
+          array(
+            'value' => '360 Research',
+          ),
+        ),
+      ),
+      'field_arsenal_files' => array(
+        'und' => array(
+          array(
+            'fid' => '26',
+            'uid' => '652',
+            'filename' => 'Interview_script_howto.pdf',
+            'uri' => 'public://Interview_script_howto_0.pdf',
+            'filemime' => 'application/pdf',
+            'filesize' => '151034',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'document',
+            'uuid' => '41c296c8-5aed-4f71-b82a-1fbbc82691ee',
+            'rdf_mapping' => array(),
+            'metadata' => array(),
+            'alt' => '',
+            'title' => '',
+            'display' => '1',
+            'description' => 'HOW TO CREATE AN INTERVIEW SCRIPT',
+          ),
+          array(
+            'fid' => '27',
+            'uid' => '1',
+            'filename' => 'Interview_script_example_template.docx',
+            'uri' => 'public://Interview_script_example_template.docx',
+            'filemime' => 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+            'filesize' => '28356',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'document',
+            'uuid' => 'f02b69d8-84fd-4408-a9fc-0eb5019fb3fd',
+            'rdf_mapping' => array(),
+            'metadata' => array(),
+            'alt' => '',
+            'title' => '',
+            'display' => '1',
+            'description' => 'INTERVIEW SCRIPT EXAMPLE + TEMPLATE',
+          ),
+        ),
+      ),
+      'field_feature_on_the_home_page' => array(
+        'und' => array(
+          array(
+            'value' => '1',
+          ),
+        ),
+      ),
+      'field_participants' => array(
+        'und' => array(
+          array(
+            'value' => '5 users (1 user per session), 1 moderator and 1-2 notetakers',
+            'format' => NULL,
+            'safe_value' => '5 users (1 user per session), 1 moderator and 1-2 notetakers',
+          ),
+        ),
+      ),
+      'field_steps' => array(
+        'und' => array(
+          array(
+            'value' => "Decide on the roles and number of users (3 is a minimum) you will interview. Establish a plan and a timeline for the interviews.\r\nPrepare your interview guide: a set of open-ended questions you want to explore. Begin with the basics by asking about who they work with, their top 3 work priorities, and what their work environment is like before asking questions that relate directly to your use-case.\r\nGet help with note taking. This is a chance to get people from your team involved who are not used to talking to users.\r\nIt is important to capture the facts, not interpretations. So, note down exactly what your interviewee says when you think it is key. Ask clarifying questions if you do not fully understand what was explained and play back what you understood.\r\nDon't forget to thank your user for the time he or she spends with you.",
+            'format' => 'full_html',
+            'safe_value' => "<p>Decide on the roles and number of users (3 is a minimum) you will interview. Establish a plan and a timeline for the interviews.<br />\nPrepare your interview guide: a set of open-ended questions you want to explore. Begin with the basics by asking about who they work with, their top 3 work priorities, and what their work environment is like before asking questions that relate directly to your use-case.<br />\nGet help with note taking. This is a chance to get people from your team involved who are not used to talking to users.<br />\nIt is important to capture the facts, not interpretations. So, note down exactly what your interviewee says when you think it is key. Ask clarifying questions if you do not fully understand what was explained and play back what you understood.<br />\nDon't forget to thank your user for the time he or she spends with you.</p>\n",
+          ),
+        ),
+      ),
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => 'Interviewing your users will provide many insights you will benefit from while building a solution.',
+            'format' => NULL,
+            'safe_value' => 'Interviewing your users will provide many insights you will benefit from while building a solution.',
+          ),
+        ),
+      ),
+      'field_video' => array(),
+      'field_needs' => array(
+        'und' => array(
+          array(
+            'value' => 'Interview guide, note pads, pencils, and camera',
+            'format' => NULL,
+            'safe_value' => 'Interview guide, note pads, pencils, and camera',
+          ),
+        ),
+      ),
+      'field_orca_tags' => array(
+        'und' => array(
+          array(
+            'value' => 'user research',
+            'format' => NULL,
+            'safe_value' => 'user research',
+          ),
+        ),
+      ),
+      'field_order_number' => array(
+        'und' => array(
+          array(
+            'value' => '10',
+          ),
+        ),
+      ),
+      'field_video_thumbnail' => array(),
+      'field_zip_files' => array(),
+      'field_arsenal' => array(),
+      'field_video_url' => array(
+        'und' => array(
+          array(
+            'url' => 'https://player.vimeo.com/external/172610181.sd.mp4?s=be90dcd9fbc328810414c246741e1b905b768ab9&profile_id=165',
+            'title' => '',
+            'attributes' => array(),
+          ),
+        ),
+      ),
+      'field_card_image' => array(
+        'und' => array(
+          array(
+            'fid' => '28',
+            'uid' => '1',
+            'filename' => 'talk_to_your_user.png',
+            'uri' => 'public://talk_to_your_user.png',
+            'filemime' => 'image/png',
+            'filesize' => '15148',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'image',
+            'uuid' => 'ab29ce16-8220-4bec-85a3-1b316263ecd9',
+            'field_file_image_alt_text' => array(),
+            'field_file_image_title_text' => array(),
+            'rdf_mapping' => array(),
+            'metadata' => array(
+              'width' => 137,
+              'height' => 205,
+            ),
+            'alt' => '',
+            'title' => '',
+            'width' => '137',
+            'height' => '205',
+          ),
+        ),
+      ),
+      'field_links' => array(
+        'und' => array(
+          array(
+            'url' => 'vimeo.com/166430884',
+            'title' => 'AGREE ON OUTCOMES AND PARTICIPANTS',
+            'attributes' => array(),
+          ),
+          array(
+            'url' => 'vimeo.com/166430883',
+            'title' => 'GETTING READY FOR YOUR FIELD VISIT',
+            'attributes' => array(),
+          ),
+          array(
+            'url' => 'vimeo.com/166430882',
+            'title' => 'CAPTURING THE FIELD VISIT',
+            'attributes' => array(),
+          ),
+          array(
+            'url' => 'vimeo.com/166430885',
+            'title' => 'INTRODUCTION AND BUILDING CONNECTION',
+            'attributes' => array(),
+          ),
+        ),
+      ),
+      'field_activity_description' => array(
+        'und' => array(
+          array(
+            'value' => "Observing and interviewing your users will provide many insights that will help you make educated decisions while building a software product. This gives you a chance to be in your target user's shoes and understand their goals, motivations and pains. Be prepared for your interviews: don't hesitate to make a dry run with a colleague.",
+            'format' => NULL,
+            'safe_value' => 'Observing and interviewing your users will provide many insights that will help you make educated decisions while building a software product. This gives you a chance to be in your target user&#039;s shoes and understand their goals, motivations and pains. Be prepared for your interviews: don&#039;t hesitate to make a dry run with a colleague.',
+          ),
+        ),
+      ),
+      'field_recommended' => array(),
+      'field_endorse' => array(),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1469565240',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '15',
+      'uid' => '1',
+      'title' => 'WHAT IS USER EXPERIENCE?',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => '3e1129cf-1447-4a72-a553-52406a188275',
+      'nid' => '15',
+      'type' => 'method_card',
+      'language' => 'und',
+      'created' => '1469565240',
+      'changed' => '1469565240',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => 'f0a91051-206d-4b5a-90a3-6b0bf172ae6f',
+      'revision_timestamp' => '1469565240',
+      'revision_uid' => '1',
+      'field_consumption_time' => array(),
+      'field_dld_step' => array(),
+      'field_arsenal_files' => array(),
+      'field_feature_on_the_home_page' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_participants' => array(),
+      'field_steps' => array(),
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => 'This video is a brief overview of what user experience design is and what components make up a user experience design team.',
+            'format' => NULL,
+            'safe_value' => 'This video is a brief overview of what user experience design is and what components make up a user experience design team.',
+          ),
+        ),
+      ),
+      'field_video' => array(),
+      'field_needs' => array(),
+      'field_orca_tags' => array(),
+      'field_order_number' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_video_thumbnail' => array(),
+      'field_zip_files' => array(),
+      'field_arsenal' => array(),
+      'field_video_url' => array(
+        'und' => array(
+          array(
+            'url' => 'https://player.vimeo.com/external/171774553.sd.mp4?s=61efd6c470e3832ceda5fc91b6441bc923dd9017&profile_id=165',
+            'title' => '',
+            'attributes' => array(),
+          ),
+        ),
+      ),
+      'field_card_image' => array(
+        'und' => array(
+          array(
+            'fid' => '32',
+            'uid' => '1',
+            'filename' => 'whatisuxdesign2.png',
+            'uri' => 'public://whatisuxdesign2.png',
+            'filemime' => 'image/png',
+            'filesize' => '449679',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'image',
+            'uuid' => 'd5080450-bff5-405c-b1ea-138eccfdc412',
+            'field_file_image_alt_text' => array(),
+            'field_file_image_title_text' => array(),
+            'rdf_mapping' => array(),
+            'metadata' => array(
+              'height' => 531,
+              'width' => 800,
+            ),
+            'alt' => '',
+            'title' => '',
+            'height' => '531',
+            'width' => '800',
+          ),
+        ),
+      ),
+      'field_links' => array(),
+      'field_activity_description' => array(),
+      'field_recommended' => array(),
+      'field_endorse' => array(),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1469565240',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '14',
+      'uid' => '1',
+      'title' => 'Agree on project scope',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => '5ddeab15-d2a4-43b9-9524-6433386b455e',
+      'nid' => '14',
+      'type' => 'method_card',
+      'language' => 'und',
+      'created' => '1469565240',
+      'changed' => '1469565240',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => 'c90da1da-1d2b-44ce-92a7-63a9ea8b17d0',
+      'revision_timestamp' => '1469565240',
+      'revision_uid' => '1',
+      'field_consumption_time' => array(
+        'und' => array(
+          array(
+            'value' => '2 hours',
+            'format' => NULL,
+            'safe_value' => '2 hours',
+          ),
+        ),
+      ),
+      'field_dld_step' => array(
+        'und' => array(
+          array(
+            'value' => 'Scoping',
+          ),
+        ),
+      ),
+      'field_arsenal_files' => array(
+        'und' => array(
+          array(
+            'fid' => '29',
+            'uid' => '652',
+            'filename' => 'ProjectScoping_HowTo.pdf',
+            'uri' => 'public://ProjectScoping_HowTo.pdf',
+            'filemime' => 'application/pdf',
+            'filesize' => '123169',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'document',
+            'uuid' => 'b96717f5-543e-478f-9946-16aa12e40ab6',
+            'rdf_mapping' => array(),
+            'metadata' => array(),
+            'alt' => '',
+            'title' => '',
+            'display' => '1',
+            'description' => 'How to create a Project Scoping Document',
+          ),
+          array(
+            'fid' => '30',
+            'uid' => '652',
+            'filename' => 'ProjectScope_example_template.pptx',
+            'uri' => 'public://ProjectScope_example_template.pptx',
+            'filemime' => 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+            'filesize' => '26667',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'document',
+            'uuid' => '0b2a7f6d-16ea-4d81-b59f-c8ce4e85e0ee',
+            'rdf_mapping' => array(),
+            'metadata' => array(),
+            'alt' => '',
+            'title' => '',
+            'display' => '1',
+            'description' => 'Project Scoping Example + Template',
+          ),
+        ),
+      ),
+      'field_feature_on_the_home_page' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_participants' => array(
+        'und' => array(
+          array(
+            'value' => 'Project Manager',
+            'format' => NULL,
+            'safe_value' => 'Project Manager',
+          ),
+        ),
+      ),
+      'field_steps' => array(
+        'und' => array(
+          array(
+            'value' => "Define what the overall goal of your project is.  \r\nDescribe the scope of your project: what is in scope and also what is not in the scope.\r\nList the stakeholders of the project \r\nDescribe the project: the team, the lead, …\r\nList the project deliverables, together with the success criteria\r\nList the milestones of your project\r\nValidate your scoping document with the team and stakeholders",
+            'format' => 'filtered_html',
+            'safe_value' => "<p>Define what the overall goal of your project is.<br />\nDescribe the scope of your project: what is in scope and also what is not in the scope.<br />\nList the stakeholders of the project<br />\nDescribe the project: the team, the lead, …<br />\nList the project deliverables, together with the success criteria<br />\nList the milestones of your project<br />\nValidate your scoping document with the team and stakeholders</p>\n",
+          ),
+        ),
+      ),
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => "Create a document, outlining your project commitments: what problems you are solving, what are your project deliverables,  and milestones.\r\n",
+            'format' => NULL,
+            'safe_value' => "Create a document, outlining your project commitments: what problems you are solving, what are your project deliverables,  and milestones.\r\n",
+          ),
+        ),
+      ),
+      'field_video' => array(),
+      'field_needs' => array(
+        'und' => array(
+          array(
+            'value' => 'The project scoping document template',
+            'format' => NULL,
+            'safe_value' => 'The project scoping document template',
+          ),
+        ),
+      ),
+      'field_orca_tags' => array(),
+      'field_order_number' => array(
+        'und' => array(
+          array(
+            'value' => '1',
+          ),
+        ),
+      ),
+      'field_video_thumbnail' => array(),
+      'field_zip_files' => array(),
+      'field_arsenal' => array(),
+      'field_video_url' => array(
+        'und' => array(
+          array(
+            'url' => 'https://player.vimeo.com/external/171773578.sd.mp4?s=0b3d0bd5335d9a48908687995b0399184c5ecabd&profile_id=165',
+            'title' => '',
+            'attributes' => array(),
+          ),
+        ),
+      ),
+      'field_card_image' => array(
+        'und' => array(
+          array(
+            'fid' => '31',
+            'uid' => '652',
+            'filename' => 'agree on project scope.png',
+            'uri' => 'public://agree on project scope.png',
+            'filemime' => 'image/png',
+            'filesize' => '13918',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'image',
+            'uuid' => 'c5f3f954-f27e-4fca-91f6-c599aae3a215',
+            'field_file_image_alt_text' => array(),
+            'field_file_image_title_text' => array(),
+            'rdf_mapping' => array(),
+            'metadata' => array(
+              'height' => 257,
+              'width' => 178,
+            ),
+            'alt' => '',
+            'title' => '',
+            'height' => '257',
+            'width' => '178',
+          ),
+        ),
+      ),
+      'field_links' => array(),
+      'field_activity_description' => array(
+        'und' => array(
+          array(
+            'value' => "The project scoping document is a key element to  communicate what the project is all about,  and describe the project to others. \r\n\r\nIt’ll help to agree with your team what you will deliver as part of the project, who is doing what and what timelines you have for  the project. It should include not only development deliverables but also user experience related deliverables such as user research and design.\r\n\r\nIt’ll also help you to communicate your objectives, to identify your key deliverables, to provide a rough timeline, to help manage stakeholder’s expectations and to get the buy-in from the sponsor.\r\n",
+            'format' => NULL,
+            'safe_value' => "The project scoping document is a key element to  communicate what the project is all about,  and describe the project to others. \r\n\r\nIt’ll help to agree with your team what you will deliver as part of the project, who is doing what and what timelines you have for  the project. It should include not only development deliverables but also user experience related deliverables such as user research and design.\r\n\r\nIt’ll also help you to communicate your objectives, to identify your key deliverables, to provide a rough timeline, to help manage stakeholder’s expectations and to get the buy-in from the sponsor.\r\n",
+          ),
+        ),
+      ),
+      'field_recommended' => array(),
+      'field_endorse' => array(),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1469565240',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '12',
+      'uid' => '1',
+      'title' => 'Reframe the problem statement ',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => 'bca6cba7-a02c-41ea-ae7e-f89b7bee05f1',
+      'nid' => '12',
+      'type' => 'method_card',
+      'language' => 'und',
+      'created' => '1469565240',
+      'changed' => '1469565240',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => '162c8d8c-faf0-49f1-a90b-474e99f20979',
+      'revision_timestamp' => '1469565240',
+      'revision_uid' => '1',
+      'field_consumption_time' => array(
+        'und' => array(
+          array(
+            'value' => '45 min',
+            'format' => NULL,
+            'safe_value' => '45 min',
+          ),
+        ),
+      ),
+      'field_dld_step' => array(
+        'und' => array(
+          array(
+            'value' => 'Synthesize',
+          ),
+        ),
+      ),
+      'field_arsenal_files' => array(
+        'und' => array(
+          array(
+            'fid' => '24',
+            'uid' => '652',
+            'filename' => 'Reframing_HowTo.pdf',
+            'uri' => 'public://Reframing_HowTo_0.pdf',
+            'filemime' => 'application/pdf',
+            'filesize' => '224157',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'document',
+            'uuid' => '52c52e8a-95b9-483f-b48f-3daa7bdf4055',
+            'rdf_mapping' => array(),
+            'metadata' => array(),
+            'alt' => '',
+            'title' => '',
+            'display' => '1',
+            'description' => 'How to Reframe Your Problem Statement',
+          ),
+        ),
+      ),
+      'field_feature_on_the_home_page' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_participants' => array(
+        'und' => array(
+          array(
+            'value' => 'Project Team',
+            'format' => NULL,
+            'safe_value' => 'Project Team',
+          ),
+        ),
+      ),
+      'field_steps' => array(
+        'und' => array(
+          array(
+            'value' => "Write the problem statement on a whiteboard\r\nUnderline the keywords of this statement\r\nBrainstorm on each keyword: what does it mean, what could be a better synonym,..\r\nAsk questions about the problem\r\nRephrase the whole sentence of the problem statement",
+            'format' => 'filtered_html',
+            'safe_value' => "<p>Write the problem statement on a whiteboard<br />\nUnderline the keywords of this statement<br />\nBrainstorm on each keyword: what does it mean, what could be a better synonym,..<br />\nAsk questions about the problem<br />\nRephrase the whole sentence of the problem statement</p>\n",
+          ),
+        ),
+      ),
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => 'Reframe your problem statement to create a common understanding of the goal you are addressing. ',
+            'format' => NULL,
+            'safe_value' => 'Reframe your problem statement to create a common understanding of the goal you are addressing. ',
+          ),
+        ),
+      ),
+      'field_video' => array(),
+      'field_needs' => array(
+        'und' => array(
+          array(
+            'value' => 'A whiteboard',
+            'format' => NULL,
+            'safe_value' => 'A whiteboard',
+          ),
+        ),
+      ),
+      'field_orca_tags' => array(),
+      'field_order_number' => array(
+        'und' => array(
+          array(
+            'value' => '3',
+          ),
+        ),
+      ),
+      'field_video_thumbnail' => array(),
+      'field_zip_files' => array(),
+      'field_arsenal' => array(),
+      'field_video_url' => array(
+        'und' => array(
+          array(
+            'url' => 'https://player.vimeo.com/external/172610181.sd.mp4?s=be90dcd9fbc328810414c246741e1b905b768ab9&profile_id=165',
+            'title' => '',
+            'attributes' => array(),
+          ),
+        ),
+      ),
+      'field_card_image' => array(
+        'und' => array(
+          array(
+            'fid' => '25',
+            'uid' => '652',
+            'filename' => 'reframe the problem statment.png',
+            'uri' => 'public://reframe the problem statment.png',
+            'filemime' => 'image/png',
+            'filesize' => '8890',
+            'status' => '1',
+            'timestamp' => '1469565240',
+            'type' => 'image',
+            'uuid' => '4fdf3246-7923-44d9-9ccd-b19815aed57b',
+            'field_file_image_alt_text' => array(),
+            'field_file_image_title_text' => array(),
+            'rdf_mapping' => array(),
+            'metadata' => array(
+              'width' => 178,
+              'height' => 257,
+            ),
+            'alt' => '',
+            'title' => '',
+            'width' => '178',
+            'height' => '257',
+          ),
+        ),
+      ),
+      'field_links' => array(),
+      'field_activity_description' => array(
+        'und' => array(
+          array(
+            'value' => "At the beginning of a project, the statement of the problem to solve may be a little bit fuzzy.\r\n\r\nEither too high level, or not precise enough, using words that are maybe not clear for the team, this statement needs to be discussed with the team to bring clarity and common agreement.",
+            'format' => NULL,
+            'safe_value' => "At the beginning of a project, the statement of the problem to solve may be a little bit fuzzy.\r\n\r\nEither too high level, or not precise enough, using words that are maybe not clear for the team, this statement needs to be discussed with the team to bring clarity and common agreement.",
+          ),
+        ),
+      ),
+      'field_recommended' => array(),
+      'field_endorse' => array(),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1469565240',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '2',
+      'uid' => '1',
+      'title' => 'Methods',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => '99829d42-bc00-4fc9-8732-afabadd7d95f',
+      'nid' => '2',
+      'type' => 'learning_sections',
+      'language' => 'und',
+      'created' => '1447942001',
+      'changed' => '1468605584',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => '41d18d45-5a67-4638-82d0-5a485c90c16a',
+      'revision_timestamp' => '1468605584',
+      'revision_uid' => '1',
+      'field_section_summary' => array(
+        'und' => array(
+          array(
+            'value' => 'Our method cards walk you through a typical product development lifecycle where the design and feature decisions are focused on the end user. While most methods can be applied on their own, we do provide a suggested sequence.',
+            'format' => NULL,
+            'safe_value' => 'Our method cards walk you through a typical product development lifecycle where the design and feature decisions are focused on the end user. While most methods can be applied on their own, we do provide a suggested sequence.',
+          ),
+        ),
+      ),
+      'field_type' => array(
+        'und' => array(
+          array(
+            'value' => 'Method Card',
+          ),
+        ),
+      ),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1468605584',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '3',
+      'uid' => '1',
+      'title' => 'Guides and Courses',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => '70c4f83b-4303-4d5a-9e8a-32225b554609',
+      'nid' => '3',
+      'type' => 'learning_sections',
+      'language' => 'und',
+      'created' => '1447942001',
+      'changed' => '1468605584',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => '425aed70-7954-4b0c-82e5-7d68c10e1eb3',
+      'revision_timestamp' => '1468605584',
+      'revision_uid' => '1',
+      'field_section_summary' => array(
+        'und' => array(
+          array(
+            'value' => 'Learn about the Fiori guidelines and how to apply them, or take a course to get a feel for design thinking and related topics such as User Research and Design',
+            'format' => NULL,
+            'safe_value' => 'Learn about the Fiori guidelines and how to apply them, or take a course to get a feel for design thinking and related topics such as User Research and Design',
+          ),
+        ),
+      ),
+      'field_type' => array(
+        'und' => array(
+          array(
+            'value' => 'Course Card',
+          ),
+        ),
+      ),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1468605584',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '1',
+      'uid' => '1',
+      'title' => 'Design Services',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => 'ea6bc0af-4d58-4366-b669-eebb2df8ca4a',
+      'nid' => '1',
+      'type' => 'learning_sections',
+      'language' => 'und',
+      'created' => '1447942001',
+      'changed' => '1468605584',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => '1c7d74dd-82b3-4154-8976-0f8eb134b78c',
+      'revision_timestamp' => '1468605584',
+      'revision_uid' => '1',
+      'field_section_summary' => array(
+        'und' => array(
+          array(
+            'value' => 'Humanize business software with SAP User Experience Design Services!',
+            'format' => NULL,
+            'safe_value' => 'Humanize business software with SAP User Experience Design Services!',
+          ),
+        ),
+      ),
+      'field_type' => array(
+        'und' => array(
+          array(
+            'value' => 'Service Card',
+          ),
+        ),
+      ),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1468605584',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+)
