@@ -1,0 +1,1242 @@
+array(
+  (object) array(
+      'vid' => '23',
+      'uid' => '1',
+      'title' => 'Forming student groups-3',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => 'a29571e4-c1c3-4812-8f04-51d967fa5c52',
+      'nid' => '23',
+      'type' => 'class_tip',
+      'language' => 'und',
+      'created' => '1470787690',
+      'changed' => '1471905334',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => 'e562f65b-e1fa-4ff9-a7ec-1481a0857eed',
+      'revision_timestamp' => '1471905334',
+      'revision_uid' => '0',
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+            'format' => NULL,
+            'safe_value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+          ),
+        ),
+      ),
+      'field_author' => array(
+        'und' => array(
+          array(
+            'value' => 'Petra Royse',
+            'format' => NULL,
+            'safe_value' => 'Petra Royse',
+          ),
+        ),
+      ),
+      'field_learning_goals' => array(
+        'und' => array(
+          array(
+            'value' => "1. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n2. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n3. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+            'format' => NULL,
+            'safe_value' => "1. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n2. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n3. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+          ),
+        ),
+      ),
+      'body' => array(),
+      'field_about' => array(
+        'und' => array(
+          array(
+            'value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+            'format' => NULL,
+            'safe_value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+          ),
+        ),
+      ),
+      'field_author_title' => array(
+        'und' => array(
+          array(
+            'value' => 'Professor of Cognitive Science at UC San Diego',
+            'format' => NULL,
+            'safe_value' => 'Professor of Cognitive Science at UC San Diego',
+          ),
+        ),
+      ),
+      'field_endorse' => array(
+        'und' => array(
+          array(
+            'value' => 'IDEO',
+            'format' => NULL,
+            'safe_value' => 'IDEO',
+          ),
+        ),
+      ),
+      'field_recommended' => array(
+        'und' => array(
+          array(
+            'value' => '1',
+          ),
+        ),
+      ),
+      'field_things_to_consider' => array(
+        'und' => array(
+          array(
+            'value' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dictum est vel hendrerit dapibus. Duis imperdiet vel ligula eget consectetur. Phasellus malesuada dui sed lacus ornare lacinia. Donec tincidunt maximus fermentum. Morbi et est tincidunt, malesuada est eu, feugiat diam. Nunc vulputate sollicitudin dignissim. Curabitur consequat vitae nisl quis commodo. Suspendisse orci neque, sagittis eu lacus sit amet, porta efficitur elit.\r\n\r\nDuis quam eros, dignissim vitae purus vitae, feugiat tristique felis. In mi ligula, tristique non suscipit luctus, porta id sem. Integer condimentum lobortis varius. Fusce ullamcorper ex felis, fringilla pretium sapien gravida quis. Nunc congue molestie turpis ut egestas. Nunc imperdiet elit sed tellus efficitur, at pulvinar metus scelerisque. Aliquam fermentum faucibus magna in facilisis. Proin id arcu porttitor eros dignissim feugiat sed et dui. Integer laoreet scelerisque enim eget vehicula. Cras tincidunt a nibh nec euismod. Nullam at lorem mi. Suspendisse pellentesque vestibulum metus id viverra. Praesent vulputate venenatis ex sit amet tristique.\r\n\r\nCras a tincidunt lacus. Nunc vitae ante pretium, commodo libero iaculis, congue ligula. Morbi enim ante, cursus ut fringilla ac, congue sed mauris. Curabitur bibendum erat sed lobortis tempor. Maecenas vitae felis a orci rhoncus aliquam. Sed mi elit, porttitor ac vestibulum quis, gravida vitae risus. Mauris tristique in est porttitor aliquam. Aenean facilisis nisi mauris, ut pulvinar mauris blandit non.",
+            'format' => 'plain_text',
+            'safe_value' => "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dictum est vel hendrerit dapibus. Duis imperdiet vel ligula eget consectetur. Phasellus malesuada dui sed lacus ornare lacinia. Donec tincidunt maximus fermentum. Morbi et est tincidunt, malesuada est eu, feugiat diam. Nunc vulputate sollicitudin dignissim. Curabitur consequat vitae nisl quis commodo. Suspendisse orci neque, sagittis eu lacus sit amet, porta efficitur elit.</p>\n<p>Duis quam eros, dignissim vitae purus vitae, feugiat tristique felis. In mi ligula, tristique non suscipit luctus, porta id sem. Integer condimentum lobortis varius. Fusce ullamcorper ex felis, fringilla pretium sapien gravida quis. Nunc congue molestie turpis ut egestas. Nunc imperdiet elit sed tellus efficitur, at pulvinar metus scelerisque. Aliquam fermentum faucibus magna in facilisis. Proin id arcu porttitor eros dignissim feugiat sed et dui. Integer laoreet scelerisque enim eget vehicula. Cras tincidunt a nibh nec euismod. Nullam at lorem mi. Suspendisse pellentesque vestibulum metus id viverra. Praesent vulputate venenatis ex sit amet tristique.</p>\n<p>Cras a tincidunt lacus. Nunc vitae ante pretium, commodo libero iaculis, congue ligula. Morbi enim ante, cursus ut fringilla ac, congue sed mauris. Curabitur bibendum erat sed lobortis tempor. Maecenas vitae felis a orci rhoncus aliquam. Sed mi elit, porttitor ac vestibulum quis, gravida vitae risus. Mauris tristique in est porttitor aliquam. Aenean facilisis nisi mauris, ut pulvinar mauris blandit non.</p>\n",
+          ),
+        ),
+      ),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1470787690',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '20',
+      'uid' => '1',
+      'title' => 'Forming student groups',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => 'e99fb663-f40f-4dff-9f15-014eb86c2e2c',
+      'nid' => '20',
+      'type' => 'class_tip',
+      'language' => 'und',
+      'created' => '1470787569',
+      'changed' => '1471562613',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => '9a6c1651-b917-4a37-98f3-65e461934503',
+      'revision_timestamp' => '1471562613',
+      'revision_uid' => '1',
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+            'format' => NULL,
+            'safe_value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+          ),
+        ),
+      ),
+      'field_author' => array(
+        'und' => array(
+          array(
+            'value' => 'Petra Royse',
+            'format' => NULL,
+            'safe_value' => 'Petra Royse',
+          ),
+        ),
+      ),
+      'field_learning_goals' => array(
+        'und' => array(
+          array(
+            'value' => "1. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n2. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n3. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+            'format' => NULL,
+            'safe_value' => "1. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n2. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n3. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+          ),
+        ),
+      ),
+      'body' => array(),
+      'field_about' => array(
+        'und' => array(
+          array(
+            'value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+            'format' => NULL,
+            'safe_value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+          ),
+        ),
+      ),
+      'field_author_title' => array(
+        'und' => array(
+          array(
+            'value' => 'Professor of Cognitive Science at UC San Diego',
+            'format' => NULL,
+            'safe_value' => 'Professor of Cognitive Science at UC San Diego',
+          ),
+        ),
+      ),
+      'field_endorse' => array(
+        'und' => array(
+          array(
+            'value' => 'IDEO',
+            'format' => NULL,
+            'safe_value' => 'IDEO',
+          ),
+        ),
+      ),
+      'field_recommended' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_things_to_consider' => array(),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1470787569',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '22',
+      'uid' => '1',
+      'title' => 'Forming student groups-2',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => 'a6280a66-b06e-474b-8dac-32a4c96ade9a',
+      'nid' => '22',
+      'type' => 'class_tip',
+      'language' => 'und',
+      'created' => '1470787680',
+      'changed' => '1471562590',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => 'bd29dfb5-f382-4048-a6c3-f9bd7df2f321',
+      'revision_timestamp' => '1471562590',
+      'revision_uid' => '1',
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+            'format' => NULL,
+            'safe_value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+          ),
+        ),
+      ),
+      'field_author' => array(
+        'und' => array(
+          array(
+            'value' => 'Petra Royse',
+            'format' => NULL,
+            'safe_value' => 'Petra Royse',
+          ),
+        ),
+      ),
+      'field_learning_goals' => array(
+        'und' => array(
+          array(
+            'value' => "1. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n2. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n3. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+            'format' => NULL,
+            'safe_value' => "1. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n2. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n3. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+          ),
+        ),
+      ),
+      'body' => array(),
+      'field_about' => array(
+        'und' => array(
+          array(
+            'value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+            'format' => NULL,
+            'safe_value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+          ),
+        ),
+      ),
+      'field_author_title' => array(
+        'und' => array(
+          array(
+            'value' => 'Professor of Cognitive Science at UC San Diego',
+            'format' => NULL,
+            'safe_value' => 'Professor of Cognitive Science at UC San Diego',
+          ),
+        ),
+      ),
+      'field_endorse' => array(
+        'und' => array(
+          array(
+            'value' => 'UCSD',
+            'format' => NULL,
+            'safe_value' => 'UCSD',
+          ),
+        ),
+      ),
+      'field_recommended' => array(
+        'und' => array(
+          array(
+            'value' => '1',
+          ),
+        ),
+      ),
+      'field_things_to_consider' => array(),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1470787680',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '21',
+      'uid' => '1',
+      'title' => 'Forming student groups-1',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => 'f178fff1-b9fc-4541-ba82-4622018f378e',
+      'nid' => '21',
+      'type' => 'class_tip',
+      'language' => 'und',
+      'created' => '1470787672',
+      'changed' => '1471562565',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => 'a6934f9a-d5d3-4b5b-a79b-bfb746b55b28',
+      'revision_timestamp' => '1471562565',
+      'revision_uid' => '1',
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+            'format' => NULL,
+            'safe_value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+          ),
+        ),
+      ),
+      'field_author' => array(
+        'und' => array(
+          array(
+            'value' => 'Petra Royse',
+            'format' => NULL,
+            'safe_value' => 'Petra Royse',
+          ),
+        ),
+      ),
+      'field_learning_goals' => array(
+        'und' => array(
+          array(
+            'value' => "1. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n2. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n3. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+            'format' => NULL,
+            'safe_value' => "1. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n2. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n3. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+          ),
+        ),
+      ),
+      'body' => array(),
+      'field_about' => array(
+        'und' => array(
+          array(
+            'value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+            'format' => NULL,
+            'safe_value' => "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum sed magna eget eleifend.\r\n",
+          ),
+        ),
+      ),
+      'field_author_title' => array(
+        'und' => array(
+          array(
+            'value' => 'Professor of Cognitive Science at UC San Diego',
+            'format' => NULL,
+            'safe_value' => 'Professor of Cognitive Science at UC San Diego',
+          ),
+        ),
+      ),
+      'field_endorse' => array(
+        'und' => array(
+          array(
+            'value' => 'IDEO',
+            'format' => NULL,
+            'safe_value' => 'IDEO',
+          ),
+        ),
+      ),
+      'field_recommended' => array(
+        'und' => array(
+          array(
+            'value' => '19',
+          ),
+        ),
+      ),
+      'field_things_to_consider' => array(),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1470787672',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '18',
+      'uid' => '1',
+      'title' => 'Introduction to Human-Computer Interaction-2',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => '706dfcd4-9b7e-43e6-ad47-2662478f7d71',
+      'nid' => '18',
+      'type' => 'course_example',
+      'language' => 'und',
+      'created' => '1470786655',
+      'changed' => '1471389057',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => '4383189e-b5bb-4cb8-a5b2-651e63cedbba',
+      'revision_timestamp' => '1471389057',
+      'revision_uid' => '1',
+      'field_learning_goals' => array(
+        'und' => array(
+          array(
+            'value' => "1. Students will learn how to design technologies that bring people joy, rather than frustration. \r\n2. To do this they’ll learn techniques for rapidly prototyping and evaluating multiple interface alternatives — and why rapid prototyping and comparative evaluation are essential to excellent interaction design. \r\n3. They’ll learn how to conduct fieldwork with people to help generate design ideas. \r\n4. They'll learn how to make paper prototypes and low-fidelity mock-ups that are interactive — and how to use these designs to get feedback from teammates, clients, and users. \r\n5. They'll learn principles of visual design, perception and cognition so that they can effectively organize and present information with their interfaces. \r\n6. They’ll learn how to perform and analyze controlled experiments online.",
+            'format' => 'unfiltered_html',
+            'safe_value' => "1. Students will learn how to design technologies that bring people joy, rather than frustration. \n2. To do this they’ll learn techniques for rapidly prototyping and evaluating multiple interface alternatives — and why rapid prototyping and comparative evaluation are essential to excellent interaction design. \n3. They’ll learn how to conduct fieldwork with people to help generate design ideas. \n4. They'll learn how to make paper prototypes and low-fidelity mock-ups that are interactive — and how to use these designs to get feedback from teammates, clients, and users. \n5. They'll learn principles of visual design, perception and cognition so that they can effectively organize and present information with their interfaces. \n6. They’ll learn how to perform and analyze controlled experiments online.",
+          ),
+        ),
+      ),
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => 'Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. ',
+            'format' => NULL,
+            'safe_value' => 'Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. ',
+          ),
+        ),
+      ),
+      'field_about' => array(
+        'und' => array(
+          array(
+            'value' => "Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. Topics: user-centered design, rapid prototyping, experimentation, direct manipulation, cognitive principles, visual design, social software, software tools. Learn by doing: work with a team on a quarter-long design project. Recommended preparation: basic familiarity with HTML. This course covers the time span of 10 weeks, and 250+ students are typically enrolled in this course.\r\n\r\nThese are past project done by students who have taken the class before and demonstrated exemplary work:  <a href=\"\">Example 1</a> <a href=\"\">Example 2</a> <a href=\"\">Example 3</a>",
+            'format' => 'filtered_html',
+            'safe_value' => "<p>Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. Topics: user-centered design, rapid prototyping, experimentation, direct manipulation, cognitive principles, visual design, social software, software tools. Learn by doing: work with a team on a quarter-long design project. Recommended preparation: basic familiarity with HTML. This course covers the time span of 10 weeks, and 250+ students are typically enrolled in this course.</p>\n<p>These are past project done by students who have taken the class before and demonstrated exemplary work:  <a href=\"\">Example 1</a> <a href=\"\">Example 2</a> <a href=\"\">Example 3</a></p>\n",
+          ),
+        ),
+      ),
+      'field_syllabus' => array(),
+      'field_author_title' => array(
+        'und' => array(
+          array(
+            'value' => 'Professor of Cognitive Science at UC San Diego',
+            'format' => NULL,
+            'safe_value' => 'Professor of Cognitive Science at UC San Diego',
+          ),
+        ),
+      ),
+      'field_author' => array(
+        'und' => array(
+          array(
+            'value' => 'Rayna Dantas',
+            'format' => NULL,
+            'safe_value' => 'Rayna Dantas',
+          ),
+        ),
+      ),
+      'field_links' => array(
+        'und' => array(
+          array(
+            'url' => '/classroomtips/1',
+            'title' => 'Forming student groups',
+            'attributes' => array(),
+          ),
+        ),
+      ),
+      'field_recommended' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_endorse' => array(
+        'und' => array(
+          array(
+            'value' => 'UCSD',
+            'format' => NULL,
+            'safe_value' => 'UCSD',
+          ),
+        ),
+      ),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1470786655',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '16',
+      'uid' => '1',
+      'title' => 'Introduction to Human-Computer Interaction',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => 'edb5f73d-ea30-4eae-8d21-935708f143e7',
+      'nid' => '16',
+      'type' => 'course_example',
+      'language' => 'und',
+      'created' => '1470784214',
+      'changed' => '1470862447',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => '1f342deb-423e-4ba0-a587-c3c38ce07e71',
+      'revision_timestamp' => '1470862447',
+      'revision_uid' => '1',
+      'field_learning_goals' => array(
+        'und' => array(
+          array(
+            'value' => "1. Students will learn how to design technologies that bring people joy, rather than frustration. \r\n2. To do this they’ll learn techniques for rapidly prototyping and evaluating multiple interface alternatives — and why rapid prototyping and comparative evaluation are essential to excellent interaction design. \r\n3. They’ll learn how to conduct fieldwork with people to help generate design ideas. \r\n4. They'll learn how to make paper prototypes and low-fidelity mock-ups that are interactive — and how to use these designs to get feedback from teammates, clients, and users. \r\n5. They'll learn principles of visual design, perception and cognition so that they can effectively organize and present information with their interfaces. \r\n6. They’ll learn how to perform and analyze controlled experiments online.",
+            'format' => 'unfiltered_html',
+            'safe_value' => "1. Students will learn how to design technologies that bring people joy, rather than frustration. \n2. To do this they’ll learn techniques for rapidly prototyping and evaluating multiple interface alternatives — and why rapid prototyping and comparative evaluation are essential to excellent interaction design. \n3. They’ll learn how to conduct fieldwork with people to help generate design ideas. \n4. They'll learn how to make paper prototypes and low-fidelity mock-ups that are interactive — and how to use these designs to get feedback from teammates, clients, and users. \n5. They'll learn principles of visual design, perception and cognition so that they can effectively organize and present information with their interfaces. \n6. They’ll learn how to perform and analyze controlled experiments online.",
+          ),
+        ),
+      ),
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => 'Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. ',
+            'format' => NULL,
+            'safe_value' => 'Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. ',
+          ),
+        ),
+      ),
+      'field_about' => array(
+        'und' => array(
+          array(
+            'value' => "Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. Topics: user-centered design, rapid prototyping, experimentation, direct manipulation, cognitive principles, visual design, social software, software tools. Learn by doing: work with a team on a quarter-long design project. Recommended preparation: basic familiarity with HTML. This course covers the time span of 10 weeks, and 250+ students are typically enrolled in this course.\r\n\r\nThese are past project done by students who have taken the class before and demonstrated exemplary work:  <a href=\"\">Example 1</a> <a href=\"\">Example 2</a> <a href=\"\">Example 3</a>",
+            'format' => 'filtered_html',
+            'safe_value' => "<p>Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. Topics: user-centered design, rapid prototyping, experimentation, direct manipulation, cognitive principles, visual design, social software, software tools. Learn by doing: work with a team on a quarter-long design project. Recommended preparation: basic familiarity with HTML. This course covers the time span of 10 weeks, and 250+ students are typically enrolled in this course.</p>\n<p>These are past project done by students who have taken the class before and demonstrated exemplary work:  <a href=\"\">Example 1</a> <a href=\"\">Example 2</a> <a href=\"\">Example 3</a></p>\n",
+          ),
+        ),
+      ),
+      'field_syllabus' => array(),
+      'field_author_title' => array(
+        'und' => array(
+          array(
+            'value' => 'Professor of Cognitive Science at UC San Diego',
+            'format' => NULL,
+            'safe_value' => 'Professor of Cognitive Science at UC San Diego',
+          ),
+        ),
+      ),
+      'field_author' => array(
+        'und' => array(
+          array(
+            'value' => 'Rayna Dantas',
+            'format' => NULL,
+            'safe_value' => 'Rayna Dantas',
+          ),
+        ),
+      ),
+      'field_links' => array(
+        'und' => array(
+          array(
+            'url' => '/classroomtips/1',
+            'title' => 'Forming student groups',
+            'attributes' => array(),
+          ),
+        ),
+      ),
+      'field_recommended' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_endorse' => array(
+        'und' => array(
+          array(
+            'value' => 'IDEO',
+            'format' => NULL,
+            'safe_value' => 'IDEO',
+          ),
+        ),
+      ),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1470784214',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '17',
+      'uid' => '1',
+      'title' => 'Introduction to Human-Computer Interaction-1',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => 'ed2308b2-df8d-4189-b4af-b480ce92dddc',
+      'nid' => '17',
+      'type' => 'course_example',
+      'language' => 'und',
+      'created' => '1470786647',
+      'changed' => '1470862431',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => '630ffa41-b1da-4bc8-b5e5-6d3c0e84879a',
+      'revision_timestamp' => '1470862431',
+      'revision_uid' => '1',
+      'field_learning_goals' => array(
+        'und' => array(
+          array(
+            'value' => "1. Students will learn how to design technologies that bring people joy, rather than frustration. \r\n2. To do this they’ll learn techniques for rapidly prototyping and evaluating multiple interface alternatives — and why rapid prototyping and comparative evaluation are essential to excellent interaction design. \r\n3. They’ll learn how to conduct fieldwork with people to help generate design ideas. \r\n4. They'll learn how to make paper prototypes and low-fidelity mock-ups that are interactive — and how to use these designs to get feedback from teammates, clients, and users. \r\n5. They'll learn principles of visual design, perception and cognition so that they can effectively organize and present information with their interfaces. \r\n6. They’ll learn how to perform and analyze controlled experiments online.",
+            'format' => 'unfiltered_html',
+            'safe_value' => "1. Students will learn how to design technologies that bring people joy, rather than frustration. \n2. To do this they’ll learn techniques for rapidly prototyping and evaluating multiple interface alternatives — and why rapid prototyping and comparative evaluation are essential to excellent interaction design. \n3. They’ll learn how to conduct fieldwork with people to help generate design ideas. \n4. They'll learn how to make paper prototypes and low-fidelity mock-ups that are interactive — and how to use these designs to get feedback from teammates, clients, and users. \n5. They'll learn principles of visual design, perception and cognition so that they can effectively organize and present information with their interfaces. \n6. They’ll learn how to perform and analyze controlled experiments online.",
+          ),
+        ),
+      ),
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => 'Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. ',
+            'format' => NULL,
+            'safe_value' => 'Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. ',
+          ),
+        ),
+      ),
+      'field_about' => array(
+        'und' => array(
+          array(
+            'value' => "Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. Topics: user-centered design, rapid prototyping, experimentation, direct manipulation, cognitive principles, visual design, social software, software tools. Learn by doing: work with a team on a quarter-long design project. Recommended preparation: basic familiarity with HTML. This course covers the time span of 10 weeks, and 250+ students are typically enrolled in this course.\r\n\r\nThese are past project done by students who have taken the class before and demonstrated exemplary work:  <a href=\"\">Example 1</a> <a href=\"\">Example 2</a> <a href=\"\">Example 3</a>",
+            'format' => 'filtered_html',
+            'safe_value' => "<p>Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. Topics: user-centered design, rapid prototyping, experimentation, direct manipulation, cognitive principles, visual design, social software, software tools. Learn by doing: work with a team on a quarter-long design project. Recommended preparation: basic familiarity with HTML. This course covers the time span of 10 weeks, and 250+ students are typically enrolled in this course.</p>\n<p>These are past project done by students who have taken the class before and demonstrated exemplary work:  <a href=\"\">Example 1</a> <a href=\"\">Example 2</a> <a href=\"\">Example 3</a></p>\n",
+          ),
+        ),
+      ),
+      'field_syllabus' => array(),
+      'field_author_title' => array(
+        'und' => array(
+          array(
+            'value' => 'Professor of Cognitive Science at UC San Diego',
+            'format' => NULL,
+            'safe_value' => 'Professor of Cognitive Science at UC San Diego',
+          ),
+        ),
+      ),
+      'field_author' => array(
+        'und' => array(
+          array(
+            'value' => 'Rayna Dantas',
+            'format' => NULL,
+            'safe_value' => 'Rayna Dantas',
+          ),
+        ),
+      ),
+      'field_links' => array(
+        'und' => array(
+          array(
+            'url' => '/classroomtips/1',
+            'title' => 'Forming student groups',
+            'attributes' => array(),
+          ),
+        ),
+      ),
+      'field_recommended' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_endorse' => array(
+        'und' => array(
+          array(
+            'value' => 'IDEO',
+            'format' => NULL,
+            'safe_value' => 'IDEO',
+          ),
+        ),
+      ),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1470786647',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '19',
+      'uid' => '1',
+      'title' => 'Introduction to Human-Computer Interaction-3',
+      'log' => '',
+      'status' => '1',
+      'comment' => '2',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => '52755d3d-708f-4c3c-9293-9c9a3c6b77f5',
+      'nid' => '19',
+      'type' => 'course_example',
+      'language' => 'und',
+      'created' => '1470786942',
+      'changed' => '1470862399',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => 'f190fdd7-4070-4168-b70b-c18910ff0416',
+      'revision_timestamp' => '1470862399',
+      'revision_uid' => '1',
+      'field_learning_goals' => array(
+        'und' => array(
+          array(
+            'value' => "1. Students will learn how to design technologies that bring people joy, rather than frustration. \r\n2. To do this they’ll learn techniques for rapidly prototyping and evaluating multiple interface alternatives — and why rapid prototyping and comparative evaluation are essential to excellent interaction design. \r\n3. They’ll learn how to conduct fieldwork with people to help generate design ideas. \r\n4. They'll learn how to make paper prototypes and low-fidelity mock-ups that are interactive — and how to use these designs to get feedback from teammates, clients, and users. \r\n5. They'll learn principles of visual design, perception and cognition so that they can effectively organize and present information with their interfaces. \r\n6. They’ll learn how to perform and analyze controlled experiments online.",
+            'format' => 'unfiltered_html',
+            'safe_value' => "1. Students will learn how to design technologies that bring people joy, rather than frustration. \n2. To do this they’ll learn techniques for rapidly prototyping and evaluating multiple interface alternatives — and why rapid prototyping and comparative evaluation are essential to excellent interaction design. \n3. They’ll learn how to conduct fieldwork with people to help generate design ideas. \n4. They'll learn how to make paper prototypes and low-fidelity mock-ups that are interactive — and how to use these designs to get feedback from teammates, clients, and users. \n5. They'll learn principles of visual design, perception and cognition so that they can effectively organize and present information with their interfaces. \n6. They’ll learn how to perform and analyze controlled experiments online.",
+          ),
+        ),
+      ),
+      'field_summary' => array(
+        'und' => array(
+          array(
+            'value' => 'Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. ',
+            'format' => NULL,
+            'safe_value' => 'Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. ',
+          ),
+        ),
+      ),
+      'field_about' => array(
+        'und' => array(
+          array(
+            'value' => "Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. Topics: user-centered design, rapid prototyping, experimentation, direct manipulation, cognitive principles, visual design, social software, software tools. Learn by doing: work with a team on a quarter-long design project. Recommended preparation: basic familiarity with HTML. This course covers the time span of 10 weeks, and 250+ students are typically enrolled in this course.\r\n\r\nThese are past project done by students who have taken the class before and demonstrated exemplary work:  <a href=\"\">Example 1</a> <a href=\"\">Example 2</a> <a href=\"\">Example 3</a>",
+            'format' => 'filtered_html',
+            'safe_value' => "<p>Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. Topics: user-centered design, rapid prototyping, experimentation, direct manipulation, cognitive principles, visual design, social software, software tools. Learn by doing: work with a team on a quarter-long design project. Recommended preparation: basic familiarity with HTML. This course covers the time span of 10 weeks, and 250+ students are typically enrolled in this course.</p>\n<p>These are past project done by students who have taken the class before and demonstrated exemplary work:  <a href=\"\">Example 1</a> <a href=\"\">Example 2</a> <a href=\"\">Example 3</a></p>\n",
+          ),
+        ),
+      ),
+      'field_syllabus' => array(),
+      'field_author_title' => array(
+        'und' => array(
+          array(
+            'value' => 'Professor of Cognitive Science at UC San Diego',
+            'format' => NULL,
+            'safe_value' => 'Professor of Cognitive Science at UC San Diego',
+          ),
+        ),
+      ),
+      'field_author' => array(
+        'und' => array(
+          array(
+            'value' => 'Rayna Dantas',
+            'format' => NULL,
+            'safe_value' => 'Rayna Dantas',
+          ),
+        ),
+      ),
+      'field_links' => array(
+        'und' => array(
+          array(
+            'url' => '/classroomtips/1',
+            'title' => 'Forming student groups',
+            'attributes' => array(),
+          ),
+        ),
+      ),
+      'field_recommended' => array(
+        'und' => array(
+          array(
+            'value' => '0',
+          ),
+        ),
+      ),
+      'field_endorse' => array(
+        'und' => array(
+          array(
+            'value' => 'IDEO',
+            'format' => NULL,
+            'safe_value' => 'IDEO',
+          ),
+        ),
+      ),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1470786942',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '1',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => FALSE,
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+)
