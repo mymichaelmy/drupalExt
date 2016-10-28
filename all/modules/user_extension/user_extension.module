@@ -1,0 +1,10 @@
+<?php
+
+function user_extension_services_request_postprocess_alter($controller, $args, &$results) {
+  if (isset($results->uid) && $results->uid > 0) {
+    $profile2 = profile2_load_by_user($results);
+    if ($profile2) {
+      $results->profile2 = array_values(profile2_load_by_user($results));
+    }
+  }
+}

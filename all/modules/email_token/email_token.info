@@ -1,0 +1,3 @@
+name = Email token
+description = add new email token for email verification
+core = 7.x 

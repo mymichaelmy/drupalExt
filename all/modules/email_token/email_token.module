@@ -1,0 +1,23 @@
+<?php
+
+function email_token_token_info() {
+  $info['tokens']['user']['one-time-login-url-relative'] = array(
+    'name' => t('One-time login URL relative'),
+    'description' => t('The URL of the one-time login page for the user account.'),
+    'restricted' => FALSE,
+  );
+
+  return $info;
+}
+
+function email_token_tokens($type, $tokens, array $data = array(), array $options = array()) {
+  $replacements = array();
+
+  if ($type == 'user' && isset($tokens['one-time-login-url-relative']) && !empty($data['user'])) {
+    $user = $data['user'];
+    $timestamp = REQUEST_TIME;
+    $replacements[$tokens['one-time-login-url-relative']] = "http://127.0.0.1:8080" . "/#!/activation?uid=$user->uid&timestamp=$timestamp&hashed_pass=" . user_pass_rehash($user->pass, $timestamp, $user->login, $user->uid);
+  }
+
+  return $replacements;
+}
