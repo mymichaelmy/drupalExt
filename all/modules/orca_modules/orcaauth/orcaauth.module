@@ -32,14 +32,14 @@ function orcaauth_help($path, $arg){
 function orcaauth_menu() {
   $items = array();
 
-//  $items['admin/config/people/orcaauth'] = array(
-//    'title' => 'Orca Auth Settings',
-//    'description' => 'Control settings of the Orca Drupal Authentication module',
-//    'page callback' => 'drupal_get_form',
-//    'page arguments' => array('orcaauth_settings'),
-//    'access arguments' => array('Administer orcaauth authentication'),
-//    'type' => MENU_LOCAL_TASK | MENU_NORMAL_ITEM,
-//  );
+ $items['admin/config/people/orcaauth'] = array(
+   'title' => 'Orca Auth Settings',
+   'description' => 'Control settings of the Orca Drupal Authentication module',
+   'page callback' => 'drupal_get_form',
+   'page arguments' => array('orcaauth_settings'),
+   'access arguments' => array('Administer orcaauth authentication'),
+   'type' => MENU_LOCAL_TASK | MENU_NORMAL_ITEM,
+ );
   
   $items['slo'] = array(
     'title' => 'Orca CMS logout',
@@ -74,23 +74,23 @@ function orcaauth_permission() {
 /**
  * Implements settings for the module.
  */
-//function orcaauth_settings() {
-//$form['orcaauth_grp_setup'] = array(
-//    '#type' => 'fieldset',
-//    '#title' => t('Basic Setup'),
-//    '#collapsible' => FALSE, 
-//  );
-//
-//  $form['orcaauth_grp_setup']['orca_jwt_secret'] = array(
-//    '#type' => 'textfield',
-//    '#title' => t('Orca JWT Secret Key'),
-//    '#default_value' => variable_get('orca_jwt_secret', 'NDEzMWM4MjYzOGMyYzYwODhjZTA0ZTBkYmViODQzNTVmY2I4NTFmM2QxOTQzZTNjODk2MTc0ZWVmOTNhMGQ0MQ=='),
-//    '#description' => t('Base64 encoded Orca JWT Secret Key'),
-//    '#size' => 150,
-//  );
-//  
-//  return system_settings_form($form);
-//}
+function orcaauth_settings() {
+$form['orcaauth_grp_setup'] = array(
+   '#type' => 'fieldset',
+   '#title' => t('Basic Setup'),
+   '#collapsible' => FALSE, 
+ );
+
+ $form['orcaauth_grp_setup']['orca_jwt_secret'] = array(
+   '#type' => 'textfield',
+   '#title' => t('Orca JWT Secret Key'),
+   '#default_value' => variable_get('orca_jwt_secret', 'NDEzMWM4MjYzOGMyYzYwODhjZTA0ZTBkYmViODQzNTVmY2I4NTFmM2QxOTQzZTNjODk2MTc0ZWVmOTNhMGQ0MQ=='),
+   '#description' => t('Base64 encoded Orca JWT Secret Key'),
+   '#size' => 150,
+ );
+ 
+ return system_settings_form($form);
+}
 
 /**
  * implement hook_init
