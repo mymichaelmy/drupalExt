@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the cookbook_new_content_type feature.
+ */
+
+include_once 'cookbook_new_content_type.features.inc';
