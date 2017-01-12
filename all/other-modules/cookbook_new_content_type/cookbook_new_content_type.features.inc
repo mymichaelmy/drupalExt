@@ -8,9 +8,19 @@
  * Implements hook_ctools_plugin_api().
  */
 function cookbook_new_content_type_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "services" && $api == "services") {
+    return array("version" => "3");
+  }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function cookbook_new_content_type_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
 }
 
 /**
@@ -32,14 +42,6 @@ function cookbook_new_content_type_node_info() {
       'description' => t('course example from professors'),
       'has_title' => '1',
       'title_label' => t('Title'),
-      'help' => '',
-    ),
-    'method_card' => array(
-      'name' => t('Method Card'),
-      'base' => 'node_content',
-      'description' => t('Playbook method card'),
-      'has_title' => '1',
-      'title_label' => t('Method Card Name'),
       'help' => '',
     ),
     'stoke' => array(
