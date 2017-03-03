@@ -1,0 +1,11 @@
+name = rest_services_api
+description = rest services providing api for ui
+core = 7.x
+package = Features
+version = 7.x-1.0
+dependencies[] = cookbook_new_content_type
+dependencies[] = ctools
+dependencies[] = import_html
+dependencies[] = services
+features[ctools][] = services:services:3
+features[features_api][] = api:2
